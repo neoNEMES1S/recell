@@ -1,0 +1,52 @@
+project:
+  title: Physics-Guided Probabilistic Health Forecasting and Degradation-Aware Optimization of Second-Life EV Batteries for Solar Energy Storage
+  seed: 42
+
+# Paths are relative to this config's parent directory (the repository root).
+dataset:
+  raw_dir: data/raw/stanford_second_life/extracted/SL_Dataset_SECL_INR21700-M50T
+  source_url: https://osf.io/8jnr5/
+  doi: 10.17605/OSF.IO/8JNR5
+  expected_cell_count: 6  # Publication description, NOT a discovery from local files.
+
+inspection:
+  output_dir: outputs/inventory
+  preview_rows: 20
+  scan_limit: null  # Complete scan; set 200 for a fast structural preview.
+  workers: 4
+  # Optional, reviewed header locations: {relative/file.xlsx: {Sheet1: 3}}
+  # Rows are one-based. CSV/TSV use the table name "table".
+  header_rows_file: reviewed_headers.json
+
+# Added only after examining the downloaded files and the publication's Table 2.
+review:
+  source: docs/dataset_findings.md
+  measurement_sheet_prefix: Channel_
+  timestamp_column: Date_Time
+  cells:
+    G1: {duty_cycle_type: commercial}
+    V4: {duty_cycle_type: residential}
+    V5: {duty_cycle_type: commercial}
+    W8: {duty_cycle_type: commercial}
+    W9: {duty_cycle_type: residential}
+    W10: {duty_cycle_type: residential}
+  test_type_rules:
+    - {pattern: 'cycling_tests/*', test_type: cycling}
+    - {pattern: 'diagnostic_tests/*/Capacity_test_with_pulses/*', test_type: capacity_with_pulses}
+    - {pattern: 'diagnostic_tests/*/*EIS*/*', test_type: eis}
+    - {pattern: 'diagnostic_tests/*/*EIS*.xlsx', test_type: eis}
+    - {pattern: 'diagnostic_tests/*/eis_*.mat', test_type: eis}
+
+# Declaration for later phases; no SOH computation is implemented yet.
+target:
+  quantity: discharge_capacity_ah
+  soh_reference:
+    method: first_observed_rpt
+    fixed_capacity_ah: null
+  # Alternatives: fixed nominal capacity, or a documented first-life end capacity.
+  # First observed RPT must be available at the forecast origin; never use a future maximum.
+
+evaluation:
+  protocol: leave_one_battery_out
+  validation: separate_training_battery
+  history_fractions: [0.10, 0.25, 0.50, 0.75, 1.00]

@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "second-life-battery-ai"
+version = "0.1.0"
+description = "Reproducible inspection and research tooling for second-life EV battery aging"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "scipy>=1.13,<2",
+  "openpyxl>=3.1,<4",
+  "h5py>=3.11,<4",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.9,<1"]
+research = [
+  "scikit-learn>=1.5,<2", "torch>=2.4,<3", "xgboost>=2.1,<4",
+  "matplotlib>=3.9,<4", "cvxpy>=1.6,<2", "joblib>=1.4,<2",
+  "jupyterlab>=4,<5",
+]
+
+[project.scripts]
+battery-inspect = "second_life_battery.data.inventory:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]

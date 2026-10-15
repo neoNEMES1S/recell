@@ -1,0 +1,1925 @@
+{
+  "cycling_tests/Cycling_1/G1/20221028_sd_g1_Channel_6.xlsx": {
+    "RawData_6_1": 1,
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_1/G1/20221108_sd_g1_Channel_6.xlsx": {
+    "RawData_6_1": 1,
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_1/V4/20221028_sd_v4_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_1/V4/20221108_sd_v4_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_1/V5/20221028_sd_v5_Channel_4.xlsx": {
+    "RawData_4_1": 1,
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_1/V5/20221108_sd_v5_Channel_4.xlsx": {
+    "RawData_4_1": 1,
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_1/W10/20221028_sd_w10_Channel_5.xlsx": {
+    "RawData_5_1": 1,
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_1/W10/20221108_sd_w10_Channel_5.xlsx": {
+    "RawData_5_1": 1,
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_1/W8/20221028_sd_w8_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_1/W8/20221108_sd_w8_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_1/W9/20221028_sd_w9_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_1/W9/20221108_sd_w9_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_10/G1/20230823_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_10/G1/20230903_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_10/V4/20230823_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_10/V4/20230903_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_10/V5/20230823_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_10/V5/20230903_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_10/W10/20230823_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_10/W10/20230903_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_10/W8/20230823_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_10/W8/20230903_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_10/W9/20230823_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_10/W9/20230903_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_11/G1/20230920_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_11/G1/20231001_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_11/V4/20230920_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_11/V4/20231001_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_11/V5/20230920_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_11/V5/20231001_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_11/W10/20230920_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_11/W10/20231001_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_11/W8/20230920_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_11/W8/20231001_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_11/W9/20230920_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_11/W9/20231001_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_12/G1/20231106_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_12/G1/20231117_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_12/V4/20231106_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_12/V4/20231117_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_12/V5/20231106_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_12/V5/20231117_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_12/W10/20231106_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_12/W10/20231117_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_12/W8/20231106_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_12/W8/20231117_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_12/W9/20231106_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_12/W9/20231117_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_13/G1/20231218_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_13/G1/20231229_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_13/V4/20231218_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_13/V4/20231229_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_13/V5/20231218_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_13/V5/20231229_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_13/W10/20231218_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_13/W10/20231229_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_13/W8/20231218_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_13/W8/20231229_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_13/W9/20231218_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_13/W9/20231229_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_14/G1/20240113_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_14/G1/20240123_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_14/V4/20240113_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_14/V4/20240123_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_14/V5/20240113_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_14/V5/20240123_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_14/W10/20240113_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_14/W10/20240123_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_14/W8/20240113_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_14/W8/20240123_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_14/W9/20240113_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_14/W9/20240123_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_15/G1/20240318_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_15/G1/20240330_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_15/V4/20240318_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_15/V4/20240330_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_15/V5/20240318_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_15/V5/20240330_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_15/W10/20240318_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_15/W10/20240330_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_15/W8/20240318_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_15/W8/20240330_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_15/W9/20240318_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_15/W9/20240330_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_16/G1/20241017_sd_g1_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_16/G1/20241029_sd_g1_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_16/V5/20241017_sd_v5_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_16/V5/20241029_sd_v5_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_16/W8/20241017_sd_w8_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_16/W8/20241029_sd_w8_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_17/G1/20241120_sd_g1_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_17/G1/20241203_sd_g1_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_17/V4/20241202_sd_v4_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_17/V5/20241120_sd_v5_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_17/V5/20241203_sd_v5_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_17/W10/20241202_sd_w10_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_17/W8/20241120_sd_w8_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_17/W8/20241203_sd_w8_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_18/G1/20250108_sd_g1_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_18/G1/20250118_sd_g1_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_18/V4/20250106_sd_v4_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_18/V4/20250116_sd_v4_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_18/V5/20250108_sd_v5_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_18/V5/20250118_sd_v5_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_18/W10/20250106_sd_w10_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_18/W10/20250116_sd_w10_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_18/W8/20250108_sd_w8_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_18/W8/20250118_sd_w8_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_2/G1/20221206_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_2/V4/20221206_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_2/V5/20221206_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_2/W10/20221206_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_2/W8/20221206_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_2/W9/20221206_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_3/G1/20230103_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_3/V4/20230103_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_3/V5/20230103_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_3/W10/20230103_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_3/W8/20230103_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_3/W9/20230103_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_4/G1/20230207_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_4/G1/20230217_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_4/V4/20230207_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_4/V4/20230217_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_4/V5/20230207_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_4/V5/20230217_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_4/W10/20230207_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_4/W10/20230217_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_4/W8/20230207_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_4/W8/20230217_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_4/W9/20230207_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_4/W9/20230217_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_5/G1/20230302_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_5/G1/20230312_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_5/V4/20230302_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_5/V4/20230312_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_5/V5/20230302_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_5/V5/20230312_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_5/W10/20230302_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_5/W10/20230312_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_5/W8/20230302_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_5/W8/20230312_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_5/W9/20230302_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_5/W9/20230312_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_6/G1/20230329_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_6/G1/20230409_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_6/V4/20230329_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_6/V4/20230409_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_6/V5/20230329_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_6/V5/20230409_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_6/W10/20230329_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_6/W10/20230409_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_6/W8/20230329_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_6/W8/20230409_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_6/W9/20230329_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_6/W9/20230409_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_7/G1/20230427_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_7/G1/20230508_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_7/V4/20230427_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_7/V4/20230508_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_7/V5/20230427_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_7/V5/20230508_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_7/W10/20230427_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_7/W10/20230508_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_7/W8/20230427_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_7/W8/20230508_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_7/W9/20230427_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_7/W9/20230508_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_8/G1/20230526_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_8/G1/20230606_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_8/V4/20230526_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_8/V4/20230606_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_8/V5/20230526_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_8/V5/20230606_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_8/W10/20230526_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_8/W10/20230606_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_8/W8/20230526_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_8/W8/20230606_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_8/W9/20230526_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_8/W9/20230606_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_9/G1/20230722_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_9/G1/20230802_sd_g1_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "cycling_tests/Cycling_9/V4/20230722_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_9/V4/20230802_sd_v4_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "cycling_tests/Cycling_9/V5/20230722_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_9/V5/20230802_sd_v5_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "cycling_tests/Cycling_9/W10/20230722_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_9/W10/20230802_sd_w10_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "cycling_tests/Cycling_9/W8/20230722_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_9/W8/20230802_sd_w8_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "cycling_tests/Cycling_9/W9/20230722_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "cycling_tests/Cycling_9/W9/20230802_sd_w9_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_g1_RPT/Channel_6/20221114_g1_RPT_Channel_6_1.xlsx": {
+    "RawData_6_1": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_g1_RPT/Channel_6/20221114_g1_RPT_Channel_6_2.xlsx": {
+    "RawData_6_1": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_v4_RPT/Channel_1/20221114_v4_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_v5_RPT/Channel_4/20221114_v5_RPT_Channel_4.xlsx": {
+    "RawData_4_1": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_w10_RPT/Channel_5/20221114_w10_RPT_Channel_5.xlsx": {
+    "RawData_5_1": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_w8_RPT/Channel_2/20221114_w8_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_1/Capacity_test_with_pulses/20221114_w9_RPT/Channel_3/20221114_w9_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_10/Capacity_test_with_pulses/20230914_g1_RPT/Channel_6/20230914_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_10/Capacity_test_with_pulses/20230914_v4_RPT/Channel_1/20230914_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_10/Capacity_test_with_pulses/20230914_v5_RPT/Channel_4/20230914_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_10/Capacity_test_with_pulses/20230914_w10_RPT/Channel_5/20230914_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_10/Capacity_test_with_pulses/20230914_w8_RPT/Channel_2/20230914_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_10/Capacity_test_with_pulses/20230914_w9_RPT/Channel_3/20230914_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_g1_EIS326V/Channel_6/20230918_g1_EIS326V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_g1_EIS363V/Channel_6/20230918_g1_EIS363V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_g1_EIS400V/Channel_6/20230918_g1_EIS400V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_v4_EIS326V/Channel_1/20230918_v4_EIS326V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_v4_EIS363V/Channel_1/20230918_v4_EIS363V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_v4_EIS400V/Channel_1/20230918_v4_EIS400V_2_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_v5_EIS326V/Channel_4/20230918_v5_EIS326V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_v5_EIS363V/Channel_4/20230918_v5_EIS363V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_v5_EIS400V/Channel_4/20230918_v5_EIS400V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w10_EIS326V/Channel_5/20230918_w10_EIS326V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w10_EIS363V/Channel_5/20230918_w10_EIS363V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w10_EIS400V/Channel_5/20230918_w10_EIS400V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w8_EIS326V/Channel_2/20230918_w8_EIS326V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w8_EIS363V/Channel_2/20230918_w8_EIS363V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w8_EIS400V/Channel_2/20230918_w8_EIS400V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w9_EIS326V/Channel_3/20230918_w9_EIS326V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w9_EIS363V/Channel_3/20230918_w9_EIS363V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_10/EIS_10/20230918_w9_EIS400V/Channel_3/20230918_w9_EIS400V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_11/Capacity_test_with_pulses/20231030_g1_RPT/Channel_6/20231030_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_11/Capacity_test_with_pulses/20231030_v4_RPT/Channel_1/20231030_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_11/Capacity_test_with_pulses/20231030_v5_RPT/Channel_4/20231030_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_11/Capacity_test_with_pulses/20231030_w10_RPT/Channel_5/20231030_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_11/Capacity_test_with_pulses/20231030_w8_RPT/Channel_2/20231030_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_11/Capacity_test_with_pulses/20231030_w9_RPT/Channel_3/20231030_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_g1_EIS326V/Channel_6/20231101_g1_EIS326V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_g1_EIS363V/Channel_6/20231101_g1_EIS363V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_g1_EIS400V/Channel_6/20231101_g1_EIS400V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_v4_EIS326V/Channel_1/20231101_v4_EIS326V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_v4_EIS363V/Channel_1/20231101_v4_EIS363V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_v4_EIS400V/Channel_1/20231101_v4_EIS400V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_v5_EIS326V/Channel_4/20231101_v5_EIS326V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_v5_EIS363V/Channel_4/20231101_v5_EIS363V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_v5_EIS400V/Channel_4/20231101_v5_EIS400V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w10_EIS326V/Channel_5/20231101_w10_EIS326V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w10_EIS363V/Channel_5/20231101_w10_EIS363V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w10_EIS400V/Channel_5/20231101_w10_EIS400V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w8_EIS326V/Channel_2/20231101_w8_EIS326V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w8_EIS363V/Channel_2/20231101_w8_EIS363V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w8_EIS400V/Channel_2/20231101_w8_EIS400V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w9_EIS326V/Channel_3/20231101_w9_EIS326V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w9_EIS363V/Channel_3/20231101_w9_EIS363V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_11/EIS_11/20231101_w9_EIS400V/Channel_3/20231101_w9_EIS400V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_12/Capacity_test_with_pulses/20231128_g1_RPT/Channel_6/20231128_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_12/Capacity_test_with_pulses/20231128_v4_RPT/Channel_1/20231128_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_12/Capacity_test_with_pulses/20231128_v5_RPT/Channel_4/20231128_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_12/Capacity_test_with_pulses/20231128_w10_RPT/Channel_5/20231128_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_12/Capacity_test_with_pulses/20231128_w8_RPT/Channel_2/20231128_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_12/Capacity_test_with_pulses/20231128_w9_RPT/Channel_3/20231128_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_g1_EIS326V/Channel_6/20231202_g1_EIS326V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_g1_EIS363V/Channel_6/20231202_g1_EIS363V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_g1_EIS400V/Channel_6/20231202_g1_EIS400V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_v4_EIS326V/Channel_1/20231202_v4_EIS326V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_v4_EIS363V/Channel_1/20231202_v4_EIS363V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_v4_EIS400V/Channel_1/20231202_v4_EIS400V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_v5_EIS326V/Channel_4/20231202_v5_EIS326V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_v5_EIS363V/Channel_4/20231202_v5_EIS363V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_v5_EIS400V/Channel_4/20231202_v5_EIS400V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w10_EIS326V/Channel_5/20231202_w10_EIS326V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w10_EIS363V/Channel_5/20231202_w10_EIS363V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w10_EIS400V/Channel_5/20231202_w10_EIS400V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w8_EIS326V/Channel_2/20231202_w8_EIS326V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w8_EIS363V/Channel_2/20231202_w8_EIS363V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w8_EIS400V/Channel_2/20231202_w8_EIS400V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w9_EIS326V/Channel_3/20231202_w9_EIS326V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w9_EIS363V/Channel_3/20231202_w9_EIS363V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_12/EIS_12/20231202_w9_EIS400V/Channel_3/20231202_w9_EIS400V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_13/Capacity_test_with_pulses/20240108_g1_RPT/Channel_6/20240108_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_13/Capacity_test_with_pulses/20240108_v4_RPT/Channel_1/20240108_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_13/Capacity_test_with_pulses/20240108_v5_RPT/Channel_4/20240108_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_13/Capacity_test_with_pulses/20240108_w10_RPT/Channel_5/20240108_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_13/Capacity_test_with_pulses/20240108_w8_RPT/Channel_2/20240108_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_13/Capacity_test_with_pulses/20240108_w9_RPT/Channel_3/20240108_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_g1_EIS326V/Channel_6/20240109_g1_EIS326V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_g1_EIS363V/Channel_6/20240109_g1_EIS363V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_g1_EIS400V/Channel_6/20240109_g1_EIS400V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_v4_EIS326V/Channel_1/20240109_v4_EIS326V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_v4_EIS363V/Channel_1/20240109_v4_EIS363V_2_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_v4_EIS400V/Channel_1/20240109_v4_EIS400V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_v5_EIS326V/Channel_4/20240109_v5_EIS326V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_v5_EIS363V/Channel_4/20240109_v5_EIS363V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_v5_EIS400V/Channel_4/20240109_v5_EIS400V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w10_EIS326V/Channel_5/20240109_w10_EIS326V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w10_EIS363V/Channel_5/20240109_w10_EIS363V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w10_EIS400V/Channel_5/20240109_w10_EIS400V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w8_EIS326V/Channel_2/20240109_w8_EIS326V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w8_EIS363V/Channel_2/20240109_w8_EIS363V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w8_EIS400V/Channel_2/20240109_w8_EIS400V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w9_EIS326V/Channel_3/20240109_w9_EIS326V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w9_EIS363V/Channel_3/20240109_w9_EIS363V_2_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_13/EIS_13/20240109_w9_EIS400V/Channel_3/20240109_w9_EIS400V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_14/Capacity_test_with_pulses/20240203_g1_RPT/Channel_6/20240203_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_14/Capacity_test_with_pulses/20240203_v4_RPT/Channel_1/20240203_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_14/Capacity_test_with_pulses/20240203_v5_RPT/Channel_4/20240203_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_14/Capacity_test_with_pulses/20240203_w10_RPT/Channel_5/20240203_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_14/Capacity_test_with_pulses/20240203_w8_RPT/Channel_2/20240203_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_14/Capacity_test_with_pulses/20240203_w9_RPT/Channel_3/20240203_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_g1_EIS326V/Channel_6/20240205_g1_EIS326V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_g1_EIS363V/Channel_6/20240205_g1_EIS363V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_g1_EIS400V/Channel_6/20240205_g1_EIS400V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_v4_EIS326V/Channel_1/20240205_v4_EIS326V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_v4_EIS363V/Channel_1/20240205_v4_EIS363V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_v4_EIS400V/Channel_1/20240205_v4_EIS400V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_v5_EIS326V/Channel_4/20240205_v5_EIS326V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_v5_EIS363V/Channel_4/20240205_v5_EIS363V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_v5_EIS400V/Channel_4/20240205_v5_EIS400V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w10_EIS326V/Channel_5/20240205_w10_EIS326V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w10_EIS363V/Channel_5/20240205_w10_EIS363V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w10_EIS400V/Channel_5/20240205_w10_EIS400V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w8_EIS326V/Channel_2/20240205_w8_EIS326V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w8_EIS363V/Channel_2/20240205_w8_EIS363V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w8_EIS400V/Channel_2/20240205_w8_EIS400V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w9_EIS326V/Channel_3/20240205_w9_EIS326V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w9_EIS363V/Channel_3/20240205_w9_EIS363V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_14/EIS_14/20240205_w9_EIS400V/Channel_3/20240205_w9_EIS400V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_15/Capacity_test_with_pulses/20240409_g1_RPT/Channel_6/20240409_g1_RPT_Channel_6.xlsx": {
+    "RawData_6_1": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_15/Capacity_test_with_pulses/20240409_v4_RPT/Channel_1/20240409_v4_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_15/Capacity_test_with_pulses/20240409_v5_RPT/Channel_4/20240409_v5_RPT_Channel_4.xlsx": {
+    "RawData_4_1": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_15/Capacity_test_with_pulses/20240409_w10_RPT/Channel_5/20240409_w10_RPT_Channel_5.xlsx": {
+    "RawData_5_1": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_15/Capacity_test_with_pulses/20240409_w8_RPT/Channel_2/20240409_w8_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_15/Capacity_test_with_pulses/20240409_w9_RPT/Channel_3/20240409_w9_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_g1_EIS326V/Channel_6/20240411_g1_EIS326V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_g1_EIS363V/Channel_6/20240411_g1_EIS363V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_g1_EIS400V/Channel_6/20240411_g1_EIS400V_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_v4_EIS326V/Channel_1/20240411_v4_EIS326V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_v4_EIS363V/Channel_1/20240411_v4_EIS363V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_v4_EIS400V/Channel_1/20240411_v4_EIS400V_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_v5_EIS326V/Channel_4/20240411_v5_EIS326V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_v5_EIS363V/Channel_4/20240411_v5_EIS363V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_v5_EIS400V/Channel_4/20240411_v5_EIS400V_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w10_EIS326V/Channel_5/20240411_w10_EIS326V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w10_EIS363V/Channel_5/20240411_w10_EIS363V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w10_EIS400V/Channel_5/20240411_w10_EIS400V_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w8_EIS326V/Channel_2/20240411_w8_EIS326V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w8_EIS363V/Channel_2/20240411_w8_EIS363V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w8_EIS400V/Channel_2/20240411_w8_EIS400V_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w9_EIS326V/Channel_3/20240411_w9_EIS326V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w9_EIS363V/Channel_3/20240411_w9_EIS363V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_15/EIS_15/20240411_w9_EIS400V/Channel_3/20240411_w9_EIS400V_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_16/Capacity_test_with_pulses/20240801_g1_RPT/Channel_1/20240801_g1_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_16/Capacity_test_with_pulses/20240801_v4_RPT/Channel_1/20240801_v4_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_16/Capacity_test_with_pulses/20240801_v5_RPT/Channel_2/20240801_v5_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_16/Capacity_test_with_pulses/20240801_w10_RPT/Channel_3/20240801_w10_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_16/Capacity_test_with_pulses/20240801_w8_RPT/Channel_3/20240801_w8_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_16/Capacity_test_with_pulses/20240801_w9_RPT/Channel_2/20240801_w9_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240806_v4_EIS_363V/Channel_1/20240806_v4_EIS_363V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240806_v4_EIS_400V/Channel_1/20240806_v4_EIS_400V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240806_w10_EIS_400V/Channel_3/20240806_w10_EIS_400V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240806_w9_EIS_363V/Channel_2/20240806_w9_EIS_363V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240806_w9_EIS_400V/Channel_2/20240806_w9_EIS_400V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240807_v4_EIS_326V/Channel_1/20240807_v4_EIS_326V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240807_w10_EIS_363V/Channel_1/20240807_w10_EIS_363V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240807_w9_EIS_326V/Channel_2/20240807_w9_EIS_326V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_16/EIS_16/20240808_w10_EIS_326V/Channel_1/20240808_w10_EIS_326V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/Capacity_test_with_pulses/20241108_g1_RPT/Channel_1/20241108_g1_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/Capacity_test_with_pulses/20241108_v5_RPT/Channel_2/20241108_v5_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/Capacity_test_with_pulses/20241108_w8_RPT/Channel_3/20241108_w8_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_17/Capacity_test_with_pulses/20241130_v4_RPT/Channel_1/20241130_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/Capacity_test_with_pulses/20241130_w10_RPT/Channel_2/20241130_w10_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241111_g1_EIS363V/Channel_1/20241111_g1_EIS363V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241111_g1_EIS400V/Channel_1/20241111_g1_EIS400V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241111_v5_EIS400V/Channel_2/20241111_v5_EIS400V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241111_w8_EIS400V/Channel_3/20241111_w8_EIS400V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241112_g1_EIS326V/Channel_1/20241112_g1_EIS326V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241112_v5_EIS326V/Channel_2/20241112_v5_EIS326V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241112_v5_EIS363V/Channel_2/20241112_v5_EIS363V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241112_w8_EIS326V/Channel_3/20241112_w8_EIS326V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17/20241112_w8_EIS363V_gal/Channel_3/20241112_w8_EIS363V_gal_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241007_g1_EIS400V/Channel_1/20241007_g1_EIS400V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241007_v5_EIS400V/Channel_2/20241007_v5_EIS400V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241008_g1_EIS326/Channel_1/20241008_g1_EIS326_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241008_g1_EIS363V/Channel_1/20241008_g1_EIS363V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241008_v5_EIS363V/Channel_2/20241008_v5_EIS363V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241008_w8_EIS363V/Channel_3/20241008_w8_EIS363V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241008_w8_EIS400V/Channel_3/20241008_w8_EIS400V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241009_v5_EIS326/Channel_2/20241009_v5_EIS326_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_17/EIS_17-1/20241009_w8_EIS326V/Channel_3/20241009_w8_EIS326V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_18/Capacity_test_with_pulses/20241217_g1_RPT/Channel_1/20241217_g1_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_18/Capacity_test_with_pulses/20241217_v4_RPT/Channel_1/20241217_v4_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_18/Capacity_test_with_pulses/20241217_v5_RPT/Channel_2/20241217_v5_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_18/Capacity_test_with_pulses/20241217_w10_RPT/Channel_2/20241217_w10_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_18/Capacity_test_with_pulses/20241217_w8_RPT/Channel_3/20241217_w8_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241220_g1_EIS400V/Channel_1/20241220_g1_EIS400V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241222_v5_EIS400V/Channel_2/20241222_v5_EIS400V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241223_g1_EIS363V/Channel_1/20241223_g1_EIS363V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241223_v5_EIS363V/Channel_2/20241223_v5_EIS363V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241223_w8_EIS400V/Channel_3/20241223_w8_EIS400V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241229_g1_EIS326V/Channel_1/20241229_g1_EIS326V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241229_v5_EIS326V/Channel_2/20241229_v5_EIS326V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241229_w8_EIS363V/Channel_3/20241229_w8_EIS363V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_18/EIS_18/20241230_w8_EIS326V/Channel_3/20241230_w8_EIS326V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_19/Capacity_test_with_pulses/20250128_v4_RPT/Channel_1/20250128_v4_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_19/Capacity_test_with_pulses/20250128_w10_RPT/Channel_2/20250128_w10_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_19/Capacity_test_with_pulses/20250129_g1_RPT/Channel_1/20250129_g1_RPT_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_19/Capacity_test_with_pulses/20250129_v5_RPT/Channel_2/20250129_v5_RPT_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_19/Capacity_test_with_pulses/20250129_w8_RPT/Channel_3/20250129_w8_RPT_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250131_g1_EIS400V/Channel_1/20250131_g1_EIS400V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250131_v5_EIS400V/Channel_2/20250131_v5_EIS400V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250131_w8_EIS400V/Channel_3/20250131_w8_EIS400V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250201_g1_EIS326V/Channel_1/20250201_g1_EIS326V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250201_g1_EIS363V/Channel_1/20250201_g1_EIS363V_Channel_1.xlsx": {
+    "RawData_1_1": 1,
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250201_v5_EIS326V/Channel_2/20250201_v5_EIS326V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250201_v5_EIS363V/Channel_2/20250201_v5_EIS363V_Channel_2.xlsx": {
+    "RawData_2_1": 1,
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250201_w8_EIS363V_gal/Channel_3/20250201_w8_EIS363V_gal_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_19/EIS_19/20250202_w8_EIS326V/Channel_3/20250202_w8_EIS326V_Channel_3.xlsx": {
+    "RawData_3_1": 1,
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_2/Capacity_test_with_pulses/20221216_g1_RPT/Channel_6/20221216_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_2/Capacity_test_with_pulses/20221216_v4_RPT/Channel_1/20221216_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_2/Capacity_test_with_pulses/20221216_v5_RPT/Channel_4/20221216_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_2/Capacity_test_with_pulses/20221216_w10_RPT/Channel_5/20221216_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_2/Capacity_test_with_pulses/20221216_w8_RPT/Channel_2/20221216_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_2/Capacity_test_with_pulses/20221216_w9_RPT/Channel_3/20221216_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_3/Capacity_test_with_pulses/20230116_g1_RPT/Channel_6/20230116_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_3/Capacity_test_with_pulses/20230116_v4_RPT/Channel_1/20230116_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_3/Capacity_test_with_pulses/20230116_v5_RPT/Channel_4/20230116_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_3/Capacity_test_with_pulses/20230116_w10_RPT/Channel_5/20230116_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_3/Capacity_test_with_pulses/20230116_w8_RPT/Channel_2/20230116_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_3/Capacity_test_with_pulses/20230116_w9_RPT/Channel_3/20230116_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_4/Capacity_test_with_pulses/20230228_g1_RPT/Channel_6/20230228_sd_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_4/Capacity_test_with_pulses/20230228_v4_RPT/Channel_1/20230228_sd_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_4/Capacity_test_with_pulses/20230228_v5_RPT/Channel_4/20230228_sd_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_4/Capacity_test_with_pulses/20230228_w10_RPT/Channel_5/20230228_sd_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_4/Capacity_test_with_pulses/20230228_w8_RPT/Channel_2/20230228_sd_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_4/Capacity_test_with_pulses/20230228_w9_RPT/Channel_3/20230228_sd_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_5/Capacity_test_with_pulses/20230322_g1_RPT/Channel_6/20230322_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_5/Capacity_test_with_pulses/20230322_v4_RPT/Channel_1/20230322_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_5/Capacity_test_with_pulses/20230322_v5_RPT/Channel_4/20230322_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_5/Capacity_test_with_pulses/20230322_w10_RPT/Channel_5/20230322_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_5/Capacity_test_with_pulses/20230322_w8_RPT/Channel_2/20230322_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_5/Capacity_test_with_pulses/20230322_w9_RPT/Channel_3/20230322_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_G1_EIS326/Channel_6/20230327_G1_EIS326_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_G1_EIS363/Channel_6/20230327_G1_EIS363_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_G1_EIS400/Channel_6/20230327_G1_EIS400_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_V4_EIS326/Channel_1/20230327_V4_EIS326_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_V4_EIS363/Channel_1/20230327_V4_EIS363_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_V4_EIS400/Channel_1/20230327_V4_EIS400_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_V5_EIS326/Channel_4/20230327_V5_EIS326_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_V5_EIS363/Channel_4/20230327_V5_EIS363_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_V5_EIS400/Channel_4/20230327_V5_EIS400_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W10_EIS326/Channel_5/20230327_W10_EIS326_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W10_EIS363/Channel_5/20230327_W10_EIS363_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W10_EIS400/Channel_5/20230327_W10_EIS400_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W8_EIS326/Channel_2/20230327_W8_EIS326_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W8_EIS363/Channel_2/20230327_W8_EIS363_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W8_EIS400/Channel_2/20230327_W8_EIS400_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W9_EIS326/Channel_3/20230327_W9_EIS326_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W9_EIS363/Channel_3/20230327_W9_EIS363_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_5/EIS_5/20230327_W9_EIS400/Channel_3/20230327_W9_EIS400_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_6/Capacity_test_with_pulses/20230421_g1_RPT/Channel_6/20230421_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_6/Capacity_test_with_pulses/20230421_v4_RPT/Channel_1/20230421_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_6/Capacity_test_with_pulses/20230421_v5_RPT/Channel_4/20230421_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_6/Capacity_test_with_pulses/20230421_w10_RPT/Channel_5/20230421_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_6/Capacity_test_with_pulses/20230421_w8_RPT/Channel_2/20230421_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_6/Capacity_test_with_pulses/20230421_w9_RPT/Channel_3/20230421_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_G1_EIS326/Channel_6/20230425_G1_EIS326_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_G1_EIS363/Channel_6/20230425_G1_EIS363_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_G1_EIS400/Channel_6/20230425_G1_EIS400_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_V4_EIS326/Channel_1/20230425_V4_EIS326_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_V4_EIS363/Channel_1/20230425_V4_EIS363_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_V4_EIS400/Channel_1/20230425_V4_EIS400_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_V5_EIS326/Channel_4/20230425_V5_EIS326_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_V5_EIS363/Channel_4/20230425_V5_EIS363_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_V5_EIS400/Channel_4/20230425_V5_EIS400_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W10_EIS326/Channel_5/20230425_W10_EIS326_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W10_EIS363/Channel_5/20230425_W10_EIS363_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W10_EIS400/Channel_5/20230425_W10_EIS400_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W8_EIS326/Channel_2/20230425_W8_EIS326_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W8_EIS363/Channel_2/20230425_W8_EIS363_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W8_EIS400/Channel_2/20230425_W8_EIS400_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W9_EIS326/Channel_3/20230425_W9_EIS326_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W9_EIS363/Channel_3/20230425_W9_EIS363_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_6/EIS_6/20230425_W9_EIS400/Channel_3/20230425_W9_EIS400_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_7/Capacity_test_with_pulses/20230518_g1_RPT/Channel_6/20230518_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_7/Capacity_test_with_pulses/20230518_v4_RPT/Channel_1/20230518_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_7/Capacity_test_with_pulses/20230518_v5_RPT/Channel_4/20230518_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_7/Capacity_test_with_pulses/20230518_w10_RPT/Channel_5/20230518_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_7/Capacity_test_with_pulses/20230518_w8_RPT/Channel_2/20230518_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_7/Capacity_test_with_pulses/20230518_w9_RPT/Channel_3/20230518_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_8/Capacity_test_with_pulses/20230616_g1_RPT/Channel_6/20230616_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_8/Capacity_test_with_pulses/20230616_v4_RPT/Channel_1/20230616_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_8/Capacity_test_with_pulses/20230616_v5_RPT/Channel_4/20230616_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_8/Capacity_test_with_pulses/20230616_w10_RPT/Channel_5/20230616_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_8/Capacity_test_with_pulses/20230616_w8_RPT/Channel_2/20230616_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_8/Capacity_test_with_pulses/20230616_w9_RPT/Channel_3/20230616_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_G1_EIS326/Channel_6/20230618_G1_EIS326_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_G1_EIS363/Channel_6/20230618_G1_EIS363_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_G1_EIS400/Channel_6/20230618_G1_EIS400_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_V4_EIS326/Channel_1/20230618_V4_EIS326_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_V4_EIS363/Channel_1/20230618_V4_EIS363_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_V4_EIS400/Channel_1/20230618_V4_EIS400_2_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_V5_EIS326/Channel_4/20230618_V5_EIS326_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_V5_EIS363/Channel_4/20230618_V5_EIS363_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_V5_EIS400/Channel_4/20230618_V5_EIS400_2_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W10_EIS326/Channel_5/20230618_W10_EIS326_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W10_EIS363/Channel_5/20230618_W10_EIS363_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W10_EIS400/Channel_5/20230618_W10_EIS400_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W8_EIS326/Channel_2/20230618_W8_EIS326_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W8_EIS363/Channel_2/20230618_W8_EIS363_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W8_EIS400/Channel_2/20230618_W8_EIS400_2_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W9_EIS326/Channel_3/20230618_W9_EIS326_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W9_EIS363/Channel_3/20230618_W9_EIS363_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_8/EIS_8/20230618_W9_EIS400/Channel_3/20230618_W9_EIS400_2_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_9/Capacity_test_with_pulses/20230814_g1_RPT/Channel_6/20230814_g1_RPT_Channel_6.xlsx": {
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_9/Capacity_test_with_pulses/20230814_v4_RPT/Channel_1/20230814_v4_RPT_Channel_1.xlsx": {
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_9/Capacity_test_with_pulses/20230814_v5_RPT/Channel_4/20230814_v5_RPT_Channel_4.xlsx": {
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_9/Capacity_test_with_pulses/20230814_w10_RPT/Channel_5/20230814_w10_RPT_Channel_5.xlsx": {
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_9/Capacity_test_with_pulses/20230814_w8_RPT/Channel_2/20230814_w8_RPT_Channel_2.xlsx": {
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_9/Capacity_test_with_pulses/20230814_w9_RPT/Channel_3/20230814_w9_RPT_Channel_3.xlsx": {
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_g1_EIS326/Channel_6/20230816_g1_EIS326_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_g1_EIS363/Channel_6/20230816_g1_EIS363_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_g1_EIS400/Channel_6/20230816_g1_EIS400V_EIS_Channel_6.xlsx": {
+    "ACIM_Chan6": 1,
+    "Channel_6_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_v4_EIS326/Channel_1/20230816_v4_EIS326_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_v4_EIS363/Channel_1/20230816_v4_EIS363_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_v4_EIS400/Channel_1/20230816_v4_EIS400V_EIS_Channel_1.xlsx": {
+    "ACIM_Chan1": 1,
+    "Channel_1_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_v5_EIS326/Channel_4/20230816_v4_EIS326_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_v5_EIS363/Channel_4/20230816_v5_EIS363_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_v5_EIS400/Channel_4/20230816_v5_EIS400V_EIS_Channel_4.xlsx": {
+    "ACIM_Chan4": 1,
+    "Channel_4_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w10_EIS326/Channel_5/20230816_w10_EIS326_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w10_EIS363/Channel_5/20230816_w10_EIS363_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w10_EIS400/Channel_5/20230816_w10_EIS400V_EIS_Channel_5.xlsx": {
+    "ACIM_Chan5": 1,
+    "Channel_5_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w8_EIS326/Channel_2/20230816_w8_EIS326_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w8_EIS363/Channel_2/20230816_w8_EIS363_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w8_EIS400/Channel_2/20230816_w9_EIS400V_EIS_Channel_2.xlsx": {
+    "ACIM_Chan2": 1,
+    "Channel_2_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w9_EIS326/Channel_3/20230816_w9_EIS326_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w9_EIS363/Channel_3/20230816_w9_EIS363_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  },
+  "diagnostic_tests/RPT_9/EIS_9/20230816_w9_EIS400/Channel_3/20230816_w9_EIS400V_EIS2_Channel_3.xlsx": {
+    "ACIM_Chan3": 1,
+    "Channel_3_1": 1
+  }
+}

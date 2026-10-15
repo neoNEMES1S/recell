@@ -37,7 +37,7 @@ review:
     - {pattern: 'diagnostic_tests/*/*EIS*.xlsx', test_type: eis}
     - {pattern: 'diagnostic_tests/*/eis_*.mat', test_type: eis}
 
-# Declaration for later phases; no SOH computation is implemented yet.
+# Causal SOH normalization, applied during target extraction.
 target:
   quantity: discharge_capacity_ah
   soh_reference:
@@ -50,3 +50,88 @@ evaluation:
   protocol: leave_one_battery_out
   validation: separate_training_battery
   history_fractions: [0.10, 0.25, 0.50, 0.75, 1.00]
+  horizon: 2
+  minimum_history: 3
+  seeds: [42, 43, 44]
+  models: [persistence, linear, xgboost, gru, pgp_gru, quantile_gru]
+
+features: [soh, elapsed_days, cumulative_ah, pulse_resistance_ohm, duty_commercial, first_life_capacity_ah]
+
+baselines:
+  linear_alpha: 1.0
+  tree_estimators: 150
+  tree_depth: 2
+  tree_learning_rate: 0.03
+
+gru:
+  hidden_size: 8
+  layers: 1
+  dropout: 0.1
+  output_scale: 0.02
+
+training:
+  epochs: 200
+  patience: 25
+  minimum_improvement: 0.00001
+  learning_rate: 0.003
+  weight_decay: 0.0001
+  device: cpu
+
+physics:
+  lambda_prediction: 1.0
+  lambda_quantile: 1.0
+  lambda_monotonic: 0.1
+  lambda_smooth: 0.1
+  recovery_tolerance: 0.002
+
+parsing:
+  discharge_current_min_a: 0.15
+  discharge_current_max_a: 0.30
+  minimum_segment_seconds: 300
+  maximum_sample_gap_seconds: 5
+  counter_relative_tolerance: 0.01
+  capacity_min_ah: 2.0
+  capacity_max_ah: 5.5
+  # Moy et al. Table 2; static first-life metadata, not fitted using second-life outcomes.
+  first_life_capacity_ah:
+    G1: 4.6000
+    V4: 4.6024
+    V5: 4.7055
+    W8: 4.4568
+    W9: 4.4636
+    W10: 4.4591
+
+# OPSD/CoSSMic measured meters; tariffs and battery costs below are scenario assumptions.
+solar:
+  source_url: https://data.open-power-system-data.org/household_data/2020-04-15/
+  raw_file: data/raw/solar/household_data_60min_singleindex.csv
+  raw_sha256: 15956440b27465686eae2abf5895cbc3dab80f934a891bcb2f4f944428e97d60
+  columns:
+    pv: DE_KN_residential3_pv
+    import: DE_KN_residential3_grid_import
+    export: DE_KN_residential3_grid_export
+  start: '2016-06-01T00:00:00Z'
+  end: '2016-07-01T00:00:00Z'
+  tariff_timezone: Europe/Berlin
+  peak_start_hour: 17
+  peak_end_hour: 21
+  peak_price_eur_per_kwh: 0.40
+  offpeak_price_eur_per_kwh: 0.25
+  export_price_eur_per_kwh: 0.08
+
+dispatch:
+  forecast_model: pgp_gru
+  forecast_seed: 42
+  nominal_cell_capacity_ah: 5.0
+  degradation_weights: [0.5, 1.0, 2.0]
+  battery:
+    nominal_energy_kwh: 10.0
+    power_kw: 3.0
+    round_trip_efficiency: 0.90
+    soc_min: 0.10
+    soc_max: 0.90
+    initial_soc: 0.50
+    replacement_cost_eur: 1000.0
+    capacity_loss_budget: 0.20
+    carbon_price_eur_per_kg: 0.0
+    solver: CLARABEL

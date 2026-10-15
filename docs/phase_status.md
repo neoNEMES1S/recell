@@ -1,61 +1,56 @@
 # Phase status
 
-## Phase 1 — implemented
+The documented 13-phase research prototype has been implemented and its reference
+artifacts checked on 2026-10-15. This tracks software and experiment completion;
+scientific limitations remain explicit in [methods](methods.md) and [results](results.md).
 
-- Python package under `src/second_life_battery`, environment metadata and uv lock.
-- Local Python 3.11 environment with inspection and development dependencies installed.
-- Research dependencies declared as an optional extra; future module directories reserved.
-- YAML configuration, JSON logging, ignore rules and three notebook entry points.
-- README, raw-data acquisition instructions and scientific review gates.
+| Phase | Deliverable | Evidence and status |
+| --- | --- | --- |
+| 1 | Repository and reproducible environment | Python package, locked dependencies, config and logging implemented |
+| 2 | Dataset acquisition and inspection | Verified OSF archive; 777 files inventoried; 633 supported files scanned |
+| 3 | Parsing and capacity/SOH targets | 111 checkpoints; source hashes, segment audits, exclusions and duplicate checks |
+| 4 | Exploratory analysis | Capacity/SOH, exposure, resistance, missingness and duty plots; descriptive tables |
+| 5 | Baselines | Persistence, ridge linear regression and XGBoost fitted per fold and seed |
+| 6 | Vanilla GRU | Packed variable-length sequences, deterministic training and validation stopping |
+| 7 | Leave-one-battery-out evaluation | Six folds, separate validation cells, training-only preprocessing; three seeds |
+| 8 | Physics-guided probabilistic GRU | Ordered quantiles, soft penalties and quantile-GRU ablation; calibration outputs |
+| 9 | Limited-history experiments | Five fractions with matched origins; 15,660 prediction rows |
+| 10 | Failure and comparative analysis | Per-cell/horizon metrics, recovery errors, validation importance and paired bootstrap |
+| 11 | Solar/load data interface | Pinned OPSD cumulative meters; hourly conversion, validation and provenance |
+| 12 | Degradation-aware dispatch | Four planned scenarios, P10 case and wear sensitivity; 42 solved schedules |
+| 13 | Reproducible tables and figures | CSV tables, PNG/PDF figures, source-reading notebooks and reference results report |
 
-Assumptions: Python 3.11 is the reproducibility target. The setup stage requires CPU
-only. SOH is declared relative to first observed second-life RPT, pending target parsing.
-No future measurements may determine a reference capacity at an earlier forecast origin.
+## Validation and provenance
 
-## Phase 2 — structural inspection implemented and run on real data
+`python -m pytest -q` passes 41 tests. `ruff check src scripts tests` passes.
+Coverage includes archive integrity, conflicting identities, capacity integration,
+counter resets, causal SOH, training/test separation, future-feature exclusion, metrics,
+quantile ordering, GRU padding, meter differencing and constrained dispatch.
 
-- Downloaded the official OSF version-2 archive; verified its published SHA-256.
-- Extracted with path validation and CRC checking, preserving the original hierarchy.
-- Inspected every dataset file and every workbook sheet; recorded hashes and errors.
-- Reviewed 865 header locations across 529 workbooks and saved those locations in config.
-- Recorded six path-based cell identities, duty assignments with publication provenance,
-  column availability, full row counts and native date ranges.
-- Identified two conflicting cell labels, one empty capacity workbook, twelve multi-cell
-  EIS workbooks and opaque cycling MAT objects.
+The saved forecasting configurations match current modeling settings. Both forecasting
+runs' recorded input hashes match `data/processed/checkpoints.csv`. Each run has 216
+checkpoint/preprocessing/training-history files. Prediction targets follow their origins;
+probabilistic quantiles are ordered. The latest dispatch run used these checked forecasts
+and a hash-pinned household file, with maximum solver residual below 1e-8.
 
-Generated outputs (recreate with `python scripts/inspect_dataset.py --config configs/base.yaml`):
+Reference artifacts:
 
-- `outputs/inventory/dataset_manifest.json`
-- `outputs/inventory/files.csv`
-- `outputs/inventory/column_availability.csv`
-- `outputs/inventory/inspection_report.md`
-- `outputs/inventory/inspection.jsonl`
-- `outputs/inventory/config.snapshot.yaml`
-- `outputs/inventory/environment.json`
+- `outputs/inventory/`: source identities, hashes, columns, row counts and missingness.
+- `data/processed/`: checkpoints, cycling summaries, per-session audit and exclusions.
+- `outputs/figures/eda/`, `outputs/tables/`: exploratory figures and dataset tables.
+- `outputs/lobo/`, `outputs/limited_history/`: predictions, fold metrics and saved models.
+- `outputs/analysis/`: calibration, comparison, failure cases and limited-history plots.
+- `outputs/dispatch/`: schedules, scenario summaries, wear conversion and figures.
 
-Source/acquisition records: `docs/osf_file_listing.json`, `docs/dataset_findings.md`,
-`configs/reviewed_headers.json`. Raw archive and extraction are under
-`data/raw/stanford_second_life/`. Notebook analysis reads these outputs rather than
-embedding hand-entered research results.
+## Deliberate scientific boundaries
 
-## Verification
+Temperature channel mapping and naive timestamp timezone remain unresolved. Temperature
+and EIS are excluded from forecast features; conflicting EIS identities remain quarantined.
+SOH references use past observations only. Six independent cells limit statistical claims.
+XGBoost, not PGP-GRU, has the lowest aggregate error in the reference run.
 
-`python -m pytest -q`: 23 tests cover workbook preambles/multiple sheets, duplicate
-headers, missing values, native datetimes, both MATLAB storage families, corrupt files,
-empty datasets, bad configurations, output isolation, sampling completeness, parallel
-inspection, cell-label conflicts, checksum checks and unsafe archive paths.
-`ruff check src scripts tests` checks the Python code. The real-data full scan confirms
-633 supported files read successfully; 144 metadata/script files remain listed and
-hashed as unsupported content. Bundled MATLAB code was not executed.
-
-## Remaining gate before phase 3
-
-Review identity conflicts and multi-cell EIS layouts, establish physical sensor units
-and current sign, reconcile split/duplicate exports, verify diagnostic step sequences,
-and choose a consistent discharge-capacity calculation. File timestamps are naive;
-no timezone has been inferred. Late campaign coverage differs by battery.
-
-Phase 3 parsers, target extraction, EDA, baselines, leakage tests, GRUs, uncertainty,
-limited-history experiments and dispatch optimization are deliberately not implemented
-in this phase. Capacity/SOH, throughput, sequence, loss, metric and optimizer tests
-must accompany those modules when they exist. No research-model comparison is claimed.
+Dispatch is a perfect-foresight replay with assumed tariffs and a linear wear proxy.
+Pack calibration, dynamic aging, closed-loop operation and hardware validation are not
+implemented. There is no claimed carbon benefit, observed RUL, measured lifetime extension
+or established real-world dispatch saving. These are research follow-ups rather than
+hidden completed deliverables. Reproduction commands are in the README.

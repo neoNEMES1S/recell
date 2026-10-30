@@ -1,0 +1,8 @@
+{
+  "pdf_sha256": "6dc8cd8fbe384683f5110e192c4134e9902de71c2c23c8146fc4759a5cc8c6ba",
+  "builder_sha256": "2bf579b27fc4d91665ba53fcd32fb63fbfff20898eaf4119e8a0ccba2f4c9ce9",
+  "completion_sha256": "c08938c4fbe985de8879845aa4e3634f75d2691fa5640408c08ec667fe69d312",
+  "postfit_review_sha256": "dd647619894d8ee02302ccbbf90939770f6273eaf74663bbacc77bba9048cf67",
+  "protocol_sha256": "7377d66d0867b7500e082ca61382dc807a9d11537e85354cb4223355661c5668",
+  "purpose": "additional review artifact; no refit or model promotion"
+}

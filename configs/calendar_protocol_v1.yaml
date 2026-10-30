@@ -1,0 +1,97 @@
+protocol_id: calendar_validation_v1
+registered_at: '2026-10-27T17:53:41.066944+00:00'
+status: registered_before_first_fit
+question: How well do fixed apparent calendar-storage aging models generalize to physically
+  unseen cell types and later storage ages?
+inputs:
+  data/processed/calendar/calendar_checkpoints.csv: 80797de9f36d160afb6b3135f7413043c13c7aa996a144b4e50680d9e7b4577c
+  data/raw/stanford_calendar/Joule_cell_id.csv: 0e79ddf9dee9140c474bd2d6974d78eb84a86f041d55c84663ac862a7ef02be8
+  outputs/calendar/source_audit/history_audit.json: a63dd67c3543d1314b8bbe02686217f746bfd3529ce6558fccd0ab9f42484c92
+  outputs/calendar/source_audit/cohort_audit.json: 65b4246ccda544f7c7faf1161a81aac6c5503a921d8878c576f2096db87a191f
+  outputs/calendar/source_audit/candidate_type_folds.json: 12830c83b9fd5a774de434f456ac035581cad1acdc602d108a9fe2df22ad0ce6
+  outputs/calendar/source_audit/license_audit.json: 1df2ea671a8a9cdacdd8c88fb7d0d4823e5daddf96273d610098e733278fa728
+cohort:
+  primary: All author-curated summary cells with at least two accepted diagnostics
+    and positive observed time span. Initial reference point is excluded from fitting
+    and error metrics.
+  available_cells: 232
+  predictively_observable_cells: 218
+  single_observation_cells: 14
+  comments: Retain author comments and bag/lot flags; deleted source points remain
+    deleted.
+  sensitivity: Repeat after excluding all cells with author swap notes from every
+    role; primary cohort remains unchanged.
+  type_grouping: Keep _v2 lots grouped with their base cell type.
+normalization: Capacity divided by first accepted observed capacity of that cell;
+  observed elapsed days start at that reference. No future maxima, clipping, or interpolation.
+splits:
+  unit: physical_cell_id
+  outer: Eight leave-one-base-cell-type-out folds, validation next sorted type; six
+    types for gradient/parameter fitting.
+  folds: outputs/calendar/source_audit/candidate_type_folds.json
+  test_adaptation: Only first observed reference capacity is supplied; no test-cell
+    parameter updates.
+models:
+  C0: SOH(t)=1
+  C1: SOH(t)=1-a*sqrt(t_years), a>=0
+  C2: SOH(t,T,s)=1-exp(alpha+beta_T*1000*(1/297.15-1/(T_C+273.15))+beta_s*(s-0.5))*sqrt(t_years)
+optimization:
+  objective: Weighted squared residuals, equal weight to each training type, then
+    each physical cell, then each positive-time diagnostic. Validation/test labels
+    never select parameters.
+  C1: Closed-form nonnegative weighted least-squares coefficient.
+  C2_bounds:
+  - - -20
+    - 0
+    - -10
+  - - 2
+    - 20
+    - 10
+  C2_starts_beta_T:
+  - 0
+  - 2
+  - 5
+  C2_starts_beta_s:
+  - 0
+  - 1
+  C2_start_alpha: log(max(C1 coefficient,1e-8)); clipped only to optimizer bounds,
+    never clipping observed SOH.
+  solver: scipy.optimize.least_squares, trf, linear loss, max_nfev=2000, x_scale=1.0,
+    ftol=xtol=gtol=1e-8; choose smallest training cost among converged fixed starts.
+regimes:
+  full: Fit all positive-time observations of permitted training types; evaluate all
+    positive-time observations of held-out types.
+  early180: Fit only training observations at ages <=180 days; evaluate held-out-type
+    observations at ages >180 days. Missing late histories remain unavailable, not
+    zero-error results.
+evaluation:
+  primary: 'Full regime, primary cohort: mean of cell SOH RMSE within each type, then
+    mean equally across eight test types.'
+  contrast: C2 minus C1; negative favors temperature/SOC conditioning.
+  secondary:
+  - MAE
+  - R2 when defined
+  - per-cell and per-type failures
+  - recovery observations
+  - nonphysical predictions
+  - condition/time range shifts
+  - early180 extrapolation
+  - author-swap-note sensitivity
+  uncertainty: Descriptive paired bootstrap over eight held-out types, not checkpoint
+    rows.
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 42
+  interval: 0.95
+  interpretation: An interval spanning zero is inconclusive. No strong cross-chemistry
+    or field claim from eight types.
+loss_accounting: Model apparent loss under the storage-and-periodic-diagnostic protocol;
+  diagnostic cycling is not separately identified. Do not add this term to the mixed-aging
+  throughput wear proxy.
+application_gates:
+- No M50T cells are present. Resolve M50T temperature channels and establish independent
+  calibration before applying this model to M50T.
+- No cell/pack thermal, financial, lifetime-extension or Indian-site saving claim.
+- OSF node declares no license; record this absence and resolve intended redistribution/commercial
+  use before release.
+- Do not alter the sealed first-life transfer protocol or promote any calendar model
+  to the dashboard.

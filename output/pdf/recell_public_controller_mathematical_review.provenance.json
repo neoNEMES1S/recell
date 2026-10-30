@@ -1,0 +1,32 @@
+{
+  "status": "mathematical_supplement_created; visual_QA_required; no_model_change",
+  "review_sha256": "d2acaf893343f7e54445bdc13d39ee9cd95543141bcfbf1d15e271054681989e",
+  "integration_evidence_sha256": "02d1d5c357d7bbe0729e3b7c5e2992edf948dd485754ae9a11e6d28baae21da8",
+  "battery_review_sha256": "4c249abc5abbe9b2ffd5ca48884a230dbd4eb9be9938aa5ae073edc307f56b50",
+  "figure_sha256": "b009305866d13edfaf1df78904d384508d52af692889071aa017d93527417af3",
+  "output": "output/pdf/recell_public_controller_mathematical_review.pdf",
+  "output_sha256": "75e9cbb3603e0b52c89f221ae0eac693c333b02323eac8fc33d4fbb9bcdcd571",
+  "implementation_sha256": "5198126caf1b49a210de2b3a2e8744f8204ad70dbe398c3bc9ccf6a1f38cfb6e",
+  "qa": {
+    "reviewed_at_utc": "2026-10-30T06:18:49.893455+00:00",
+    "status": "text_and_all_five_rendered_pages_reviewed; passed",
+    "pdf_sha256": "75e9cbb3603e0b52c89f221ae0eac693c333b02323eac8fc33d4fbb9bcdcd571",
+    "pages": 5,
+    "visual_findings": "No clipping, overlapping text, missing glyphs or table/page overflow observed",
+    "checks": [
+      "required equations, values, units and 95% label present",
+      "all updated local document links resolve",
+      "builder lint passes",
+      "three original PDFs unchanged",
+      "539 frozen historical paths unchanged in linked integrity audit"
+    ],
+    "rendered_pages_sha256": {
+      "recell-controller-review-verified-1.png": "7eb00c58cb379f97cb3c9acbc11860eee879f7d84ea3922cc9649902ce035b2a",
+      "recell-controller-review-verified-2.png": "9fcbc7fa2931143d801d5accdeb82b6f42b319e57f2d786ee61af538d71301c6",
+      "recell-controller-review-verified-3.png": "9f05a90330fe0cef33b02e6e1cb2c0471a3ff62a49961f46174d1d9a7eac2aa3",
+      "recell-controller-review-verified-4.png": "32a45ae48675ccb51e344462d7b8653e6a9f65f49a9c4694a75f7596478f1de9",
+      "recell-controller-review-verified-5.png": "c500de037d90d65e0ac42e70f2771c00532b61c87f9a12b3450a171b506d17dd"
+    },
+    "scope": "Report creation and artifact-integrity verification only; no refitting, field validation or dashboard promotion"
+  }
+}

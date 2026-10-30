@@ -1,0 +1,145 @@
+protocol_id: india_public_controller_v1
+status: registered_before_any_controller_outcome; offline_scenario_only
+question: Under identical public demand, modeled PV, physical capacity and recourse,
+  do different held-out SOH forecasts change the common-reference proxy objective?
+inputs:
+  data/processed/india_ci/academic_load_modeled_pv_v1.csv: 250ca059aa8657e36dce87644881afdd796eaab71fdfa4dba2be7cfea822810f
+  outputs/india_ci/india_public_pv_scenario_v1/conversion/provenance.json: 009cfc1e8814b61d0ba3c2a040313cd88f99a5203e0f8c3b001fefb30d73d343
+  outputs/india_ci/india_load_forecast_v1/forecast/selection.json: 55bc288c8252402bdac19eb5f3f0c50c3335400c6675a17e6aa128e99d5aca95
+  outputs/india_ci/india_load_forecast_v1/forecast/completion.json: 69405bb882b706210040941b69398b05416ce21f1e1ff7aaef504f93b9e611a5
+  outputs/transfer/ev_to_second_life_v3/comparison/completion.json: 7e0e5556bb99b775c130fcc907a73f51ee32f94ca25b62c01d258ae090405dfe
+  outputs/transfer/ev_to_second_life_v3/comparison/predictions.csv: 4c4a847f94166debe0758713cb0e608928f728fbfcebbd7aae42b6b75a5a4804
+  outputs/transfer/ev_to_second_life_v3/comparison/folds.json: 0878736248648561dc221a5db0a5d184a013df7c58647f523e6ef454cc879509
+  outputs/transfer/ev_to_second_life_v3/feature_gate.json: ba122902d7e78fb02470df817072889cd0bcc7cac1dc2dc7367874fea450cb39
+  outputs/transfer/ev_to_second_life_v3/comparison/review/verification.json: 4c249abc5abbe9b2ffd5ca48884a230dbd4eb9be9938aa5ae073edc307f56b50
+  data/processed/transfer/target_checkpoints.csv: b069324073265b1c0b2d4469f2678ab933e420459bc0f4a57426e9f20a242539
+  configs/cell_registry.yaml: ed53438c712efd64396588c2d0f38f70029352ec590c554871f9d7f94b1f88a1
+  configs/india_ci.yaml: 820e91cab3542cac2e04aa7a58af587a6c5ca6c06578f343682f137faa0e36e1
+prior_knowledge: All v3 health results, demand-forecast test errors, PV-scenario totals
+  and source-quality findings are already known. No controller score or action has
+  been computed. This is not an independent new site or prospective validation cohort.
+period:
+  timezone: Asia/Kolkata
+  start: '2014-12-01T00:00:00+05:30'
+  end_exclusive: '2014-12-17T00:00:00+05:30'
+  interval_minutes: 15
+  days: 16
+information:
+  planning_origin: Local midnight, 96 forecast quarters; replan daily from realized
+    SOC.
+  load: Frozen validation-selected blend50, previous-day/week completed quarters;
+    weight 0.5; no refitting.
+  pv: Previous-day same-quarter modeled AC profile; only intervals ending by midnight.
+    Simulated observation feed with zero latency, not a NASA forecast service.
+  recourse: Each realized quarter clamps the requested action using contemporaneous
+    mean surplus/deficit, actuator and SOC limits. Ideal interval feedback; within-quarter
+    disturbances and live telemetry timing are unvalidated.
+  no_future: Future realized load/resource never enters planning. No target future
+    SOH label enters wear calibration or policy selection.
+health_cases:
+  cells:
+  - secl_m50t_G1
+  - secl_m50t_V4
+  - secl_m50t_V5
+  - secl_m50t_W10
+  - secl_m50t_W8
+  - secl_m50t_W9
+  seeds:
+  - 42
+  - 43
+  - 44
+  selection: Latest matched v3 horizon-1 origin at 10% context for each cell/seed/arm
+    R1,R2,R5; no selection using health errors.
+  physical_capacity: 'Common across policies: nominal pack energy * origin_SOH * reference_capacity_Ah
+    / 4.85. Held constant throughout the 16-day scenario.'
+  clock_boundary: Battery benchmark states from later laboratory years are hypothetical
+    case inputs; they are not attributed to this building in 2014.
+battery:
+  nominal_energy_kwh: 40.0
+  power_kw: 20.0
+  round_trip_efficiency: 0.9
+  soc_min: 0.1
+  soc_max: 0.9
+  initial_soc: 0.5
+  replacement_cost_inr: 400000.0
+  capacity_loss_budget: 0.2
+  nominal_cell_capacity_ah: 4.85
+  solver: CLARABEL
+economics:
+  import_price_inr_per_kwh: 10.0
+  tariff_status: Illustrative active-energy price, not an applicable DISCOM retail
+    tariff or observed bill. Original 10 kWh/INR100000 reference cost scaled to a
+    generic 40 kWh scenario; not a supplier quotation.
+  export: Zero export enforced; residual modeled PV is curtailed with no compensation.
+  terminal_value_inr_per_internal_kwh: import_price * sqrt(round_trip_efficiency);
+    common linear inventory value. Record actual cost and terminal inventory separately;
+    inventory credit is not a bill payment.
+  excluded: Demand/kVAh/fixed charges, PF penalties, taxes, duties, financing, installation,
+    O&M, backup, carbon and actual pack aging.
+wear:
+  planner: max(0,(origin_SOH-predicted_median_SOH)*reference_capacity_Ah/4.85 / expected_training_EFC_per_checkpoint);
+    horizon 1.
+  exposure: expected EFC/checkpoint = median across four target training cells of
+    each cell median positive Ah increment / (2*4.85).
+  common_reference: For each target training cell, median signed observed SOH decline
+    converted to nominal fraction divided by its positive interval EFC; median across
+    four cells, then floor the pooled rate at zero. Capacity recoveries remain in
+    these signed statistics.
+  separation: Only target gradient-training batteries calibrate either proxy. No validation/test
+    histories, additive calendar term or measured physical wear truth.
+  score_sensitivities:
+  - 0.0
+  - 0.5
+  - 1.0
+  - 2.0
+policies:
+  A_no_battery: Grid plus direct modeled PV; no storage.
+  B_greedy: Charge any current modeled surplus and discharge to current deficit, subject
+    to physical limits.
+  C_energy: Day-ahead energy/inventory optimization with zero planning wear penalty.
+  D_R1: Same optimizer with R1 scratch-GRU point-forecast wear proxy.
+  D_R2: Same optimizer with R2 transfer-GRU point-forecast wear proxy.
+  D_R5: Same optimizer with R5 XGBoost point-forecast wear proxy; no fabricated quantiles.
+planner:
+  dt_hours: 0.25
+  terminal: No hard end-of-day SOC reset; carry realized energy continuously. Common
+    linear terminal inventory value enters planning and evaluation.
+  objective: sum(import_price*predicted_grid_import*dt) + planning_wear_cost - terminal_value*(E_end-E_start)
+    + epsilon*sum(charge_kw^2+discharge_kw^2)*dt
+  power_regularization_inr_per_kw2_hour: 1.0e-06
+  regularization_status: Fixed numerical action preference, excluded from reported
+    energy/common-reference-wear score. Maximum 0.0192 INR/day at declared limits;
+    report actual terms.
+  limits: PV-only charging; discharge serves net load; no simultaneous flows; power
+    and actual-origin-capacity SOC limits; constant efficiency.
+  cache: No-battery, greedy and energy-only paths may be reused across seeds only
+    after physical inputs match; cached paths are not independent optimizations.
+evaluation:
+  primary: D_R2 minus D_R1 total 16-day inventory-adjusted grid-plus-common-reference-wear
+    score; mean seeds within each physical health case, then equal mean across six
+    cases. Negative favors transfer-derived planning.
+  secondary:
+  - D_R2 minus D_R5 and each policy versus no battery
+  - Raw import energy/charge, throughput/EFC, curtailment, final energy and inventory
+    adjustment
+  - Daily energy score, mean-power peaks (not metered billing demand), recourse deviations
+    and constraint residuals
+  - PV and load profile forecast errors, idle policies and negative cases
+  - Fixed common-reference wear score sensitivities; no reoptimization or post-test
+    tuning
+  uncertainty: Descriptive paired circular four-day block bootstrap over 16 daily
+    differences after averaging seeds then six health cases; 10000 replicates seed42;
+    total-period differences multiply resampled daily means by16. One site/window;
+    repeated health cases do not create new sites.
+  interpretation: Positive, null or negative results retained. No model/policy promotion,
+    measured wear/lifetime/savings claim or investment recommendation. Effects near
+    solver/regularization scales remain numerically qualified.
+gates:
+- Verify all pinned inputs, completed study artifact manifests and model-code snapshots
+  without retraining.
+- Automated tests prove 15-minute balance, current-interval recourse, SOC continuity,
+  forecast cutoffs and held-out wear calibration.
+- Synthetic fixtures pass and a one-cell/seed/day research smoke has physical/accounting
+  residuals <=1e-5 before the full fixed matrix.
+- Save every action/forecast/case/score and code/runtime hashes in a new directory;
+  preserve all historical results.

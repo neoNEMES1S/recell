@@ -24,7 +24,19 @@ def seed_everything(seed: int) -> None:
     torch.set_num_threads(1)
 
 
-def save_run(config: dict, root: Path, output: Path) -> None:
+def verify_artifacts(folder: Path, expected: dict[str, str]) -> None:
+    """Verify completed artifacts without loading executable model/scaler formats."""
+    if not expected:
+        raise ValueError("Completed run has no artifact manifest")
+    for name, digest in expected.items():
+        path = (folder / name).resolve()
+        if not path.is_relative_to(folder.resolve()) or sha256_file(path) != digest:
+            raise ValueError(f"Completed run artifact changed or escaped its directory: {name}")
+
+
+def save_run(
+    config: dict, root: Path, output: Path, *, inputs: dict[str, Path] | None = None
+) -> None:
     """Persist effective configuration, source data hash and numerical package versions."""
     output.mkdir(parents=True, exist_ok=True)
     (output / "config.yaml").write_text(yaml.safe_dump(config, sort_keys=False))
@@ -33,6 +45,7 @@ def save_run(config: dict, root: Path, output: Path) -> None:
             {
                 "python": platform.python_version(),
                 "checkpoint_data_sha256": sha256_file(root / "data/processed/checkpoints.csv"),
+                "input_sha256": {name: sha256_file(path) for name, path in (inputs or {}).items()},
                 "packages": {
                     name: version(name)
                     for name in ["numpy", "pandas", "scikit-learn", "torch", "xgboost", "cvxpy"]

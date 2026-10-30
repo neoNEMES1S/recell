@@ -17,3 +17,7 @@ data/processed/**
 outputs/**
 !outputs/**/
 !outputs/**/.gitkeep
+dashboard/dist/
+.superdesign/tmp/
+dashboard/.openai/
+tmp/

@@ -87,7 +87,10 @@ the measurements and calibration still required. The published dashboard is unch
 A [separate electrical-semantics audit](india_electrical_semantics.md) quantifies
 the apparent-energy gap across the fixed load window. A Coimbatore grid/PV/battery
 data-access lead and a concrete author request are documented; no records have
-been acquired from that lead and the request remains unsent pending instruction.
+been acquired from that lead. The request was sent on 30 October after explicit
+user authorization, together with the Stanford export/temperature clarification
+request. Both exact sent messages were read back and verified; replies, access
+and any corrected metadata remain outstanding.
 
 The phase-17 encoder initialization path validates shared provenance and physical-cell roles,
 copies GRU/representation parameters, preserves a fresh H2 head and RNG state,

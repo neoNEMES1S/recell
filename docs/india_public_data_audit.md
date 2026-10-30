@@ -244,9 +244,10 @@ proxy do not validate measured PV, actual pack aging or site savings. See the
 The [public-source gap review](india_electrical_semantics.md#additional-public-data-search)
 identified a Coimbatore institutional microgrid study describing paired grid,
 solar and battery records, with access through the corresponding author on
-request. A [concrete data request](india_ci_data_request.md) is prepared. It is
-unsent pending explicit user instruction; no source records or reuse rights are
-assumed to have been obtained. The other reviewed solar mapping, capacity-factor
+request. A [concrete data request](india_ci_data_request.md) was sent on
+30 October after explicit user instruction; the exact sent message was
+read back and verified. No source records or reuse rights are assumed to have
+been obtained. The other reviewed solar mapping, capacity-factor
 and radiation sources do not supply this building's paired inverter/BMS records.
 
 The additional [Jaipur factory PV workbook audit](india_pv_source_audit.md) acquired
@@ -263,12 +264,14 @@ exists. No new files were fitted, and no research settings were changed.
 
 | Primary record checked | Observation | Decision for phase 20 |
 | --- | --- | --- |
-| [Coimbatore smart-building microgrid paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC12909795/) | The current data-availability section still directs requests to the corresponding author; no downloadable underlying data were identified there. | Retain the prepared request; do not treat article tables as interval measurements or infer dataset reuse rights. |
+| [Coimbatore smart-building microgrid paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC12909795/) | The current data-availability section still directs requests to the corresponding author; no downloadable underlying data were identified there. | Await the requested records; do not treat article tables as interval measurements or infer dataset reuse rights. |
 | [Indian demand/solar/wind, version 2](https://data.mendeley.com/datasets/y58jknpgs8/2), DOI 10.17632/y58jknpgs8.2 | Publisher describes hourly demand and renewable generation across India's combined five regional grid networks. | Grid-level scope cannot supply one customer's behind-the-meter load/PV/BMS topology or bill. No large workbook download is needed to resolve this mismatch. |
 | [ComErgy 2026 benchmark](https://data.mendeley.com/datasets/fc8tp82hyb/1), DOI 10.17632/fc8tp82hyb.1 | Publisher explicitly describes a hypothetical nine-household community rather than a specific real community. | A further hypothetical benchmark cannot close the measured Indian C&I site gate. |
 | [Containerized BESS field operations](https://zenodo.org/records/20094787), DOI 10.5281/zenodo.20094787 | Repository describes eight months of rack/cell electrical, SOC and temperature measurements. Its listed measurement structure does not establish paired Indian customer load/PV, a customer tariff or M50T pack identity. | Potential separate telemetry-method research, not evidence for this site's bill or pack calibration; defer multi-GB acquisition and any new study. |
 
 The next phase-20 dependency is still access to a suitable paired site record and
-its equipment/connection metadata. External communication remains unsent; this
-search does not create permission to contact authors. See the
+its equipment/connection metadata. Following explicit user authorization, the
+Coimbatore data request and Stanford source/temperature clarification were sent
+on 30 October, without attachments. Sending does not supply data or establish
+reuse terms. See the
 [requirement and acceptance-evidence checklist](integration_gate_review.md).

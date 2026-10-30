@@ -1,6 +1,9 @@
-# Coimbatore microgrid data request - prepared, not sent
+# Coimbatore microgrid data request - sent
 
-Prepared: 28 October 2026. Sending requires the user's explicit instruction.
+Prepared: 28 October 2026. Sent: 30 October 2026 after the user's explicit
+"Send both requests" authorization. Gmail readback verifies the recipient,
+subject and body, with no attachments or CC/BCC. Recipient delivery, a reply,
+data access and reuse terms have not been established.
 Recipient and data-access route are published in the
 [paper's data-availability and contributor sections](https://pmc.ncbi.nlm.nih.gov/articles/PMC12909795/).
 This is a potential source, not acquired or validated data. The paper's article
@@ -51,7 +54,11 @@ ReCell project
 
 ---
 
-No attachments, CC recipients, message transmission or Gmail draft creation has
-been authorized by this document. Access would start a fresh identity, timezone,
-units, quality and licensing audit; it would not automatically validate an Indian
-pack, customer bill or transferable SOH model.
+Only the recipient, subject and body above were sent under the user's explicit
+authorization, without attachments or CC/BCC. Private message receipts and the
+approved source snapshot are retained under the ignored local directory
+`outputs/integration/author_requests_20261030/`.
+
+Any received data would start a fresh identity, timezone, units, quality and
+licensing audit; it would not automatically validate an Indian pack, customer
+bill or transferable SOH model. No response or dataset reuse terms are assumed.

@@ -76,11 +76,16 @@ uneconomic. See the complete [controller review](india_controller_review.md).
 
 ## Data-access status
 
-The [Coimbatore request](india_ci_data_request.md) remains prepared and unsent.
+The [Coimbatore request](india_ci_data_request.md) and
+[Stanford export/temperature clarification](source_correction_request.md) were
+sent on 30 October after the user's explicit authorization. Exact Gmail sent
+records were read back: approved recipients, subjects and bodies, no attachments
+or CC/BCC. This does not establish recipient delivery, replies or data access.
 The [30 October public-search follow-up](india_public_data_audit.md#public-search-follow-up-30-october-2026)
 rechecks the request-only route and rejects newly reviewed nonmatching records as
 substitutes for the missing site evidence. A bounded search does not prove that
-no suitable public source exists. No messages were sent or new data rights inferred.
+no suitable public source exists. No source corrections, sensor assignments,
+site records or new reuse rights are inferred from sending these requests.
 
 Current calculation/artifact rechecks are recorded under
 `outputs/integration/gate_review_20261030/`. The new mathematical supplement is

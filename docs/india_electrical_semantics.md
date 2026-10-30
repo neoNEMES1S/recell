@@ -95,7 +95,8 @@ Indian C&I dataset:
   institutional testbed. Its data-availability section routes access through the
   corresponding author on request; no direct dataset link is supplied there.
   Units, usable channels, raw quality, BMS coverage and dataset reuse terms are
-  unverified. A [specific request is prepared](india_ci_data_request.md), unsent.
+  unverified. A [specific request](india_ci_data_request.md) was sent on
+  30 October after explicit user authorization; no data access is established.
 - [Indian solar-installation map](https://doi.org/10.1038/s41597-022-01499-9):
   geographic installation polygons are not measured PV output or building demand.
 - [Historical/modelled Indian renewable production](https://zenodo.org/records/7824872):

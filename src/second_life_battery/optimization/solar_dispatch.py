@@ -17,6 +17,11 @@ def solve_dispatch(
 ) -> tuple[pd.DataFrame, dict]:
     """Optimize one horizon; only solar surplus charges storage and discharge serves load."""
     validate_dispatch_input(frame)
+    currency = battery.get("currency", "EUR").lower()
+    if currency not in {"eur", "inr"}:
+        raise ValueError("Dispatch currency must be EUR or INR")
+    replacement_key = f"replacement_cost_{currency}"
+    carbon_key = f"carbon_price_{currency}_per_kg"
     n = len(frame)
     nominal = battery["nominal_energy_kwh"]
     power = battery["power_kw"]
@@ -30,13 +35,13 @@ def solve_dispatch(
             "soc_max",
             "initial_soc",
             "capacity_loss_budget",
-            "replacement_cost_eur",
+            replacement_key,
         ]
     ] + [
         health_fraction,
         wear_per_efc,
         degradation_weight,
-        battery.get("carbon_price_eur_per_kg", 0),
+        battery.get(carbon_key, 0),
     ]
     if not np.isfinite(numeric).all() or battery["round_trip_efficiency"] <= 0:
         raise ValueError(
@@ -57,8 +62,8 @@ def solve_dispatch(
         wear_per_efc < 0
         or degradation_weight < 0
         or battery["capacity_loss_budget"] <= 0
-        or battery["replacement_cost_eur"] < 0
-        or battery.get("carbon_price_eur_per_kg", 0) < 0
+        or battery[replacement_key] < 0
+        or battery.get(carbon_key, 0) < 0
     ):
         raise ValueError("Degradation parameters must be nonnegative with a positive loss budget")
     direct = np.minimum(frame.solar_kw, frame.load_kw).to_numpy()
@@ -71,13 +76,11 @@ def solve_dispatch(
     energy = cp.Variable(n + 1)
     throughput = efficiency * charge + discharge / efficiency
     efc = cp.sum(throughput) / (2 * nominal)
-    wear_cost = (
-        battery["replacement_cost_eur"] * wear_per_efc * efc / battery["capacity_loss_budget"]
-    )
+    wear_cost = battery[replacement_key] * wear_per_efc * efc / battery["capacity_loss_budget"]
     electricity = (
         frame.import_price.to_numpy() @ imported - frame.export_price.to_numpy() @ exported
     )
-    carbon_weight = battery.get("carbon_price_eur_per_kg", 0)
+    carbon_weight = battery.get(carbon_key, 0)
     if carbon_weight and "carbon_kg_per_kwh" not in frame:
         raise ValueError("Carbon penalty requested without carbon intensity data")
     carbon = frame.carbon_kg_per_kwh.to_numpy() @ imported if "carbon_kg_per_kwh" in frame else 0
@@ -128,10 +131,10 @@ def solve_dispatch(
         raise RuntimeError("Solver result violates dispatch constraints")
     solar_total = frame.solar_kw.sum()
     summary = {
-        "electricity_cost_eur": float(electricity.value),
-        "estimated_degradation_cost_eur": float(wear_cost.value),
-        "electricity_plus_estimated_wear_eur": float(electricity.value + wear_cost.value),
-        "objective_eur": float(problem.value),
+        f"electricity_cost_{currency}": float(electricity.value),
+        f"estimated_degradation_cost_{currency}": float(wear_cost.value),
+        f"electricity_plus_estimated_wear_{currency}": float(electricity.value + wear_cost.value),
+        f"objective_{currency}": float(problem.value),
         "grid_import_kwh": float(imported.value.sum()),
         "grid_export_kwh": float(exported.value.sum()),
         "solar_self_consumption": float((direct.sum() + charge.value.sum()) / solar_total)

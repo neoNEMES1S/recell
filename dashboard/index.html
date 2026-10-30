@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore second-life battery research for Indian commercial and industrial solar storage, with INR scenarios and a guided pilot review.">
+  <meta name="theme-color" content="#1A3C2B">
+  <title>ReCell · India C&I workspace</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script>
+  <script src="core.js" defer></script>
+  <script src="lessons.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to analysis</a>
+  <aside class="sidebar" aria-label="Workspace">
+    <a class="brand" href="#overview" aria-label="ReCell overview">
+      <svg viewBox="0 0 28 24" aria-hidden="true"><rect x="1" y="4" width="23" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M26 9v6M14 6l-5 7h5l-1 5 6-8h-5z" fill="currentColor"/></svg>
+      ReCell
+    </a>
+    <p class="workspace-label">India C&I workspace</p>
+    <span class="prototype"><span aria-hidden="true">●</span> Research prototype</span>
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#overview"><span>01</span> Overview</a>
+      <a href="#batteries"><span>02</span> Battery evidence</a>
+      <a href="#forecasts"><span>03</span> Forecast quality</a>
+      <a href="#dispatch"><span>04</span> Storage decisions</a>
+      <a href="#learn"><span>05</span> Learn the method</a>
+      <a href="#pilot"><span>06</span> Pilot review</a>
+    </nav>
+    <div class="sidebar-note"><strong>Evidence before deployment.</strong><p>Real measurements.<br>Explicit assumptions.<br>A clear next step.</p><span id="snapshot-date"></span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar">
+      <div class="run-label"><span class="status-dot" aria-hidden="true"></span><span id="run-status">Loading reference results…</span></div>
+      <div class="actions"><a class="button secondary" href="#learn" data-action="start-guide">Guided walkthrough <span aria-hidden="true">↗</span></a><button class="button text" data-action="print">Print brief</button></div>
+    </header>
+    <main id="content" tabindex="-1"><p class="loading">Opening your research snapshot…</p></main>
+    <footer><span>ReCell · India commercial &amp; industrial storage</span><button data-action="sources" class="link-button">Sources &amp; snapshot</button><button data-action="download" class="link-button">Download analysis data</button></footer>
+  </div>
+  <dialog id="source-dialog" aria-labelledby="source-title"><div class="dialog-top"><h2 id="source-title">Sources &amp; snapshot</h2><button class="button secondary" data-action="close-sources">Close</button></div><div id="source-content"></div></dialog>
+  <div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+  <section id="print-report" aria-label="Printable client brief"></section>
+  <noscript><div class="error">Enable JavaScript to explore the dashboard. The full project explanation is also available in docs/project_walkthrough.md.</div></noscript>
+</body>
+</html>

@@ -67,6 +67,24 @@ def test_dispatch_balance_and_degradation_tradeoff(hours, battery):
     assert schedule.energy_end_kwh.max() <= 3.2 + 1e-6
 
 
+def test_inr_dispatch_keeps_money_units_consistent(hours, battery):
+    _, original = solve_dispatch(hours, battery, 0.8, 0.0001, degradation_weight=1)
+    rupees = hours.copy()
+    rupees[["import_price", "export_price"]] *= 100
+    battery["currency"] = "INR"
+    battery["replacement_cost_inr"] = battery.pop("replacement_cost_eur") * 100
+    _, result = solve_dispatch(rupees, battery, 0.8, 0.0001, degradation_weight=1)
+    assert not any("eur" in key for key in result)
+    for key in ["electricity_cost", "estimated_degradation_cost", "objective"]:
+        assert result[f"{key}_inr"] == pytest.approx(original[f"{key}_eur"] * 100, abs=1e-4)
+    assert result["equivalent_full_cycles"] == pytest.approx(
+        original["equivalent_full_cycles"], abs=1e-5
+    )
+    battery["replacement_cost_inr"] = -1
+    with pytest.raises(ValueError):
+        solve_dispatch(rupees, battery, 0.8, 0.0001)
+
+
 @pytest.mark.parametrize(
     "field,value",
     [

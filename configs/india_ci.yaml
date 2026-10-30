@@ -1,0 +1,15 @@
+# Illustrative C&I pilot economics, not a state/DISCOM tariff or vendor quotation.
+market: India
+segment: Commercial and industrial
+currency: INR
+import_price_inr_per_kwh: 10.0
+export_price_inr_per_kwh: 0.0
+replacement_cost_inr: 100000.0
+tariff_status: Flat illustrative energy charge; replace with the site's sanctioned tariff and ToD schedule.
+export_status: No export revenue credited; this does not enforce a zero-export connection.
+profile_status: German residential OPSD profile retained as a research proxy; not an Indian C&I load or solar measurement.
+excluded_costs: Demand charges, fixed charges, power-factor penalties, duties, taxes, financing, installation, O&M, subsidies and backup value.
+policy_source:
+  title: Ministry of Power — Implementation of Time of Day Electricity Tariff System
+  url: https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=1945236
+  checked_on: '2026-10-23'

@@ -42,9 +42,15 @@ Degradation-Aware Optimization of Second-Life EV Batteries for Solar Energy Stor
 | Semantic parsing, RPT capacity extraction, SOH, and EDA | Implemented; 111 checkpoints |
 | Baselines, GRU, PGP-GRU, and evaluation experiments | Run; six cells, three seeds |
 | Solar/load interface and CVXPY dispatch optimization | Run; 720-hour household replay |
+| Separate Indian public-building day-ahead demand benchmark | Registered validation/test comparison complete; [errors and limitations](docs/india_public_data_audit.md#registered-day-ahead-load-comparison); no billing validation |
+| First-life transfer-learning extension | Registered verified-prefix comparison complete; small GRU improvement, XGBoost lowest mean error; [review](docs/transfer_prefix_comparison.md) |
+| Indian public-data storage controller | Registered offline comparison complete; transfer has an unfavorable wear/inventory-adjusted score in this scenario; [review](docs/india_controller_review.md); field and release gates remain open |
 
 The current stage runs on CPU. See the [phase report](docs/phase_status.md) for
 completed work, validation, assumptions, and remaining scientific limitations.
+The [integration gate review](docs/integration_gate_review.md) tracks phases 14-20
+without treating simulated operation as field validation. The published dashboard
+continues to show the earlier illustrative reference.
 
 ## Dataset
 
@@ -86,6 +92,37 @@ Raw data and generated outputs are excluded from Git; cloning this repository do
 not download the dataset.
 
 ## Quick start
+
+### Open the client dashboard
+
+With the reference research outputs already present, build the dashboard without
+retraining models (the build reruns dispatch with illustrative Indian C&I inputs):
+
+```bash
+.venv/bin/python scripts/build_dashboard.py
+open dashboard/dist/index.html
+```
+
+`open` is the macOS launcher. On other platforms, open that file in your browser, or
+serve it with `python -m http.server 8765 --bind 127.0.0.1 --directory dashboard/dist`
+and visit `http://127.0.0.1:8765`.
+
+The six views cover battery evidence, forecasts, storage decisions, ten teaching
+lessons and a validation-pilot discussion. Start with **Guided walkthrough** to learn
+the calculations, or use **Print brief** for a client meeting. Notes and discussion
+checkboxes stay in the browser; they do not submit approval. The dashboard reads a
+verified snapshot, not a live battery or a newly fitted model. Regenerate the research
+outputs below before building on a fresh clone.
+
+The client dashboard targets Indian commercial and industrial storage, with costs
+in INR. [India scenario inputs](configs/india_ci.yaml) declare the illustrative
+tariff, export credit and replacement cost. Original EUR research results below are
+retained for reproducibility; the INR dashboard reruns the optimizer and does not
+convert currencies. The current power profile is a German residential proxy, so a
+site business case still requires Indian C&I interval data and the applicable tariff.
+
+See the [step-by-step project walkthrough](docs/project_walkthrough.md) for formulas,
+worked examples and the distinction between research evidence and field validation.
 
 Use Python 3.11 and `uv` for the reference environment. Dataset acquisition also uses
 `curl`. Run the following commands in a POSIX shell.
@@ -184,9 +221,14 @@ and hashed; malformed files are retained in the report with their errors.
 
 ### 4. Run checks
 
+The complete test suite exercises the optional research models and optimizer:
+
 ```bash
+uv sync --locked --extra dev --extra research
+export OMP_NUM_THREADS=1
 python -m pytest -q
 ruff check src scripts tests
+node dashboard/core.test.cjs
 ```
 
 Tests cover inspection, archive integrity, capacity extraction, causal features, fold
@@ -247,6 +289,32 @@ are replaced when rerunning a stage. No model fitting is required to rerun dispa
 Results are generated from local data and excluded from Git. The tracked
 [results summary](docs/results.md) records the reference run and its limitations.
 OPSD data attribution and all replay assumptions are in [methods](docs/methods.md).
+
+### Registered integration extensions
+
+The completed extension code and review PDFs are included in Git. Raw sources,
+processed tables, trained models, full ledgers and frozen run archives remain
+local generated artifacts. A fresh clone can run the synthetic software tests;
+it does not contain the artifacts needed to open the client dashboard or replay
+an already completed registered study.
+
+Start with the [integration plan](docs/dataset_integration_plan.md) and
+[requirement review](docs/integration_gate_review.md). The
+[v3 transfer comparison](docs/transfer_prefix_comparison.md),
+[calendar study](docs/calendar_source_audit.md),
+[Indian public-data benchmark](docs/india_public_data_audit.md) and
+[controller comparison](docs/india_controller_review.md) each document their
+own input and provenance gates. v2 remains closed by source defects; v3 is a
+separate availability-restricted experiment. These runners refuse completed
+output directories rather than overwrite them. Keep the frozen reference
+separate from a fresh reconstruction of the original pipeline above.
+
+Accepted transfer/controller runs require `OMP_NUM_THREADS=1` before Python
+starts, avoiding a reproduced macOS PyTorch/XGBoost native-library conflict.
+PDF builders additionally use ReportLab in a reporting environment; that optional
+package is not part of the locked scientific environment. The committed review
+PDFs can be read without installing it. Their underlying run artifacts are
+required for regeneration; PDF creation does not retrain models.
 
 ## Implemented modeling approach
 
@@ -316,6 +384,7 @@ recell/
 │   ├── interim/
 │   └── processed/
 ├── docs/                          # Inspection methods, findings, and phase status
+├── dashboard/                     # Client dashboard source; generated snapshot in dist/
 ├── notebooks/
 │   ├── 01_dataset_inspection.ipynb
 │   ├── 02_eda.ipynb
@@ -345,6 +414,18 @@ recell/
 ```
 
 ## Roadmap
+
+The next research extension is the
+[dataset integration and validation plan](docs/dataset_integration_plan.md):
+first-life transfer learning (phases 14-18), a separate calendar-aging study
+(phase 19), and Indian C&I validation (phase 20). Execution started on 2026-10-27:
+phase 14 and the phase 15 selective audit are complete; the original v2 source
+feature gate remains blocked by data defects.
+The [source audit](docs/transfer_source_audit.md) records verified measurements and
+remaining v2 gates. A separately registered [v3 prefix-transfer comparison](docs/transfer_prefix_comparison.md)
+has completed its data/smoke gates and six-fold/three-seed research comparison.
+Transfer gives a small primary improvement over the matched GRU; XGBoost retains
+the lowest observed mean error. No dashboard promotion or field savings claim follows.
 
 - [x] Phase 1: Repository scaffold and reproducible inspection environment.
 - [x] Phase 2: Download, verify, inspect, and inventory the real dataset.

@@ -1,0 +1,13 @@
+{
+  "pdf_sha256": "dce893cab1eed1c0ed19439151ebf5f7574369ff5e456b580aea7fba89a65b53",
+  "source": "outputs/transfer/ev_to_second_life_v3/comparison/review/primary_comparison.pdf",
+  "independent_review_sha256": "4c249abc5abbe9b2ffd5ca48884a230dbd4eb9be9938aa5ae073edc307f56b50",
+  "protocol_sha256": "1c7f031821378463e43e970eced0b4e69ac27e1ad44418ea5588d5c58ed83fe1",
+  "historical_recheck_sha256": "608a731ece87a98d3a6a189ec2fc553a4b6fc9829b394c608423072344381e70",
+  "qa": {
+    "pages": 1,
+    "render": "Poppler 100 dpi",
+    "text_checks": "primary metrics and limitation labels present",
+    "visual_review": "all pages inspected; no clipping or overlap"
+  }
+}

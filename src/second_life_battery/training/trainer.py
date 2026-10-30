@@ -2,6 +2,7 @@
 
 from copy import deepcopy
 from pathlib import Path
+from time import perf_counter
 
 import numpy as np
 import pandas as pd
@@ -11,6 +12,7 @@ from torch.nn.utils.rnn import pad_sequence
 from second_life_battery.models.gru import GRUForecaster
 from second_life_battery.models.physics_guided_gru import PhysicsGuidedGRU
 from second_life_battery.training.losses import physics_guided_loss
+from second_life_battery.training.transfer import initialize_encoder, validate_contract
 
 
 def tensors(samples, scaler, device: torch.device) -> tuple[torch.Tensor, ...]:
@@ -26,7 +28,16 @@ def tensors(samples, scaler, device: torch.device) -> tuple[torch.Tensor, ...]:
     )
 
 
-def train_gru(train, validation, scaler, config: dict, checkpoint: Path, name: str = "gru"):
+def train_gru(
+    train,
+    validation,
+    scaler,
+    config: dict,
+    checkpoint: Path,
+    name: str = "gru",
+    *,
+    parent_checkpoint: Path | None = None,
+):
     """Fit a point/quantile GRU; retain the best independent-validation checkpoint."""
     settings = config["training"]
     requested = settings["device"]
@@ -37,6 +48,15 @@ def train_gru(train, validation, scaler, config: dict, checkpoint: Path, name: s
     model = model_class(len(config["features"]), config["evaluation"]["horizon"], config["gru"]).to(
         device
     )
+    initialization = None
+    if "transfer" in config:
+        contract = validate_contract(config, config["transfer"]["stage"], name)
+        if {sample.cell_id for sample in train} != set(contract["gradient_cells"]) or {
+            sample.cell_id for sample in validation
+        } != {contract["validation_cell"]}:
+            raise ValueError("Actual samples differ from declared physical-cell roles")
+    if parent_checkpoint is not None:
+        initialization = initialize_encoder(model, parent_checkpoint, config, name)
     x, lengths, origins, target = tensors(train, scaler, device)
     vx, vl, vo, vy = tensors(validation, scaler, device)
     optimizer = torch.optim.Adam(
@@ -50,6 +70,7 @@ def train_gru(train, validation, scaler, config: dict, checkpoint: Path, name: s
     if name == "quantile_gru":
         loss_settings.update(lambda_monotonic=0, lambda_smooth=0)
     validation_settings = {**loss_settings, "lambda_monotonic": 0, "lambda_smooth": 0}
+    started = perf_counter()
     for epoch in range(settings["epochs"]):
         model.train()
         optimizer.zero_grad()
@@ -99,6 +120,9 @@ def train_gru(train, validation, scaler, config: dict, checkpoint: Path, name: s
             "config": config,
             "best_epoch": best_epoch,
             "best_validation_loss": best,
+            "model_name": name,
+            "initialization": initialization,
+            "optimization_seconds": perf_counter() - started,
         },
         checkpoint,
     )

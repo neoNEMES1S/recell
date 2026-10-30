@@ -1,0 +1,41 @@
+protocol_id: india_public_pv_scenario_v1
+registered_on: '2026-10-29'
+status: declared_conversion_assumptions; not_metered_PV_or_controller_validation
+purpose: Prepare a separately labelled counterfactual PV input for the registered
+  Delhi public-data benchmark. No forecasting, policy comparison, sizing optimization
+  or billing claim is performed.
+input: data/processed/india_ci/academic_load_resource_15min.csv
+input_sha256: 578e4860e3e2dc80a968409ccd83decfadbc3c2f7ed4f464782abe6e73f85b4f
+resource_provenance: outputs/india_ci/india_iblend_academic_v1/resource_provenance.json
+resource_provenance_sha256: d7f146b60f330dd00cf34594013ef479e3baea8fbdb284486d35b8020c9da9cb
+interval_minutes: 15
+source_resolution_minutes: 60
+model:
+  name: irradiance_linear_horizontal_reference_temperature
+  dc_nameplate_kw: 40.0
+  ac_nameplate_kw: 32.0
+  fixed_inverter_efficiency: 0.96
+  reference_irradiance_w_m2: 1000.0
+  assumed_pv_cell_temperature_c: 25.0
+  tilt_degrees: 0.0
+  formula: Pdc = Pdc_rated * GHI_mean / 1000; Pac = min(Pac_rated, eta * Pdc); Eac
+    = Pac * 0.25 h
+selection_basis: Round generic scenario nameplates fixed before converted PV totals,
+  controller outcomes or financial comparisons; no fitted/supplier/site sizing claim.
+limitations:
+- Regional hourly NASA resource uniformly distributed over quarters; no measured subhourly
+  PV or irradiance
+- Horizontal irradiance used as horizontal plane-of-array irradiance; no tilt, reflection
+  or spectral model
+- PV cell temperature fixed at reference 25 C, not equal to measured ambient T2M;
+  no thermal calibration
+- Constant inverter efficiency; no validated part-load, shading, soiling, degradation,
+  outages or standby consumption
+- No observed PV system, pack, tariff, export agreement or deployment recommendation
+  is inferred
+- Historical realized resource is an offline simulation input, not a weather forecast
+  available at a decision origin
+source_references:
+  linear_DC_reference: https://pvwatts.nrel.gov/downloads/pvwattsv5.pdf
+  scope: Only the reference-temperature linear irradiance relation is used. This is
+    not an implementation or validation of the complete PVWatts system model.

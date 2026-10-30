@@ -1,0 +1,30 @@
+data_protocol_id: india_iblend_academic_v1
+registered_on: '2026-10-27'
+status: Data window fixed before site-forecast fitting or dispatch comparison; experiment protocol pending tariff/PV audit.
+population: IIIT Delhi academic-building mains; institutional/commercial benchmark.
+source_doi: 10.6084/m9.figshare.6007637.v1
+timezone: Asia/Kolkata
+interval_minutes: 15
+selection_basis: Whole days inside the longest complete observed-data run; no model or dispatch performance used.
+start: '2014-09-17T00:00:00+05:30'
+end_exclusive: '2014-12-17T00:00:00+05:30'
+splits:
+  train:
+    start: '2014-09-17T00:00:00+05:30'
+    end_exclusive: '2014-11-16T00:00:00+05:30'
+  validation:
+    start: '2014-11-16T00:00:00+05:30'
+    end_exclusive: '2014-12-01T00:00:00+05:30'
+  test:
+    start: '2014-12-01T00:00:00+05:30'
+    end_exclusive: '2014-12-17T00:00:00+05:30'
+quality:
+  required_minutes_per_interval: 15
+  author_availability_flag: Academic == 1
+  missing: No zero filling, interpolation or partial-interval averaging.
+  energy: Mean of complete minute power samples / 1000 * 0.25 h; estimated interval kWh.
+boundaries:
+  solar: Matching historical resource and PV conversion still pending; no measured inverter generation.
+  tariff: Official category, units, dates and billing rules pending; not an observed customer bill.
+  battery: No new pack/BMS/temperature evidence supplied.
+  battery_health_training: Site-power records supply no SOH labels and never enter aging-model training.

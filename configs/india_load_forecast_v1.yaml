@@ -1,0 +1,52 @@
+protocol_id: india_load_forecast_v1
+registered_at: '2026-10-28T06:21:27+00:00'
+status: Fixed before load-forecast scoring or blend selection.
+question: How well do causal day-ahead seasonal load baselines forecast this public Indian institutional building?
+inputs:
+  data/processed/india_ci/academic_benchmark_load_15min.csv: 9981829b463e26d6f9fa30b7bd92d2ca343351489b7f181bae06b14771e517f8
+  outputs/india_ci/india_iblend_academic_v1/load_provenance.json: c1cddb4dada8b90b1ef44a6e6b120bbc302f53417ef80289671a0b8847f6f350
+  outputs/india_ci/india_iblend_academic_v1/data_protocol.yaml: 01b6a46a058653195286c76c076a6e530ae28506b05771bd46ef072b78d45a63
+population: One IIIT Delhi academic-building mains meter; not a factory, independent site, or Indian national sample.
+data_selection: Original 91-day registered window and chronological partitions unchanged. Descriptive data-quality findings were already known; forecast errors have not been scored.
+forecast:
+  timezone: Asia/Kolkata
+  interval_minutes: 15
+  origin: Local midnight; forecast the next 96 quarter-hour interval means.
+  available_data: Only intervals ending at or before the forecast origin. Assume zero reporting delay at the boundary; no practical ingestion latency is validated.
+  lag_days: [1, 7]
+  model: prediction = day_weight * previous_day_same_quarter + (1-day_weight) * previous_week_same_quarter
+  candidates:
+    weekly: 0.0
+    blend25: 0.25
+    blend50: 0.5
+    blend75: 0.75
+    previous_day: 1.0
+  fitting: No gradient fitting. Training partition supplies causal observed lag values, not future labels or weather.
+selection:
+  partition: validation
+  criterion: Lowest pooled quarter-hour RMSE over all 15 complete validation days.
+  tie_break: Smaller previous-day weight, then model name.
+  test_updates: Weight frozen before test scoring. Past observed test-day measurements may become lag inputs at subsequent midnight origins; test errors never update parameters.
+evaluation:
+  validation_days: 15
+  test_days: 16
+  primary: Pooled quarter-hour RMSE in kW of the validation-selected candidate over all 16 test days.
+  contrast: Selected minus weekly test RMSE; negative favors selected. Report all five arms without selecting from test results.
+  secondary:
+    - MAE and signed prediction-minus-observation bias in kW
+    - Daily RMSE, MAE and signed energy error in kWh
+    - Daily peak-magnitude error and absolute error in kW
+    - Absolute peak-time error in minutes, first chronological maximum for ties
+    - Number of days with underestimated peak magnitude
+  energy: Quarter-hour mean power multiplied by 0.25 h; not cumulative billed energy.
+  uncertainty: Descriptive paired circular block bootstrap over the 16 ordered test days; block length four days, four independently drawn starts per replicate, wrap at end.
+  bootstrap_block_days: 4
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 42
+  interval: 0.95
+  inference: One short seasonal window and dependent observations do not establish performance at a different site, season, or live controller.
+boundaries:
+  - No future measured demand, realized NASA weather or modeled PV enters forecast inputs.
+  - No imputation, clipping, resampling changes, extra dates or post-test model selection.
+  - No battery-health fit, first-life transfer gate change, tariff bill or storage-policy comparison.
+  - No measured PV, pack/BMS validation, savings, wear or deployment claim; do not promote to the client dashboard.

@@ -1,0 +1,10 @@
+review_basis: Complete original exports independently pass unchanged raw measurement
+  checks; original conflicting MAT files retained. Diagnostic-boundary checks remain
+  mandatory.
+report_sha256: a2897a873f3e3405204f3b6c2897231a58e8cb15ff4d5b392765e50af84cec99
+selection_sha256: fdfff04066d046cad39ba437bacb788102fabfcc9fda8e07b7b5e69960a81585
+batches:
+- cell_id: W8
+  number: 6
+- cell_id: W9
+  number: 6

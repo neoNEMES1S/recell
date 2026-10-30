@@ -1,5 +1,6 @@
 """Read the reviewed Stanford Channel exports without executing embedded code."""
 
+import re
 from pathlib import Path
 
 import numpy as np
@@ -23,6 +24,16 @@ COLUMNS = {
     "Aux_Temperature(¡æ)_1": "aux_temp_c",
 }
 REQUIRED = set(COLUMNS.values()) - {"aux_temp_c"}
+HEADER_NAMES = {re.sub(r"[\s_]", "", name): name for name in COLUMNS}
+
+
+def canonical_header(name):
+    """Normalize reviewed space/underscore spellings, preserving unit text."""
+    return HEADER_NAMES.get(re.sub(r"[\s_]", "", name)) if isinstance(name, str) else None
+
+
+def is_channel_sheet(name: str) -> bool:
+    return re.fullmatch(r"Channel_?\d+_\d+", name) is not None
 
 
 def read_channel(root: Path, record: dict, cache: Path) -> pd.DataFrame:
@@ -31,7 +42,7 @@ def read_channel(root: Path, record: dict, cache: Path) -> pd.DataFrame:
     if sha256_file(source) != record["sha256"]:
         raise ValueError(f"Source changed since inspection: {source}")
     cache.mkdir(parents=True, exist_ok=True)
-    cached = cache / f"channel-v1-{record['sha256']}.npz"
+    cached = cache / f"channel-v2-{record['sha256']}.npz"
     if cached.exists():
         with np.load(cached, allow_pickle=False) as arrays:
             frame = pd.DataFrame({name: arrays[name] for name in arrays.files})
@@ -43,7 +54,13 @@ def read_channel(root: Path, record: dict, cache: Path) -> pd.DataFrame:
         sheet.reset_dimensions()
         rows = sheet.values
         header = next(rows)
-        positions = {i: COLUMNS[name] for i, name in enumerate(header) if name in COLUMNS}
+        positions = {
+            i: COLUMNS[canonical_header(name)]
+            for i, name in enumerate(header)
+            if canonical_header(name) is not None
+        }
+        if len(positions) != len(set(positions.values())):
+            raise ValueError(f"Ambiguous equivalent measurement columns: {source}")
         if not REQUIRED.issubset(positions.values()):
             raise ValueError(f"Required fields absent: {source}")
         frame = pd.DataFrame(

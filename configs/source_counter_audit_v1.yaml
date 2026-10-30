@@ -1,0 +1,33 @@
+audit_id: source_counter_audit_v1
+registered_at: '2026-10-28T07:58:48.441436+00:00'
+purpose: Forensic agreement audit of an exploratory step-aware instrument-counter
+  candidate; no model training or source feature promotion
+known_before_registration:
+- G1 cycling 1 candidate scored in exploratory probe
+- W10 cycling 2 candidate scored but has no accepted dense-integral reference; excluded
+  from this clean-reference comparison
+raw_root: data/raw/stanford_ev_first_life
+reference_batches_sha256: c7728cc269cab9a097e3900dbff460e2114454f946981cdb8957570188f26c87
+candidate:
+  new_to_previous_ratio: 0.1
+  minimum_drop_ah: 0.0001
+definition: Candidate total = terminal counter minus initial counter plus previous
+  counter at each drop >1e-4 Ah to below 10 percent of its previous value, only when
+  Step_Index changes. Preserve other signed differences; report within-step decreases
+  and negative values. This is a heuristic under audit, not a validated reset definition.
+agreement_relative_tolerance: 0.001
+comparison: Both charge and discharge candidate totals versus the previously verified
+  dense-current integral for all 50 available clean MAT batches, including one previously
+  probed batch; 49 newly scored batches reported separately. Explicit raw replacements
+  are excluded.
+failure_policy: No threshold tuning or silent case deletion. Any discrepancy rejects
+  a global-equivalence claim. Agreement alone cannot authorize repair of invalid records.
+next_gate: Independently establish raw counter reset/timing semantics and valid native
+  diagnostic corridors before any recovery; a separately sealed feature-protocol amendment
+  would be required before fitting.
+boundaries:
+- No SOH labels, predictive errors or held-out target model outcomes enter this candidate
+  rule or audit
+- Do not change transfer protocol v2, dense-current outputs, cell folds, source eligibility
+  or historical results
+- Do not promote a candidate throughput merely because clean-reference totals agree

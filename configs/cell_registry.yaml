@@ -1,0 +1,166 @@
+schema_version: 1
+review_date: '2026-10-27'
+cell_model: LG Chem INR21700-M50T
+chemistry: NMC; graphite/silicon anode
+nominal_capacity_ah: 4.85
+nominal_capacity_basis: Pozzato et al. 2022 Table 1; distinct from the historical
+  5 Ah dispatch scenario reference
+first_life_mat_column_order_basis: Author data_analysis.m cell-selection table and
+  capacity_test.mat col_cell_label agree with README.xlsx.
+sources:
+  first_life_paper: https://pangea.stanford.edu/ERE/pdf/OnoriPDF/Journals/72.pdf
+  second_life_paper: https://pangea.stanford.edu/ERE/pdf/OnoriPDF/Journals/97.pdf
+  first_life_readme_sha256: 9fa6d6a43b5302f6d7c246f17600a98611cd15ca8b796c4ef8423b825e9f2880
+cells:
+- physical_cell_id: secl_m50t_W3
+  first_life_source_id: W3
+  first_life_mat_column_zero_based: 0
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: null
+  identity_evidence: Pozzato et al. 2022 Table 3; no corresponding second-life cell
+    in current release
+  transfer_v1_role: excluded_extra_source_cell
+  quality_note: First-life paper reports termination after impedance-related issues;
+    not automatically usable for transfer.
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 3
+- physical_cell_id: secl_m50t_W4
+  first_life_source_id: W4
+  first_life_mat_column_zero_based: 1
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: null
+  identity_evidence: Pozzato et al. 2022 Table 3; no corresponding second-life cell
+    in current release
+  transfer_v1_role: excluded_extra_source_cell
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 8
+- physical_cell_id: secl_m50t_W5
+  first_life_source_id: W5
+  first_life_mat_column_zero_based: 2
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: null
+  identity_evidence: Pozzato et al. 2022 Table 3; no corresponding second-life cell
+    in current release
+  transfer_v1_role: excluded_extra_source_cell
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 15
+- physical_cell_id: secl_m50t_W7
+  first_life_source_id: W7
+  first_life_mat_column_zero_based: 3
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: null
+  identity_evidence: Pozzato et al. 2022 Table 3; no corresponding second-life cell
+    in current release
+  transfer_v1_role: excluded_extra_source_cell
+  quality_note: First-life paper reports termination after impedance-related issues;
+    not automatically usable for transfer.
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 4
+- physical_cell_id: secl_m50t_W8
+  first_life_source_id: W8
+  first_life_mat_column_zero_based: 4
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: W8
+  second_life_protocol_id: grid_capacity_C20_with_pulses
+  identity_evidence: Moy et al. 2024 Table 2 links the named cell, first-life cycle
+    count and prior study; README identifies the same column.
+  first_life_cycles_at_transition: 347
+  transfer_v1_role: assigned_by_outer_fold
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 15
+  terminal_capacity_vs_published_ah: 5.35632060634228e-05
+- physical_cell_id: secl_m50t_W9
+  first_life_source_id: W9
+  first_life_mat_column_zero_based: 5
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: W9
+  second_life_protocol_id: grid_capacity_C20_with_pulses
+  identity_evidence: Moy et al. 2024 Table 2 links the named cell, first-life cycle
+    count and prior study; README identifies the same column.
+  first_life_cycles_at_transition: 341
+  transfer_v1_role: assigned_by_outer_fold
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 15
+  terminal_capacity_vs_published_ah: 4.45555670394171e-05
+- physical_cell_id: secl_m50t_W10
+  first_life_source_id: W10
+  first_life_mat_column_zero_based: 6
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: W10
+  second_life_protocol_id: grid_capacity_C20_with_pulses
+  identity_evidence: Moy et al. 2024 Table 2 links the named cell, first-life cycle
+    count and prior study; README identifies the same column.
+  first_life_cycles_at_transition: 350
+  transfer_v1_role: assigned_by_outer_fold
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 15
+  terminal_capacity_vs_published_ah: -7.0502883859902e-06
+- physical_cell_id: secl_m50t_G1
+  first_life_source_id: G1
+  first_life_mat_column_zero_based: 7
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: G1
+  second_life_protocol_id: grid_capacity_C20_with_pulses
+  identity_evidence: Moy et al. 2024 Table 2 links the named cell, first-life cycle
+    count and prior study; README identifies the same column.
+  first_life_cycles_at_transition: 212
+  transfer_v1_role: assigned_by_outer_fold
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 11
+  terminal_capacity_vs_published_ah: -0.0002108652144663381
+- physical_cell_id: secl_m50t_V4
+  first_life_source_id: V4
+  first_life_mat_column_zero_based: 8
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: V4
+  second_life_protocol_id: grid_capacity_C20_with_pulses
+  identity_evidence: Moy et al. 2024 Table 2 links the named cell, first-life cycle
+    count and prior study; README identifies the same column.
+  first_life_cycles_at_transition: 244
+  transfer_v1_role: assigned_by_outer_fold
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 11
+  terminal_capacity_vs_published_ah: 1.1673722995375613e-05
+- physical_cell_id: secl_m50t_V5
+  first_life_source_id: V5
+  first_life_mat_column_zero_based: 9
+  first_life_protocol_id: ev_capacity_C20_separate_HPPC
+  identity_status: publication_linkage_and_author_mat_column_verified
+  source_hash_status: Completed MAT snapshot pinned locally; see source_audit/audit_summary.json.
+    Upstream provider hashes unavailable.
+  second_life_source_id: V5
+  second_life_protocol_id: grid_capacity_C20_with_pulses
+  identity_evidence: Moy et al. 2024 Table 2 links the named cell, first-life cycle
+    count and prior study; README identifies the same column.
+  first_life_cycles_at_transition: 29
+  transfer_v1_role: assigned_by_outer_fold
+  numeric_source_sha256: cd22dce12d1021263414355ff094e174d7e104387e3d7bcf3e9077944f282f09
+  first_life_capacity_checkpoints: 4
+  terminal_capacity_vs_published_ah: -1.1855956580930638e-05

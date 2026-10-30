@@ -1,0 +1,68 @@
+# Registered before source-model fitting. Amend by a new protocol ID, not in place.
+protocol_id: ev_to_second_life_v1
+registered_on: '2026-10-27'
+status: registered_pending_source_audit
+hypothesis: First-life pretraining improves limited-history SOH forecasting for physically unseen second-life cells.
+reference:
+  manifest: outputs/transfer/reference_20261027/manifest.json
+  archive_sha256: f5ca605ac35af6dcceab16a52b914f8a3dc81d25c6933e029a3f299eb0fd0c0f
+target:
+  source: data/processed/checkpoints.csv
+  cells: [G1, V4, V5, W10, W8, W9]
+  horizon: 2
+  minimum_history: 3
+  seeds: [42, 43, 44]
+  inference_context_fractions: [0.10, 0.25, 0.50, 0.75, 1.00]
+  origins: Matched to the existing two-checkpoint sample construction; identical for every arm and context fraction.
+identity:
+  split_unit: physical_cell_id
+  outer_test: leave_one_target_battery_out
+  validation: next_target_cell_in_sorted_order_with_wraparound
+  source_gradient_cells: First-life histories of the four target gradient-training batteries only.
+  source_validation: First-life history of the designated validation battery; no gradient updates or scaler fitting.
+  target_validation: Second-life history of the designated validation battery; no gradient updates or scaler fitting.
+  test_first_life: Excluded from training, validation, preprocessing and selection.
+  additional_ev_cells: Excluded from v1; separately registered source-pool expansion only.
+features:
+  primary: [soh, elapsed_days, cumulative_ah_since_stage_start]
+  normalization: Each life stage uses its first accepted diagnostic capacity; no future maxima.
+  cumulative_exposure: Causal charge-plus-discharge Ah from cycling ending before diagnostic start, offset by the first accepted checkpoint's exposure.
+  stage_boundaries: Never concatenate histories across first/second-life boundaries.
+  scaler_fit: Unique second-life gradient-training checkpoints for the outer fold.
+  scaler_application: Same fitted transform for source pretraining, scratch training and fine-tuning.
+  unavailable_features: No zero-filled EV duty labels, no future first-life-end capacity, no unaudited pulse equivalence.
+  resistance: Deferred to a separately registered ablation after protocol compatibility is established.
+training:
+  architecture: Existing one-layer eight-unit ordered-quantile GRU with three common inputs.
+  source_fit: Existing 200-epoch cap and validation stopping rule.
+  transfer: GRU and representation weights only; reset prediction head, optimizer and scheduler.
+  target_fit: Same epoch cap, learning-rate settings and stopping rule for matched scratch and transfer arms.
+  hyperparameters: Saved reference settings in outputs/lobo/config.yaml unless a versioned amendment is registered before training.
+arms:
+  R0: Existing six-feature reference results; contextual only.
+  R1: Common-feature PGP-GRU from scratch.
+  R2: Common-feature PGP-GRU pretrained then fine-tuned.
+  R3: Common-feature quantile GRU from scratch; no physical penalties.
+  R4: Common-feature quantile GRU pretrained then fine-tuned; no physical penalties.
+  R5: Common-feature XGBoost with existing fixed settings.
+  R6: Persistence at identical origins.
+evaluation:
+  primary: Equal-cell mean SOH RMSE at context fraction 0.10 and horizon 1.
+  primary_contrast: R2 minus R1; negative favors transfer.
+  secondary: Other fixed fractions/horizons, MAE, R2, coverage, width, pinball loss and per-cell failures.
+  aggregation: Compute cell/seed metrics; average seeds within each cell, then cells equally.
+  uncertainty: Descriptive paired battery-level bootstrap; overlapping origins and seeds are not independent observations.
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 42
+  interval: 0.95
+  interpretation: Lower mean primary RMSE is directional evidence; an interval spanning zero is inconclusive, not proven superiority.
+gates_before_training:
+  - Verified published-source access, identity mapping and selected-file hashes.
+  - Complete causal core features and usable source training/validation histories for every declared fold.
+  - One reconstructed capacity and exposure trajectory; diagnostic and nominal-capacity conventions documented.
+  - Source-target timestamp, protocol and feature-range audit; no fabricated values.
+  - Cross-life leakage and normalization tests pass.
+promotion:
+  client_dashboard: No automatic replacement; require documented comparison and matching provenance.
+  wear_model: No additive calendar term without identifying mixed calendar/cycling loss.
+  india_ci: No field savings claim without independent site and pack evidence.

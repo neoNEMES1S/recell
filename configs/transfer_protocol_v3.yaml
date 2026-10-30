@@ -1,0 +1,162 @@
+protocol_id: ev_to_second_life_v3
+registered_on: '2026-10-27'
+status: registered_pending_availability_feature_gate
+hypothesis: First-life pretraining improves limited-history SOH forecasting for physically
+  unseen second-life cells.
+reference:
+  manifest: outputs/transfer/reference_20261027/manifest.json
+  archive_sha256: f5ca605ac35af6dcceab16a52b914f8a3dc81d25c6933e029a3f299eb0fd0c0f
+target:
+  source: data/processed/checkpoints.csv
+  cells:
+  - G1
+  - V4
+  - V5
+  - W10
+  - W8
+  - W9
+  horizon: 2
+  minimum_history: 3
+  seeds:
+  - 42
+  - 43
+  - 44
+  inference_context_fractions:
+  - 0.1
+  - 0.25
+  - 0.5
+  - 0.75
+  - 1.0
+  origins: Matched to the existing two-checkpoint sample construction; identical for
+    every arm and context fraction.
+identity:
+  split_unit: physical_cell_id
+  outer_test: leave_one_target_battery_out
+  validation: next_target_cell_in_sorted_order_with_wraparound
+  source_gradient_cells: Eligible first-life prefixes of the four target gradient-training
+    batteries; W10 has zero origins and is explicitly unavailable. No target validation/test
+    first life or extra cell enters gradient training.
+  source_validation: secl_m50t_W5 only, identical across all folds; one verified H1/min3
+    origin; no gradient updates or scaler fitting.
+  target_validation: Second-life history of the designated validation battery; no
+    gradient updates or scaler fitting.
+  test_first_life: Excluded from training, validation, preprocessing and selection.
+  additional_ev_cells: W5 is source-validation-only in this separately registered
+    expansion. W3 has no H1/min3 origin, W4 fails its second interval, W7 is acquisition-incomplete;
+    all are excluded from fits.
+features:
+  primary:
+  - soh
+  - elapsed_days
+  - cumulative_ah_since_stage_start
+  normalization: Each life stage uses its first accepted diagnostic capacity; no future
+    maxima.
+  cumulative_exposure: Causal cycling charge-plus-discharge Ah before diagnostic start;
+    use a validated dense-current integral for first-life data rather than the jitter-sensitive
+    legacy counter reset rule. Subtract exposure at the first stage checkpoint; audit
+    target consistency before fitting. In v3, only the verified past input prefix
+    requires exposure; a separate later measured SOH label does not require invented
+    future exposure.
+  stage_boundaries: Never concatenate histories across first/second-life boundaries.
+  scaler_fit: Unique second-life gradient-training checkpoints for the outer fold.
+  scaler_application: Same fitted transform for source pretraining, scratch training
+    and fine-tuning.
+  unavailable_features: No zero-filled EV duty labels, no future first-life-end capacity,
+    no unaudited pulse equivalence.
+  resistance: Deferred to a separately registered ablation after protocol compatibility
+    is established.
+training:
+  architecture: Existing one-layer eight-unit ordered-quantile GRU with three common
+    inputs; source H=1, target H=2.
+  source_fit: Existing 200-epoch cap and validation stopping rule.
+  transfer: Transfer GRU and representation only; explicitly reset the H1 source head
+    to an H2 target head, with a fresh optimizer and scheduler.
+  target_fit: Same epoch cap, learning-rate settings and stopping rule for matched
+    scratch and transfer arms.
+  hyperparameters: Saved reference settings in outputs/lobo/config.yaml unless a versioned
+    amendment is registered before training.
+arms:
+  R0: Existing six-feature reference results; contextual only.
+  R1: Common-feature PGP-GRU from scratch.
+  R2: Common-feature PGP-GRU pretrained then fine-tuned.
+  R3: Common-feature quantile GRU from scratch; no physical penalties.
+  R4: Common-feature quantile GRU pretrained then fine-tuned; no physical penalties.
+  R5: Common-feature XGBoost with existing fixed settings.
+  R6: Persistence at identical origins.
+evaluation:
+  primary: Equal-cell mean SOH RMSE at context fraction 0.10 and horizon 1.
+  primary_contrast: R2 minus R1; negative favors transfer.
+  secondary: Other fixed fractions/horizons, MAE, R2, coverage, width, pinball loss
+    and per-cell failures.
+  aggregation: Compute cell/seed metrics; average seeds within each cell, then cells
+    equally.
+  uncertainty: Descriptive paired battery-level bootstrap; overlapping origins and
+    seeds are not independent observations.
+  bootstrap_repetitions: 10000
+  bootstrap_seed: 42
+  interval: 0.95
+  interpretation: Lower mean primary RMSE is directional evidence; an interval spanning
+    zero is inconclusive, not proven superiority.
+  source_spacing: Report days for every source target. Report future Ah spacing only
+    when both endpoint exposures are verified; otherwise retain unavailable and count
+    it explicitly.
+gates_before_training:
+- Verify registered availability-audit hashes and every referenced raw/input/code
+  artifact; preserve the failed v2 audit.
+- Build separate feature-prefix and capacity-label tables with the registered origin
+  counts; reject missing/duplicate/noncausal labels or changed physical identities.
+- Prove every fold excludes target test and validation first life from source gradients;
+  W5 is source-validation-only; target roles and origins equal the frozen benchmark.
+- Fit the shared transform only on unique target gradient-training checkpoints; report
+  source ranges and measured/unavailable horizon spacing.
+- Verify sealed v3 registration, target derivation and historical input hashes; pass
+  leakage and initialization tests.
+- A successful one-fold/seed smoke run is required before the full comparison matrix.
+promotion:
+  client_dashboard: No automatic replacement; require documented comparison and matching
+    provenance.
+  wear_model: No additive calendar term without identifying mixed calendar/cycling
+    loss.
+  india_ci: No field savings claim without independent site and pack evidence.
+amends_protocol: ev_to_second_life_v2
+amendment_reason: No scientific source or transfer fits have occurred. The full-history
+  v2 feature gate failed. Verified causal prefixes supply 8/8/1/0/1/1 H1 origins for
+  G1/V4/V5/W10/W8/W9. W5 supplies one independent source-validation origin. Register
+  the availability-restricted source-pool expansion before fits; preserve v2 as blocked
+  and retain all target folds/origins.
+amended_on: '2026-10-28'
+source:
+  horizon: 1
+  minimum_history: 3
+  reason: Separate source validation permits evaluation of all six unchanged target
+    folds without accepting failed clocks or fabricating future exposure.
+  limitation: W5 supplies one validation origin in every source fit. Source training
+    has only 3 to 18 origins across 3 or 4 physical cells per fold. Availability is
+    not selected using forecast errors.
+  history: Longest contiguous verified feature prefix from diagnostic 1; stop before
+    the first missing or rejected cycling interval.
+  labels: Measured subsequent capacity labels are separate from feature histories.
+    Do not supply unknown future exposure/age to inputs; normalize to the same observed
+    first capacity.
+  eligible_gradient_physical_cells:
+  - secl_m50t_G1
+  - secl_m50t_V4
+  - secl_m50t_V5
+  - secl_m50t_W8
+  - secl_m50t_W9
+  validation_physical_cell: secl_m50t_W5
+  registered_origin_counts:
+    secl_m50t_G1: 8
+    secl_m50t_V4: 8
+    secl_m50t_V5: 1
+    secl_m50t_W8: 1
+    secl_m50t_W9: 1
+    secl_m50t_W5: 1
+data:
+  source_features: data/processed/transfer/ev_to_second_life_v3/source_features.csv
+  source_labels: data/processed/transfer/ev_to_second_life_v3/source_labels.csv
+  target: data/processed/transfer/target_checkpoints.csv
+  provenance: data/processed/transfer/ev_to_second_life_v3/feature_provenance.json
+availability_evidence:
+  outputs/transfer/source_prefix_availability_v1/audit_20261028T155322223292Z/audit.json: deb17f21512879abd4e2da847efaa9c1072e2db7bf2235981340e30aa2f465e4
+  outputs/transfer/extra_source_audit_v1/runs/audit_20261028T155412391742Z/audit.json: 0439aac38b4e808e64356254f43f674d8b7807f950335780dfd0eeb9a819b94a

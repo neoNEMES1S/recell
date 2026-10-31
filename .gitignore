@@ -19,5 +19,6 @@ outputs/**
 !outputs/**/.gitkeep
 dashboard/dist/
 .superdesign/tmp/
+.superdesign/init/
 dashboard/.openai/
 tmp/

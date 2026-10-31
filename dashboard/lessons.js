@@ -76,6 +76,38 @@ window.RECELL_LESSONS = [
     caution: "The objective uses λ-weighted wear; the comparison total always reports electricity + unweighted wear. Tariffs and wear are assumed, load/solar are perfectly known, and battery health stays fixed during the replay."
   },
   {
+    title: "Learn from an earlier life without leaking the test", label: "First-life transfer", destination: "research/transfer",
+    summary: "Earlier history can initialize a model while each test battery stays physically unseen.",
+    body: `<p>The v3 comparison uses past SOH, elapsed life-stage days and verified stage-relative Ah. First and second lives never become one uninterrupted sequence. Permitted first-life examples pretrain the encoder; fine-tuning resets the head and optimizer.</p><p>The held-out target and target-validation batteries supply no source gradients. W5 supplies independent source validation only. Future labels never fill missing exposure inputs.</p>`,
+    formula: "x[j] = [past SOH[j], stage days[j], stage-relative Ah[j]]\nTransfer contrast = matched transfer RMSE − matched scratch RMSE",
+    example: "At 10% context and the next checkpoint: scratch PGP-GRU 0.2972 SOH pp, transfer 0.2916 pp, XGBoost 0.2534 pp. The transfer improvement is small, and G1/W8 worsen.",
+    caution: "Full-history v2 remains failed. v3 is a separate verified-prefix amendment, with only 3–18 source examples per fold and six familiar target batteries."
+  },
+  {
+    title: "Keep calendar aging separate until calibrated", label: "Calendar-aging research", destination: "research/calendar",
+    summary: "A different cell's storage curve is not automatically our pack's wear law.",
+    body: `<p>The separate study compares constant health, age-only loss and age/temperature/SOC-conditioned loss across eight held-out cell types and 218 longitudinal cells. No LG M50T is present.</p><p>Storage experiments include periodic diagnostic cycling. Their calendar and diagnostic losses are not separately identified. Our existing throughput proxy already reflects mixed aging.</p>`,
+    formula: "SOH = diagnostic capacity / first accepted capacity\nFinal error = mean types(mean cells(cell RMSE))\nIdentify the represented losses before combining aging terms",
+    example: "Age-only RMSE is 12.16 pp and conditioned-model RMSE is 7.29 pp. However, 44 negative SOH predictions and a worst absolute error of 73.71 pp remain in the metrics.",
+    caution: "Do not clip away the failures or add this curve to mixed-aging wear. M50T calibration, physical probe mapping, storage conditions and intended-use clarification remain open."
+  },
+  {
+    title: "Separate a meter from a solar scenario", label: "Indian demand and modeled PV", destination: "research/india",
+    summary: "Measured demand, modeled PV and day-ahead forecasts supply different evidence.",
+    body: `<p>Delhi demand uses 60 training, 15 validation and 16 test days. A 50/50 daily/weekly blend is chosen on validation only and frozen before test scoring.</p><p>NASA hourly irradiance supplies a horizontal PV scenario, not inverter measurements. Quarter-hour values retain the 60-minute resource label. The controller forecasts PV by repeating previous-day modeled output, not by using a live weather service.</p>`,
+    formula: "Load forecast = 0.5 × previous day + 0.5 × previous week\nModeled PV kW = min(32, 40 × 0.96 × GHImean / 1000)\nQuarter energy = mean kW × 0.25 h",
+    example: "Selected load-blend RMSE is 2.150 kW versus 2.846 kW for the weekly baseline. On 7 December it predicts nearly the right peak magnitude but puts the peak 570 minutes too early.",
+    caution: "Lower RMSE does not establish billed savings. Actual PV, meter topology, reporting delay, demand charges and kVAh/PF remain unverified. Ambient weather is not battery temperature."
+  },
+  {
+    title: "Test the decision as well as the forecast", label: "Common controller objective", destination: "research/controller",
+    summary: "Forecast accuracy and operating value require separate matched comparisons.",
+    body: `<p>The quarter-hour study compares six policies with common physical capacity and operating limits within each hypothetical case. Only four target-training cells calibrate wear. Current-interval mean feedback is ideal offline recourse, not live hardware.</p><p>A common wear proxy evaluates all policies. A terminal inventory adjustment accounts for unequal final stored energy. SOC carries continuously across the 16-day period.</p>`,
+    formula: "E[t+1] = E[t] + (η × charge[t] − discharge[t]/η) × 0.25 h\nReference score = grid charge + common wear − v × (Efinal − Einitial)\nv = ₹10 × √0.90 per internal kWh",
+    example: "Transfer minus scratch: energy −₹88.16, common wear +₹93.58, inventory +₹11.82. The unrounded total is +₹17.25 per 16 days: less favorable under this proxy despite slightly better health forecasts.",
+    caution: "The ranking reverses when the unvalidated evaluation-wear coefficient changes. These are scenario scores, not measured wear or customer bills. The no-storage policy has the lowest observed mean score in this particular scenario."
+  },
+  {
     title: "Turn findings into a pilot agreement", label: "The approval conversation", destination: "pilot",
     summary: "Ask the client to approve collecting the evidence needed for deployment—not to accept a claim that deployment is already proven.",
     body: `<p>Agree the operational site, representative batteries, measurement plan and baseline controller. Set acceptance criteria before evaluating new outcomes. Check forecasting error, uncertainty coverage and width, constraint compliance and measured operating costs.</p><p>The reference result favors XGBoost on average forecast error. PGP-GRU’s probabilistic forecasts are useful to investigate, but we should not hide the stronger baseline. The pilot should test whether better predictions or conservative assumptions actually improve operation.</p>`,

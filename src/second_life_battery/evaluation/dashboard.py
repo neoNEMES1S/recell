@@ -231,18 +231,39 @@ def build_payload(root: Path) -> dict:
     return payload
 
 
-def build_dashboard(root: Path, output: Path) -> None:
+def build_dashboard(root: Path, output: Path, *, reference_snapshot: Path | None = None) -> None:
     """Build a static dashboard usable offline or behind a private web host."""
-    payload = build_payload(root)
+    from second_life_battery.evaluation.research_dashboard import REPORTS, build_research_payload
+
+    if reference_snapshot is None:
+        payload = build_payload(root)
+    else:
+        verify_provenance(root)
+        text = reference_snapshot.read_text()
+        if not text.startswith("window.RECELL_DATA="):
+            raise ValueError("Reference snapshot is not a ReCell data export")
+        payload = json.loads(text.removeprefix("window.RECELL_DATA=").strip().removesuffix(";"))
+        if payload["schema_version"] != 1 or payload["market"]["currency"] != "INR":
+            raise ValueError("Expected the preserved original INR reference snapshot")
+        for source in payload["sources"]:
+            if sha256_file(root / source["path"]) != source["sha256"]:
+                raise ValueError(f"Original dashboard input changed: {source['path']}")
+    payload["reference_generated_at"] = payload["generated_at"]
+    payload["extensions"] = build_research_payload(root)
+    payload["generated_at"] = datetime.now(timezone.utc).isoformat()
+    payload["schema_version"] = 2
     content = json.dumps(payload, allow_nan=False, separators=(",", ":"))
     # Escape script terminators even when an artifact contains unexpected source text.
     content = content.replace("<", "\\u003c").replace("\u2028", "\\u2028")
-    assets = ["index.html", "styles.css", "core.js", "app.js", "lessons.js"]
+    assets = ["index.html", "styles.css", "core.js", "app.js", "lessons.js", "research.js"]
     for name in assets:
         if not (root / "dashboard" / name).is_file():
             raise FileNotFoundError(f"Missing dashboard asset: {name}")
     output.mkdir(parents=True, exist_ok=True)
     for name in assets:
         shutil.copyfile(root / "dashboard" / name, output / name)
+    (output / "reports").mkdir(exist_ok=True)
+    for name in REPORTS.values():
+        shutil.copyfile(root / "output/pdf" / name, output / "reports" / name)
     (output / "data.js").write_text(f"window.RECELL_DATA={content};\n", encoding="utf-8")
     print(f"Built dashboard: {output / 'index.html'}")

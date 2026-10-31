@@ -3,7 +3,9 @@
 30 October 2026. The registered offline comparison is complete. Its central
 finding is that slightly lower SOH forecast error did not improve the chosen
 scenario objective. **No field savings, physical wear reduction, investment
-case or deployment readiness is established.** The published dashboard is unchanged.
+case or deployment readiness is established.** The 31 October user-requested
+dashboard integration exposes this completed study as a separate research view,
+while retaining the original reference data. It is not operational model promotion.
 
 ## What was compared
 

@@ -22,7 +22,7 @@ have been replaced by explicitly reviewed complete raw reconstructions; both als
 pass their diagnostic-date corridors. The complete audit accepts 52 cycling batches
 and rejects 13, including mixed V5 exports and time reversals/gaps. The failures
 prevent feature-dataset promotion and training. Acquisition is complete; the
-v2 scientific feature gate has failed. The full software suite passes 216 tests.
+v2 scientific feature gate has failed. The full software suite passes 222 tests.
 
 The extra-cell availability audit acquired 28/30 selected inputs and verified
 11 additional capacity diagnostics and four cycling batches; W4 cycling 2 failed
@@ -82,7 +82,12 @@ INR17.25 per 16-day scenario, descriptive day-block interval [INR0.84, INR32.90]
 The ranking reverses when the unvalidated evaluation-wear coefficient changes.
 This completes a conditional public simulation, not the phase-20 field gate.
 The [gate review](integration_gate_review.md) separates completed evidence from
-the measurements and calibration still required. The published dashboard is unchanged.
+the measurements and calibration still required. On 31 October, the user requested
+integration of the completed studies into the dashboard as separate research views.
+All four are now available in the exporter/UI with source checks, report links,
+context/day/policy selectors and fourteen learning lessons. The original reference
+data are retained exactly, with its previous dashboard preserved separately.
+This is research visibility, not operational candidate promotion or field validation.
 
 A [separate electrical-semantics audit](india_electrical_semantics.md) quantifies
 the apparent-energy gap across the fixed load window. A Coimbatore grid/PV/battery
@@ -143,7 +148,7 @@ default v2 reporter still refuses the absent comparison. No model is promoted.
 
 ## Validation and provenance
 
-The original reference passed 41 tests. The extended suite now passes 216 tests;
+The original reference passed 41 tests. The extended suite now passes 222 tests;
 `ruff check src scripts tests` passes.
 Coverage includes archive integrity, conflicting identities, capacity integration,
 counter resets, causal SOH, training/test separation, future-feature exclusion, metrics,

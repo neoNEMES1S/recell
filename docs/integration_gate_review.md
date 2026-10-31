@@ -9,7 +9,9 @@ for their declared questions; they do not waive calendar-application or site gat
 
 Proceed to a bounded data-access and calibration pilot. Do not present this as
 approval for autonomous operation, a pack purchase or guaranteed savings.
-No candidate model, controller or latest study is promoted to the published dashboard.
+No candidate model or controller is promoted for operation. The user-requested
+31 October dashboard integration displays the completed studies as separate
+research views, with the original reference retained and validation limits visible.
 An actual site's success criteria must be agreed and registered before its evaluation;
 this review invents no commercial acceptance threshold from already observed results.
 
@@ -21,7 +23,7 @@ run manifests and independently checked ledgers are the underlying evidence.
 | Plan requirement | Evidence inspected | Status / interpretation |
 | --- | --- | --- |
 | 14: preserve reference inputs, results, code and working-tree context | `outputs/transfer/reference_20261027/{manifest.json,reference.tar.gz}`; manifest has 610 files, Git revision/status and archived computational source | Complete reference freeze. The notebook entry is explanatory text, not a notebook hash manifest. |
-| 14: historical processed/results/dashboard unchanged | All 539 manifest entries under `data/processed/`, `outputs/`, `dashboard/`; archive SHA-256 retained | Pass for these frozen paths; does not claim all current source is identical to the archived source. |
+| 14: historical processed/results/dashboard preservation | The 30 October review verified all 539 frozen paths; the immutable reference archive remains. The 31 October user-requested UI update preserves the old dashboard under `outputs/dashboard/reference_20261023/` and retains all original reference payload values | Historical numerical evidence retained; current frontend assets intentionally change. Do not claim that the updated frontend still matches its historical asset hashes. |
 | 14: preregister primary/secondary endpoints, folds, seeds, context and target origins | `configs/transfer_protocol_v2.yaml`; separate sealed `configs/transfer_protocol_v3.yaml`; registrations under the corresponding output roots | Complete registration. v3 explicitly discloses availability-based amendment; it is not v2 completion. |
 | 15: selective source acquisition, units/protocol/sign/clock/duplicate audit | `docs/transfer_source_audit.md`; `outputs/transfer/source_audit/`; 266 selected inputs plus 32 restart endpoints verified | Selective audit complete; 71 diagnostics pass, 52 cycling batches pass and 13 fail. No claim that the full raw release is acquired. |
 | 15: physical identities, chemistry and nominal conventions | `configs/cell_registry.yaml`; publication mapping and protocol audit | Six linked M50T identities preserved across life stages; 4.85 Ah source nominal distinguished from historical 5 Ah scenario. |
@@ -40,7 +42,7 @@ run manifests and independently checked ledgers are the underlying evidence.
 | 20: applicable tariff, ToD, demand, export and actual bill | `docs/india_electrical_semantics.md`; pinned historical DERC order and supply-code review | Open. No customer category/contract, applicable billing-cycle evidence, direct kVAh counter or bill reconciliation. INR10/kWh is illustrative; zero export is an assumed controller constraint. |
 | 20: pack specification/quotation, BMS/SOC/temperature and constraints | Declared generic 40 kWh/20 kW pack in controller protocol | Open. No site pack or supplier quotation, measured efficiency/usable capacity, probe assignment or verified operating limits. Lab-cell SOH is a hypothetical scenario input, not plant calibration. |
 | 20: supervised closed-loop operation and bounded pilot decision | Offline recourse replay only | Open. No live actuation, operator trial or measured aging/savings. Backup/outage requirements require a separate site specification. |
-| 20: conditional dashboard release and mathematical review | Historical dashboard hashes retained; controller review and mathematical supplement | Candidate release held. New results remain separately identified; current dashboard still uses its disclosed proxy. Re-export only after model/input provenance, selection, site readiness and visible claim limits satisfy the release gate. |
+| 20: conditional dashboard release and mathematical review | User-requested research views include transfer, calendar, Indian demand/modeled PV and controller results, unchanged review PDFs and checked source/review links. Original proxy demonstration remains separately labelled | Research review is available; operational candidate promotion still requires site, billing, pack and supervised field evidence. Displaying the studies does not close those gates. |
 
 The independent controller comparison's transfer-minus-scratch score is
 **+INR17.25** per 16-day scenario, descriptive interval [INR0.84, INR32.90].

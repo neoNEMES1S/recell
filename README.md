@@ -49,8 +49,8 @@ Degradation-Aware Optimization of Second-Life EV Batteries for Solar Energy Stor
 The current stage runs on CPU. See the [phase report](docs/phase_status.md) for
 completed work, validation, assumptions, and remaining scientific limitations.
 The [integration gate review](docs/integration_gate_review.md) tracks phases 14-20
-without treating simulated operation as field validation. The published dashboard
-continues to show the earlier illustrative reference.
+without treating simulated operation as field validation. The dashboard now includes
+completed research extensions alongside the separately labelled original reference.
 
 ## Dataset
 
@@ -107,8 +107,9 @@ open dashboard/dist/index.html
 serve it with `python -m http.server 8765 --bind 127.0.0.1 --directory dashboard/dist`
 and visit `http://127.0.0.1:8765`.
 
-The six views cover battery evidence, forecasts, storage decisions, ten teaching
-lessons and a validation-pilot discussion. Start with **Guided walkthrough** to learn
+The seven views cover battery evidence, reference forecasts/dispatch, four research
+extension tabs, fourteen teaching lessons and a validation-pilot discussion.
+Start with **Guided walkthrough** to learn
 the calculations, or use **Print brief** for a client meeting. Notes and discussion
 checkboxes stay in the browser; they do not submit approval. The dashboard reads a
 verified snapshot, not a live battery or a newly fitted model. Regenerate the research

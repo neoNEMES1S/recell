@@ -24,6 +24,13 @@ of INR17.25 in its fixed 16-day scenario. It does not establish measured wear,
 bills or field savings. The [requirement-by-requirement gate review](integration_gate_review.md)
 records the remaining phase-19 application and phase-20 field/release requirements.
 
+Planning addendum, 5 November 2026: the [proposal alignment plan](proposal_alignment_plan.md)
+adds phases 21-28 for the dynamic model, Simscape, DGX, BMS and defined SOL/life
+requirements from the supplied objectives. It includes dependencies, numerical
+acceptance planning and the existing proposed 2026-27 schedule. All new phases
+remain planned; this does not resume the paused phases 14-20 goal, relax its data
+gates or imply that the proposal requirements have already been implemented.
+
 ## 1. Research questions and scope
 
 **Primary question:** Does first-life EV aging pretraining improve prediction of

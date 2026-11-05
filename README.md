@@ -30,6 +30,11 @@ The project targets six connected tasks:
 Full research title: *Physics-Guided Probabilistic Health Forecasting and
 Degradation-Aware Optimization of Second-Life EV Batteries for Solar Energy Storage*.
 
+The [proposal alignment plan](docs/proposal_alignment_plan.md) adds the missing
+dynamic battery model, Simscape validation, DGX optimization, BMS integration and
+defined SOL/life validation as planned phases 21-28. These are future deliverables;
+the current SOH research does not complete those proposal requirements.
+
 ## What works today
 
 | Component | Status |
@@ -415,6 +420,13 @@ recell/
 ```
 
 ## Roadmap
+
+The [proposal alignment and missing-work plan](docs/proposal_alignment_plan.md)
+extends this roadmap with phases 21-28, objective-to-evidence mapping, data/access
+dependencies, mathematical model scope, acceptance checks and the existing proposed
+2026-27 schedule. All eight new phases are planned; the evidence-dependent
+phases 14-20 goal remains paused. SOL's definition and Simscape/DGX access are
+unconfirmed. No new model, runtime integration or hardware validation is claimed.
 
 The next research extension is the
 [dataset integration and validation plan](docs/dataset_integration_plan.md):

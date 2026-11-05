@@ -4,6 +4,30 @@ The documented 13-phase research prototype has been implemented and its referenc
 artifacts checked on 2026-10-15. This tracks software and experiment completion;
 scientific limitations remain explicit in [methods](methods.md) and [results](results.md).
 
+## Proposal alignment added on 5 November 2026
+
+The [missing-work plan](proposal_alignment_plan.md) adds eight **planned** phases
+without changing completed experiments or the status of phases 14-20. The latter
+evidence-dependent goal remains paused; planning does not resume it. Phase 21 has
+a draft plan, but its definitions, resources and acceptance criteria are not agreed.
+
+| New phase | Planned deliverable | Current status |
+| --- | --- | --- |
+| 21 | Proposal scope, SOH/SOL definitions, data/access review and preregistered criteria | Planned; SOL and Simscape/DGX access unconfirmed |
+| 22 | Identified dynamic equivalent-circuit battery model and baseline comparison | Planned; dynamic-waveform/OCV audit needed |
+| 23 | Runnable calibrated Simscape model and measured held-out validation | Planned; software access and phase 22 needed |
+| 24 | AI tuning/selection, health-to-model coupling and actual DGX run evidence | Planned; no DGX experiments completed |
+| 25 | Real BMS mapping, causal shadow-inference replay and latency/quality report | Planned; BMS records/reference labels needed |
+| 26 | Defined SOL model; conditional RUL and censoring-aware evaluation | Planned; target and qualifying life evidence needed |
+| 27 | Independent combined-model and robustness validation | Planned; independent compatible cohort needed |
+| 28 | Proposal evidence review, reproducible handoff and verified dashboard/PDF additions | Planned; requires preceding evidence |
+
+The proposed Gantt's November 2026-November 2027 gates are mapped in that plan;
+they are conditional dates, not recorded attainment. No Simscape/DGX/BMS/SOL
+result or thermal-runaway capability has been implemented by this planning update.
+
+## Existing research extension status
+
 The proposed next extension is documented in the
 [dataset integration and validation plan](dataset_integration_plan.md), dated
 2026-10-27. Phases 14-18 cover first-life transfer learning, phase 19 covers a

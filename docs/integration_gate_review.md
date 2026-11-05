@@ -2,8 +2,15 @@
 
 Review date: 30 October 2026. Governing scope:
 [dataset integration plan, phases 14-20](dataset_integration_plan.md).
-The active goal is **not complete**. Completed research comparisons are evidence
-for their declared questions; they do not waive calendar-application or site gates.
+The evidence-dependent goal is **paused and not complete**. Completed research
+comparisons are evidence for their declared questions; they do not waive
+calendar-application or site gates.
+
+The [5 November proposal alignment plan](proposal_alignment_plan.md) adds planned
+phases 21-28 for missing Simscape/dynamic-model, DGX, BMS and defined SOL/life
+requirements. These are separate proposal deliverables; they neither reopen failed
+source gates nor close the calendar/site requirements reviewed here. No execution
+goal is resumed by this planning addendum.
 
 ## Decision supported by current evidence
 

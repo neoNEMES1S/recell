@@ -32,8 +32,10 @@ Degradation-Aware Optimization of Second-Life EV Batteries for Solar Energy Stor
 
 The [proposal alignment plan](docs/proposal_alignment_plan.md) adds the missing
 dynamic battery model, Simscape validation, DGX optimization, BMS integration and
-defined SOL/life validation as planned phases 21-28. These are future deliverables;
-the current SOH research does not complete those proposal requirements.
+defined SOL/life validation as planned phases 21-28. The
+[Codex implementation handoff](docs/codex_implementation_plan.md) defines the fastest
+dependency-based execution order, source changes, tests and completion gates.
+These are future deliverables; the current research does not complete those requirements.
 
 ## What works today
 
@@ -423,8 +425,10 @@ recell/
 
 The [proposal alignment and missing-work plan](docs/proposal_alignment_plan.md)
 extends this roadmap with phases 21-28, objective-to-evidence mapping, data/access
-dependencies, mathematical model scope, acceptance checks and the existing proposed
-2026-27 schedule. All eight new phases are planned; the evidence-dependent
+dependencies, mathematical model scope and acceptance checks. The
+[Codex implementation plan](docs/codex_implementation_plan.md) supersedes the calendar
+schedule with packages C00-C11: finish eligible local branches while external
+requirements wait. All eight new phases are planned; the evidence-dependent
 phases 14-20 goal remains paused. SOL's definition and Simscape/DGX access are
 unconfirmed. No new model, runtime integration or hardware validation is claimed.
 

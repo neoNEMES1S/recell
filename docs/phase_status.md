@@ -22,9 +22,12 @@ a draft plan, but its definitions, resources and acceptance criteria are not agr
 | 27 | Independent combined-model and robustness validation | Planned; independent compatible cohort needed |
 | 28 | Proposal evidence review, reproducible handoff and verified dashboard/PDF additions | Planned; requires preceding evidence |
 
-The proposed Gantt's November 2026-November 2027 gates are mapped in that plan;
-they are conditional dates, not recorded attainment. No Simscape/DGX/BMS/SOL
-result or thermal-runaway capability has been implemented by this planning update.
+The user superseded the proposed calendar timeline with earliest feasible
+completion. The [Codex implementation plan](codex_implementation_plan.md) now governs
+execution order through C00-C11, concrete file changes, tests and evidence gates.
+Independent local work continues while Simscape/DGX/data requirements wait; dates
+do not govern progression. All packages remain planned. No Simscape/DGX/BMS/SOL
+result or thermal-runaway capability has been implemented by these planning updates.
 
 ## Existing research extension status
 

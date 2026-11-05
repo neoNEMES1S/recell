@@ -12,6 +12,11 @@ requirements. These are separate proposal deliverables; they neither reopen fail
 source gates nor close the calendar/site requirements reviewed here. No execution
 goal is resumed by this planning addendum.
 
+The subsequent [Codex implementation handoff](codex_implementation_plan.md) replaces
+calendar scheduling with earliest feasible execution. Independent code, audit and
+interface packages can finish while external gates wait; their software completion
+does not waive measured validation, actual Simscape/DGX or real BMS evidence.
+
 ## Decision supported by current evidence
 
 Proceed to a bounded data-access and calibration pilot. Do not present this as

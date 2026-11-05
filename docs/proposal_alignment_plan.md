@@ -6,6 +6,11 @@ inclusion of the missing proposal requirements. New phases are **planned, not
 implemented**. The evidence-dependent phases 14-20 goal remains paused until the
 user resumes it. This document creates no active execution goal or new experiment.
 
+Execution-policy update: the user has superseded the calendar timeline and wants
+completion as soon as dependencies permit. The [Codex implementation plan](codex_implementation_plan.md)
+is the governing execution handoff: packages C00-C11 define source changes, tests,
+artifacts, dependencies and the instruction for Codex. No Gantt dates govern work.
+
 ## Objective-to-deliverable map
 
 The supplied image's right edge is cropped. O1/O2 summarize the visible objectives;
@@ -33,15 +38,18 @@ electrical/thermal state model. XGBoost remains a required strong SOH baseline.
 | 21 | Define proposal scope, SOH/SOL, data contract, baselines and numerical acceptance criteria; freeze new protocols | Full wording, intended application, data and access review | Definitions, physical-cell/site and parameter-identification splits, metrics and thresholds agreed before tuning. Draft plan only; definitions/access unconfirmed. |
 | 22 | Formulate and identify a dynamic equivalent-circuit cell model; parameter tables and baseline report | 21; eligible current/voltage/pulse/rest/OCV and capacity data | Identifiable finite parameters, sign/unit checks and held-out dynamic-voltage comparison. Not implemented. |
 | 23 | Implement/calibrate in Simscape; model project, parameters and repeatable validation harness | 22; confirmed MATLAB/Simulink/Simscape access and required products | Declared release runs, solver/conservation checks and held-out measured cases meet phase-21 criteria. Not implemented. |
-| 24 | Tune/select AI, connect health predictions to the dynamic model, and execute on DGX | 21; stable 22-23 interfaces; eligible train/validation data and DGX access | Full trial ledger, validation-only selection, frozen held-out scoring, uncertainty and CPU/DGX resource comparison. Preparation may overlap 22-23; final selection follows 23. Not implemented. |
-| 25 | Integrate real BMS records; adapter, signal dictionary, shadow-inference replay and latency report | 21 and 24; BMS exports/protocol, sensor map and reference tests | Causal data-to-prediction replay, numerical parity, timing and explicit unavailable/fault outputs. No control actuation in this package. Not implemented. |
-| 26 | Implement the defined SOL target; if it means remaining life, add censoring-aware RUL forecasting | 21 definition; 24-25 interfaces; adequate longitudinal/end-of-life evidence | Target-specific errors, uncertainty, baseline comparison and censored cases. Without event evidence, scenario estimates remain unvalidated. Not implemented; SOL unresolved. |
+| 24 | Tune/select AI, connect health predictions to the dynamic model, and execute on DGX | 21; eligible health data for selection; 22-23 interfaces for coupling; actual DGX access for hardware execution | Full trial ledger, validation-only selection, frozen scoring, uncertainty and CPU/DGX resource comparison. Local AI work does not wait for Simscape; coupled validation uses the verified ECM. Not implemented. |
+| 25 | Integrate real BMS records; adapter, signal dictionary, shadow-inference replay and latency report | 21 schema and eligible frozen model; BMS exports/protocol, sensor map and reference tests | Reader/fault handling can develop before model integration or DGX. Real-data causal replay, parity and timing close the gate. No control actuation in this package. Not implemented. |
+| 26 | Implement the defined SOL target; if it means remaining life, add censoring-aware RUL forecasting | 21 definition; eligible health model; adequate longitudinal/end-of-life evidence | Life-data audit and model work do not require BMS completion unless the actual target requires it. Report target-specific errors, uncertainty and censoring. Not implemented; SOL unresolved. |
 | 27 | Independently validate the frozen combined model and robustness; separate simulation and measured-data reports | 23-26 candidates; unseen compatible cells/packs and qualified test conditions | Registered SOH/SOL/dynamic errors, sensor-fault/range tests and documented valid limits. Pack/thermal claims need their own measurements. No independent cohort confirmed. |
 | 28 | Complete objective-to-evidence review, reproducible handoff and dashboard/PDF updates | 27 and relevant gates; unmet requirements explicitly recorded | Checked equations, model/data versions, measured-versus-simulated labels and supported claims. Proposal attainment requires agreed criteria. Not implemented. |
 
-Main dependency chain: 21 -> 22 -> 23 -> 24 -> 25 -> 26 -> 27 -> 28.
-Data access, literature review and DGX preparation can overlap model development.
-Reserve the independent validation set in phase 21. Phase 20 remains the separate
+Execute the [Codex dependency graph](codex_implementation_plan.md#shortest-path-and-dependency-graph),
+not a sequential wait through all eight phases. Electrical modelling, Simscape
+source preparation, AI selection, BMS ingestion and life-data work can advance
+independently after their contracts exist. Complete all feasible local work while
+external gates are waiting. Reserve the independent validation set in phase 21.
+Phase 20 remains the separate
 requirement for Indian field/billing claims; a phase-28 dashboard update does not
 close it. The original full-history v2 gate stays failed; v3 is a separate study.
 
@@ -137,24 +145,15 @@ multiplied into a validated lifetime. Right-censored cells receive no invented
 failure date. If SOL means another quantity, replace that conditional work package
 with its confirmed definition and labels in phase 21.
 
-## Existing schedule mapping
+## Execution priority; timeline superseded
 
-The two-page local `output/pdf/EV_Battery_Research_Gantt_2026_27.pdf` proposes
-3 November 2026 to 2 November 2027. It remains unchanged and untracked. Dates are
-planning assumptions, not evidence that data, licenses or gates are obtained.
-Its assumption that all work is outstanding concerns its proposed activities;
-reuse completed ReCell artifacts where valid.
+The user explicitly chose earliest feasible completion instead of the proposed
+calendar schedule. The local Gantt PDF remains an unchanged historical planning
+artifact, not a deadline or dependency authority. Use C00-C11 in the
+[Codex implementation plan](codex_implementation_plan.md). Prioritize one measured
+electrical-model slice, then expand verified components and independent branches.
+Do not wait for dates or hold local implementation behind unavailable runtimes.
 
-| Existing activities / gate | ReCell phases | Proposed gate date |
-| --- | --- | --- |
-| T01-T02; G1 scope, data and criteria | 21; data groundwork for 22/25/26 | 2 December 2026; T02 extends to 2 January 2027 |
-| T03-T05; G2 calibrated Simscape model and comparison | 22-23 | 2 April 2027 |
-| T06-T07; G3 DGX optimization and selection | 24 | 2 June 2027 |
-| T08; G4 BMS integration | 25 | 2 August 2027 |
-| T09-T10; G5 SOH/SOL and robustness | 26-27 | 2 October 2027 |
-| T11-T12; G6 issues, evidence and final submission | 28 | 2 November 2027 |
-
-Replan dates if prerequisites slip; reaching a date does not close its gate.
 Software-in-the-loop is the initial integration target. Hardware-in-the-loop and
 supervised actuation require separately specified equipment, limits and operator
 approval; neither is already delivered by offline replay.

@@ -27,7 +27,9 @@ records the remaining phase-19 application and phase-20 field/release requiremen
 Planning addendum, 5 November 2026: the [proposal alignment plan](proposal_alignment_plan.md)
 adds phases 21-28 for the dynamic model, Simscape, DGX, BMS and defined SOL/life
 requirements from the supplied objectives. It includes dependencies, numerical
-acceptance planning and the existing proposed 2026-27 schedule. All new phases
+acceptance planning. The user has superseded the calendar schedule with earliest
+feasible completion; the [Codex handoff](codex_implementation_plan.md) defines its
+dependency graph, file-level packages, tests and scoped delivery. All new phases
 remain planned; this does not resume the paused phases 14-20 goal, relax its data
 gates or imply that the proposal requirements have already been implemented.
 

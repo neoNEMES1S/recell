@@ -1,0 +1,28 @@
+component Cell1RC
+% Local constant-OCV electrical cell; discharge current leaves positive terminal.
+nodes
+    p = foundation.electrical.electrical;
+    n = foundation.electrical.electrical;
+end
+parameters
+    r0 = {0.03, 'Ohm'};
+    r1 = {0.01, 'Ohm'};
+    tau = {10, 's'};
+    ocv = {3.7, 'V'};
+    v_initial = {0, 'V'};
+end
+variables
+    i = {0, 'A'};
+    vp = {value = v_initial, priority = priority.high};
+end
+branches
+    i : n.i -> p.i;
+end
+equations
+    assert(r0 > {0, 'Ohm'});
+    assert(r1 >= {0, 'Ohm'});
+    assert(tau > {0, 's'});
+    tau * vp.der == r1 * i - vp;
+    p.v - n.v == ocv - r0 * i - vp;
+end
+end

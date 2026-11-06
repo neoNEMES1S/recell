@@ -1,0 +1,7 @@
+protocol_id: life_inventory_v1
+data: data/processed/checkpoints.csv
+SOL_definition: null
+threshold: null
+axis: elapsed_days
+mode: inventory_only
+scope: no RUL fit or validation without confirmed definition, threshold and qualifying events

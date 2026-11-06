@@ -1,0 +1,16 @@
+protocol_id: bms_shadow_v1
+columns:
+  pack_id: pack_id
+  cell_id: cell_id
+  timestamp: timestamp
+  voltage_v: voltage_v
+  current_a: current_a
+timezone: UTC
+voltage_unit: V
+current_unit: A
+current_convention: discharge_positive
+maximum_gap_s: 5
+maximum_delay_s: 5
+ecm_case: null
+health_features: unavailable; require separately validated diagnostic/history contract
+source_kind: user must declare measured_BMS, laboratory or synthetic

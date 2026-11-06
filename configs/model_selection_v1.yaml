@@ -1,0 +1,26 @@
+protocol_id: health_selection_v1
+base_config: configs/base.yaml
+data: data/processed/checkpoints.csv
+device: cpu
+primary: validation H1 RMSE averaged across seeds separately within each physical outer fold
+seeds: [42, 43, 44]
+history_fraction: 1.0
+external_validation: unavailable; familiar six-cell development comparison only
+acceptance: descriptive research; no new performance target or operational promotion
+candidates:
+  - {id: persistence, model: persistence}
+  - {id: linear, model: linear}
+  - {id: gru_reference, model: gru}
+  - {id: xgb_d2_lr03, model: xgboost, tree_depth: 2, tree_learning_rate: 0.03}
+  - {id: xgb_d2_lr10, model: xgboost, tree_depth: 2, tree_learning_rate: 0.10}
+  - {id: xgb_d3_lr03, model: xgboost, tree_depth: 3, tree_learning_rate: 0.03}
+  - {id: xgb_d3_lr10, model: xgboost, tree_depth: 3, tree_learning_rate: 0.10}
+  - {id: pgp_h8_lr003, model: pgp_gru, hidden_size: 8, learning_rate: 0.003}
+  - {id: pgp_h8_lr001, model: pgp_gru, hidden_size: 8, learning_rate: 0.001}
+  - {id: pgp_h16_lr003, model: pgp_gru, hidden_size: 16, learning_rate: 0.003}
+  - {id: pgp_h16_lr001, model: pgp_gru, hidden_size: 16, learning_rate: 0.001}
+  - {id: quantile_h8_lr003, model: quantile_gru, hidden_size: 8, learning_rate: 0.003}
+  - {id: quantile_h8_lr001, model: quantile_gru, hidden_size: 8, learning_rate: 0.001}
+  - {id: quantile_h16_lr003, model: quantile_gru, hidden_size: 16, learning_rate: 0.003}
+  - {id: quantile_h16_lr001, model: quantile_gru, hidden_size: 16, learning_rate: 0.001}
+fixed_comparators: [persistence, linear, gru_reference, xgb_d2_lr03]

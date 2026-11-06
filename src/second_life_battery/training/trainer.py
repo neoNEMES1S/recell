@@ -15,6 +15,15 @@ from second_life_battery.training.losses import physics_guided_loss
 from second_life_battery.training.transfer import initialize_encoder, validate_contract
 
 
+def resolve_device(requested: str) -> torch.device:
+    """An explicit GPU experiment must not silently become a CPU experiment."""
+    if requested not in {"cpu", "cuda", "auto"}:
+        raise ValueError(f"Unknown training device: {requested}")
+    if requested == "cuda" and not torch.cuda.is_available():
+        raise RuntimeError("CUDA was explicitly requested but no CUDA device is available")
+    return torch.device("cuda" if requested != "cpu" and torch.cuda.is_available() else "cpu")
+
+
 def tensors(samples, scaler, device: torch.device) -> tuple[torch.Tensor, ...]:
     """Pad transformed histories without treating padding as observed measurements."""
     history = [
@@ -40,10 +49,7 @@ def train_gru(
 ):
     """Fit a point/quantile GRU; retain the best independent-validation checkpoint."""
     settings = config["training"]
-    requested = settings["device"]
-    device = torch.device(
-        "cuda" if requested in {"cuda", "auto"} and torch.cuda.is_available() else "cpu"
-    )
+    device = resolve_device(settings["device"])
     model_class = GRUForecaster if name == "gru" else PhysicsGuidedGRU
     model = model_class(len(config["features"]), config["evaluation"]["horizon"], config["gru"]).to(
         device

@@ -1,0 +1,29 @@
+protocol_id: local_pulse_ecm_v1
+scope: same-cell chronological local pulse-response research; no full OCV/SOC validation
+inventory: outputs/inventory/dataset_manifest.json
+sessions: data/processed/session_audit.json
+raw_dir: data/raw/stanford_second_life/extracted/SL_Dataset_SECL_INR21700-M50T
+current_convention: discharge_positive; negate verified native Arbin current
+time_basis: native strictly increasing instrument seconds; wall timezone unresolved
+cells: [G1, V4, V5, W8, W9, W10]
+calibration_session: RPT_1
+validation_session: RPT_2
+test_min_rpt: 3
+pulse_steps: [6, 10, 14]
+following_steps: 2
+maximum_sample_gap_s: 2.0
+model_order: [rint, 1rc]
+initial_state: stationary polarization at observed preceding low-rate current
+ocv_assumption: constant within each short pulse/rest/charge window, anchored at first measured voltage
+parameter_bounds:
+  r0_ohm: [0.0001, 0.3]
+  r1_ohm: [0.000001, 0.3]
+  tau_s: [0.05, 300]
+metrics: [rmse_mv, mae_mv, bias_mv, max_error_mv]
+primary: mean within physical cells of test-window RMSE; model contrast 1rc minus rint
+numeric_acceptance: null
+SOL_definition: null
+global_OCV_SOC_gate: missing independently verified equilibrium OCV/SOC map
+temperature_gate: physical probe mapping unresolved
+external_cohort: null
+runtime: cpu

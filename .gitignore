@@ -22,3 +22,4 @@ dashboard/dist/
 .superdesign/init/
 dashboard/.openai/
 tmp/
+output/pdf/recell_model_implementation_review.*

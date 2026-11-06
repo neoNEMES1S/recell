@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "targets": {
+    "/#implementation": {
+      "targetKind": "new-ui",
+      "projectId": "c93aef8e-e1dd-44a6-9754-32d3194bf3fb",
+      "activeDraftId": "fb78883f-9918-44f8-b1d1-e015dafbb8eb",
+      "designSystemPath": ".superdesign/design-system.md",
+      "contextFiles": [
+        "dashboard/index.html",
+        "dashboard/styles.css",
+        "dashboard/app.js",
+        "dashboard/core.js",
+        "dashboard/research.js",
+        "dashboard/implementation.js",
+        "dashboard/lessons.js",
+        ".superdesign/design-system.md"
+      ],
+      "fingerprints": {
+        "dashboard/index.html": "e955443431fd5d464869dfc38351e7a2b23e3356130f6b8ff9edafd8a0baf2fc",
+        "dashboard/styles.css": "f0d21f69e56714c1857d520da65554931dbc5b817d76d3abc66a43adcd1052a3",
+        "dashboard/app.js": "0b7d83d9d9e08ceaa11ef27578007bb045f093458a9ff95724c0fa5bfcadf18d",
+        "dashboard/core.js": "cd8f26aaaaa31d3ff8a8a0521aacf7bdb2ac3b39bd732299c9e3a8f69ded569f",
+        "dashboard/research.js": "35d70db13b6ae461b5338ce89c3ce2b39433ca11b1965ad4cbb95a5c63c33016",
+        "dashboard/implementation.js": "b98e18862d97e1ce614ce84fa7bd9e104bedfe0470475ce2cae92845834ddd3d",
+        "dashboard/lessons.js": "0462f73a8c65d78c918fa6d71958b9ba5a5915f2b88937fc343a76685e3f8b31",
+        ".superdesign/design-system.md": "c6252aff30a13accd38a99abad50981b92a5100d63ba5e916d0dd25b019a011c"
+      },
+      "drafts": {
+        "fb78883f-9918-44f8-b1d1-e015dafbb8eb": {
+          "title": "ReCell Dashboard",
+          "visualDirection": "approved forest/paper dashboard, production implementation evidence",
+          "currentVersion": 2
+        }
+      },
+      "updatedAt": "2026-11-06T08:35:57.789783+00:00"
+    }
+  }
+}

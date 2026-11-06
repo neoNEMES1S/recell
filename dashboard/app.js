@@ -1,9 +1,9 @@
 /* Client-side views over an immutable, verified experiment snapshot. */
 (function () {
   "use strict";
-  const D = window.RECELL_DATA, C = window.ReCell, R = window.ReCellResearch;
+  const D = window.RECELL_DATA, C = window.ReCell, R = window.ReCellResearch, I = window.ReCellImplementation;
   const main = document.getElementById("content");
-  if (!D || !C || !R || D.schema_version !== 2 || !D.extensions || D.market?.currency !== "INR") {
+  if (!D || !C || !R || !I || !D.implementation || D.schema_version !== 2 || !D.extensions || D.market?.currency !== "INR") {
     main.innerHTML = '<div class="error"><h1>Research snapshot unavailable</h1><p>Build the dashboard with <code>python scripts/build_dashboard.py</code>, then open <code>dashboard/dist/index.html</code>.</p></div>';
     return;
   }
@@ -13,7 +13,8 @@
     seed: D.settings.dispatch.forecast_seed, fraction: 0.1, dispatchCell: "all", weight: 1,
     day: 0, lesson: 0, researchStudy: "transfer", researchFraction: .1, researchHorizon: 1,
     calendarCase: "primary/full", siteDay: "", siteModel: "blend50",
-    controllerCell: "secl_m50t_G1", controllerPolicy: "D_R2", controllerDay: ""};
+    controllerCell: "secl_m50t_G1", controllerPolicy: "D_R2", controllerDay: "",
+    implementationTab: "electrical", ecmCell: "G1", ecmSession: "RPT_3", ecmStep: "10", selectionHorizon: "1"};
   let storageAvailable = true;
   let review = {};
   try {
@@ -22,7 +23,7 @@
   }
   catch (_) { storageAvailable = false; }
   const routes = {overview: "Overview", batteries: "Battery evidence", forecasts: "Reference forecasts",
-    dispatch: "Reference dispatch", learn: "Learn the method", research: "Research extensions", pilot: "Pilot review"};
+    dispatch: "Reference dispatch", learn: "Learn the method", research: "Research extensions", implementation: "Model implementation", pilot: "Pilot review"};
   const checkItems = [
     ["scope", "Define a bounded pilot", "Agree the Indian C&I site, DISCOM, tariff category, sanctioned demand, batteries and owner."],
     ["baseline", "Choose the comparison before testing", "Include XGBoost and a conventional controller; keep operating assumptions comparable."],
@@ -77,6 +78,7 @@
   }
   const researchUI = {esc, fmt, rupees, pp, percent, title, panel, note, kpi, select, table, bars, chart};
   function research() { return R.render(D, researchUI, state); }
+  function implementation() { return I.render(D, researchUI, state); }
   function costCards(b, d, label = "Wear-aware policy") {
     return `<div class="cost-grid"><div class="cost-case"><p class="eyebrow">C · Electricity-only policy</p><div class="cost-number">${rupees(b.electricity_plus_estimated_wear_inr)}</div><p class="cost-detail">${rupees(b.electricity_cost_inr)} electricity<br>+ ${rupees(b.estimated_degradation_cost_inr)} estimated wear</p></div><div class="cost-case highlight"><p class="eyebrow">${label}</p><div class="cost-number">${rupees(d.electricity_plus_estimated_wear_inr)}</div><p class="cost-detail">${rupees(d.electricity_cost_inr)} electricity<br>+ ${rupees(d.estimated_degradation_cost_inr)} estimated wear</p></div></div>`;
   }
@@ -97,7 +99,7 @@
     const b = D.dispatch_comparison.baseline, d = D.dispatch_comparison.aware;
     return title("India · Commercial &amp; industrial research", "Battery research, ready for review.",
       "Follow battery measurements through health forecasts and storage decisions. Review the original demonstration alongside the completed research extensions, with assumptions and remaining validation evidence visible.")
-      + `<div class="spaced">${R.overview(D, researchUI)}</div>`
+      + `<div class="spaced">${I.overview(D, researchUI)}</div><div class="spaced">${R.overview(D, researchUI)}</div>`
       + `<div class="spaced">${marketContext()}</div><div class="kpis">${kpi("Experimental scope", `${D.cells.length} <small>cells</small> / ${D.counts.checkpoints}`, "checkpoints", "Measured capacity at diagnostic tests")}${kpi(`Best forecast error · ${C.modelNames[best.model]}`, fmt(best.rmse_mean * 100, 3), "SOH pp", "RMSE · percentage points, not an accuracy score")}${kpi("Less cycling in the modeled comparison", fmt(C.reduction(b.equivalent_full_cycles, d.equivalent_full_cycles), 1) + "%", "", "C vs median D · same health and wear assumptions")}</div>
       <div class="grid-main"><div class="stack">${panel("How well can we forecast health?", "Next one and two diagnostic checkpoints · both horizons combined", bars(ranked.map(r => ({label: C.modelNames[r.model], value: r.rmse_mean * 100}))) + '<p class="chart-caption">Each cell is weighted equally after averaging three seeds. XGBoost leads this reference run; the physics-guided model does not beat every baseline.</p><a class="button secondary mt" href="#forecasts">Explore forecast quality →</a>')}
       ${panel("What changes when we account for wear?", "INR scenario · energy charge + estimated wear · proxy replay", costCards(b, d, "D · Wear-aware policy") + `<p class="comparison-caption">${fmt(C.reduction(b.electricity_plus_estimated_wear_inr, d.electricity_plus_estimated_wear_inr), 1)}% lower modeled combined cost. Energy-charge and wear costs depend on the selected INR assumptions. These are simulated costs, not a measured C&I bill saving.</p><a class="button secondary mt" href="#dispatch">Explore storage decisions →</a>`)}</div>
@@ -235,7 +237,8 @@
     const route = currentRoute();
     const requestedStudy = location.hash.slice(1).split("/")[1];
     if (route === "research" && R.studies[requestedStudy]) state.researchStudy = requestedStudy;
-    const pages = {overview, batteries, forecasts, dispatch, learn, research, pilot};
+    if (route === "implementation" && I.tabs[requestedStudy]) state.implementationTab = requestedStudy;
+    const pages = {overview, batteries, forecasts, dispatch, learn, research, implementation, pilot};
     main.innerHTML = (pages[route] || overview)();
     document.title = `ReCell · ${routes[route] || "Overview"}`;
     document.querySelectorAll(".navigation a").forEach(link => {
@@ -268,12 +271,14 @@
       ${marketContext()}<section><h2>Modeled operating trade-off · INR</h2>${table(["Reference policy", "Electricity (₹)", "Estimated wear (₹)", "Combined (₹)", "Cycles"], [["C · Electricity only", rupees(b.electricity_cost_inr), rupees(b.estimated_degradation_cost_inr), rupees(b.electricity_plus_estimated_wear_inr), fmt(b.equivalent_full_cycles)], ["D · Wear-aware, λ = 1", rupees(d.electricity_cost_inr), rupees(d.estimated_degradation_cost_inr), rupees(d.electricity_plus_estimated_wear_inr), fmt(d.equivalent_full_cycles)]])}<p>C and median D share health and wear assumptions. No export revenue is credited in this INR scenario. Combined cost is electricity + estimated wear. Only energy charges and estimated wear are counted; the actual C&I bill also requires site-specific tariff components.</p></section>
       ${note("Original reference interpretation limits", "Six cells and a German household proxy replay; illustrative Indian C&I energy charges and pack cost; linear wear proxy; demand charges and backup value excluded; perfect solar/load foresight; fixed health during dispatch. No demonstrated lifetime extension, field saving or carbon benefit. Hardware and pack-level aging still need validation.")}
       ${R.brief(D, researchUI)}
+      ${I.brief(D, researchUI)}
       <section><h2>Proposed decision: a data and calibration pilot</h2><p>Agree criteria before collecting new outcomes. Validate independent forecasting, uncertainty, wear calibration, operational constraints and measured economics against a matched baseline.</p><ul>${checkItems.map(([key, label]) => `<li>${review[key] ? "[Discussed]" : "[Open]"} ${label}</li>`).join("")}</ul><p>The checklist is a discussion aid, not an approval or signature.</p></section>${review.notes ? `<section><h2>Meeting notes</h2><p style="white-space:pre-wrap">${esc(review.notes)}</p></section>` : ""}<p class="small">Original reference: Stanford second-life (OSF 8JNR5) and OPSD/CoSSMic. Extensions: linked EV first-life, separate calendar cohort, I-BLEND Delhi demand and modeled NASA-resource PV. Exact source hashes are available in Sources &amp; snapshot. The original reference was exported ${esc(D.reference_generated_at.slice(0, 10))}; the integrated review was exported ${esc(D.generated_at.slice(0, 10))}.</p>`;
     window.print();
   }
   function sources() {
     document.getElementById("source-content").innerHTML = `<p>This snapshot retains the original INR reference and adds four completed research studies. It is not a live training or control service. Integrated export: ${esc(D.generated_at)}. Original reference export: ${esc(D.reference_generated_at)}.</p><p class="small muted mt">Battery source: <a href="https://osf.io/8jnr5/" target="_blank" rel="noopener">Stanford second-life dataset</a>. Household source: <a href="https://data.open-power-system-data.org/household_data/2020-04-15/" target="_blank" rel="noopener">OPSD/CoSSMic, version 2020-04-15</a> (CC BY 4.0). The German household and battery measurements are separate datasets. India C&I economics use the illustrative INR inputs in configs/india_ci.yaml; neither dataset is an Indian industrial measurement.</p><div class="note neutral mt"><strong>How these numbers are grounded</strong>The build verifies that forecast and dispatch provenance point to the same checkpoint data, selected predictions and solar inputs. The original reference was optimized in INR using its hashed India scenario configuration. A preserved reference can be reused without rerunning optimization; extension results come from separately completed studies. SHA-256 values below identify the exact exported artifact files.</div><ul class="source-list">${D.sources.map(s => `<li><strong>${esc(s.path)}${s.rows ? ` · ${s.rows.toLocaleString()} rows` : ""}</strong><span>${esc(s.sha256)}</span></li>`).join("")}</ul>`;
     document.getElementById("source-content").insertAdjacentHTML("beforeend", `<h3 class="mt">Completed research extensions</h3><p class="small">Saved completed-run and independent-review manifests are checked during export. Forecasts and schedules are not recalculated in the browser. New research views are not an operational model promotion.</p><ul class="source-list">${D.extensions.sources.map(s => `<li><strong>${esc(s.path)}${s.rows ? ` · ${s.rows.toLocaleString()} rows` : ""}</strong><span>${esc(s.sha256)}</span></li>`).join("")}</ul>`);
+    document.getElementById("source-content").insertAdjacentHTML("beforeend", `<h3 class="mt">Model implementation evidence</h3><p class="small">Measured local pulse study, CPU selection and independently checked replay. Simscape/DGX and physical external validation remain open. BMS replay is synthetic.</p><ul class="source-list">${D.implementation.sources.map(s => `<li><strong>${esc(s.path)}</strong><span>${esc(s.sha256)}</span></li>`).join("")}</ul>`);
     document.getElementById("source-dialog").showModal();
   }
   document.addEventListener("click", event => {
@@ -315,7 +320,7 @@
     if (event.target.id === "metric-form") { event.preventDefault(); calculate(); }
   });
   window.addEventListener("hashchange", () => render(true));
-  document.getElementById("run-status").textContent = `India C&I · original reference + four research studies`;
+  document.getElementById("run-status").textContent = `India C&I · reference, research & model implementation`;
   document.getElementById("snapshot-date").textContent = `Snapshot exported ${D.generated_at.slice(0, 10)}`;
   render();
 })();

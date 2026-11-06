@@ -10,6 +10,7 @@ from second_life_battery.data.inventory import sha256_file
 from second_life_battery.utils.reproducibility import verify_artifacts
 
 REPORTS = {
+    "implementation": "recell_model_implementation_review.pdf",
     "transfer": "recell_transfer_v3_primary_comparison.pdf",
     "calendar": "recell_calendar_validation_review.pdf",
     "controller": "recell_public_controller_mathematical_review.pdf",

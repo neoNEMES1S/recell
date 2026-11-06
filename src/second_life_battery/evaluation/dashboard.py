@@ -233,6 +233,7 @@ def build_payload(root: Path) -> dict:
 
 def build_dashboard(root: Path, output: Path, *, reference_snapshot: Path | None = None) -> None:
     """Build a static dashboard usable offline or behind a private web host."""
+    from second_life_battery.evaluation.implementation_dashboard import build_implementation_payload
     from second_life_battery.evaluation.research_dashboard import REPORTS, build_research_payload
 
     if reference_snapshot is None:
@@ -250,12 +251,14 @@ def build_dashboard(root: Path, output: Path, *, reference_snapshot: Path | None
                 raise ValueError(f"Original dashboard input changed: {source['path']}")
     payload["reference_generated_at"] = payload["generated_at"]
     payload["extensions"] = build_research_payload(root)
+    payload["implementation"] = build_implementation_payload(root)
     payload["generated_at"] = datetime.now(timezone.utc).isoformat()
     payload["schema_version"] = 2
     content = json.dumps(payload, allow_nan=False, separators=(",", ":"))
     # Escape script terminators even when an artifact contains unexpected source text.
     content = content.replace("<", "\\u003c").replace("\u2028", "\\u2028")
-    assets = ["index.html", "styles.css", "core.js", "app.js", "lessons.js", "research.js"]
+    assets = ["index.html", "styles.css", "core.js", "app.js", "lessons.js", "research.js",
+              "implementation.js"]
     for name in assets:
         if not (root / "dashboard" / name).is_file():
             raise FileNotFoundError(f"Missing dashboard asset: {name}")

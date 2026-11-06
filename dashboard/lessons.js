@@ -108,6 +108,38 @@ window.RECELL_LESSONS = [
     caution: "The ranking reverses when the unvalidated evaluation-wear coefficient changes. These are scenario scores, not measured wear or customer bills. The no-storage policy has the lowest observed mean score in this particular scenario."
   },
   {
+    title: "Model the immediate voltage response", label: "Dynamic electrical model", destination: "implementation/electrical",
+    summary: "A one-RC circuit explains a fast voltage drop and slower relaxation.",
+    body: `<p>The resistance-only model gives an instantaneous current-dependent voltage drop. A resistor-capacitor branch adds polarization with a time constant. It represents short-term electrical dynamics, while the health GRU forecasts capacity at future diagnostics.</p><p>The general engine requires an explicit OCV/SOC table and known initial state. The measured benchmark uses a narrower constant-OCV approximation for short pulse windows; it does not invent a global equilibrium curve.</p>`,
+    formula: "V = OCV − R0 × I − v1\ndv1/dt = (R1 × I − v1) / τ\nSOC change = − I × seconds / (3600 × capacity Ah)",
+    example: "With a 1 A discharge for 360 seconds and a 2 Ah cell, SOC falls by 0.05, or five percentage points. An ohmic resistance of 0.03 Ω produces a 30 mV instantaneous drop.",
+    caution: "Voltage-response accuracy does not establish SOH accuracy, thermal safety, pack calibration or lifetime. Initial state, current sign, sample timing and the OCV reference must match."
+  },
+  {
+    title: "Understand the new measured comparison", label: "Chronological pulse validation", destination: "implementation/electrical",
+    summary: "Hold out later diagnostics and keep the first measurement's role explicit.",
+    body: `<p>The audit accepts 333 pulse/rest/charge windows from 111 diagnostic sessions across six cells. Each cell's first diagnostic calibrates its own parameters. RPT-2 is validation, and RPT-3 onward provides 297 test windows.</p><p>The observed initial voltage anchors each short window and is excluded from error scoring. Error is computed within each window, then averaged within physical cells and across six cells equally.</p>`,
+    formula: "Window RMSE mV = 1000 × sqrt(mean((Vpred − Vmeasured)²))\nStudy score = mean cells(mean held-out windows(window RMSE))",
+    example: "One-RC mean test RMSE is 4.400 mV versus 8.182 mV for the resistance-only baseline. The interface reports a selected window's own error separately from these aggregate values.",
+    caution: "These are later tests of known cells. An independent unseen-cell cohort, equilibrium OCV/SOC map and physical temperature assignment are still missing."
+  },
+  {
+    title: "Choose on validation and retain the stronger baseline", label: "Bounded AI selection", destination: "implementation/ai",
+    summary: "A larger search can improve validation fit without improving held-out performance.",
+    body: `<p>The new CPU comparison registers twelve tree/GRU parameter settings plus three fixed references. Six outer folds and three seeds produce 270 validation trials. Each fold chooses using its own validation cell before scoring its test cell.</p><p>Rotating validation cells are not pooled into a global winner and then reused as untouched tests. All 2,610 test forecasts are independently replayed from saved model files.</p>`,
+    formula: "Selected configuration for fold f = argmin permitted validation RMSE\nTest error is reported after that fold's selection is sealed",
+    example: "Mean next-checkpoint RMSE is 0.2465 SOH pp for the selected models versus 0.2187 pp for fixed XGBoost. The difference interval includes zero; tuning has not established superiority.",
+    caution: "This remains development on six familiar cells. Completed CPU experiments are not DGX evidence. An explicit CUDA request now fails if no CUDA device exists."
+  },
+  {
+    title: "Distinguish software checks from life evidence", label: "BMS, Simscape and SOL gates", destination: "implementation/interfaces",
+    summary: "A working adapter or simulation interface needs real observations before its application claims are validated.",
+    body: `<p>The BMS adapter checks units, identities, clocks and measurement quality. Its current replay uses 60 explicitly synthetic electrical records. Health output stays unavailable without the diagnostic/history inputs required by the model.</p><p>Simscape numeric export is checked, but MATLAB source has not been run. SOL is not yet defined. A life model needs a declared threshold and units; if the last measurement is above threshold, the observed life is right-censored.</p>`,
+    formula: "Effective capacity = forecast SOH × matching reference capacity\nObserved threshold crossing lies between the last above-threshold and first below-threshold tests",
+    example: "A cell above the threshold at day 100 and below it at day 130 gives a crossing interval [100, 130], not an observed failure exactly at day 130. No threshold is assumed for the current inventory.",
+    caution: "A synthetic replay, source file or exported MAT case does not close real BMS, Simscape, DGX, independent cohort or lifetime-validation requirements."
+  },
+  {
     title: "Turn findings into a pilot agreement", label: "The approval conversation", destination: "pilot",
     summary: "Ask the client to approve collecting the evidence needed for deployment—not to accept a claim that deployment is already proven.",
     body: `<p>Agree the operational site, representative batteries, measurement plan and baseline controller. Set acceptance criteria before evaluating new outcomes. Check forecasting error, uncertainty coverage and width, constraint compliance and measured operating costs.</p><p>The reference result favors XGBoost on average forecast error. PGP-GRU’s probabilistic forecasts are useful to investigate, but we should not hide the stronger baseline. The pilot should test whether better predictions or conservative assumptions actually improve operation.</p>`,

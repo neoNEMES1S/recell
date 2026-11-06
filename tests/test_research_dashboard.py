@@ -119,6 +119,7 @@ def test_representative_paths_keep_one_seed_and_each_capacity():
 
 def test_existing_reference_is_reused_without_optimization(tmp_path, monkeypatch):
     import second_life_battery.evaluation.dashboard as dashboard
+    import second_life_battery.evaluation.implementation_dashboard as implementation
     import second_life_battery.evaluation.research_dashboard as research
 
     monkeypatch.setattr(dashboard, "verify_provenance", lambda root: None)
@@ -128,6 +129,9 @@ def test_existing_reference_is_reused_without_optimization(tmp_path, monkeypatch
 
     monkeypatch.setattr(dashboard, "build_payload", unexpected)
     monkeypatch.setattr(research, "build_research_payload", lambda root: {"status": "fixture"})
+    monkeypatch.setattr(
+        implementation, "build_implementation_payload", lambda root: {"status": "fixture"}
+    )
     source = tmp_path / "config.yaml"
     source.write_text("price: 10\n")
     original = {
@@ -142,7 +146,15 @@ def test_existing_reference_is_reused_without_optimization(tmp_path, monkeypatch
     original_bytes = snapshot.read_bytes()
     assets = tmp_path / "dashboard"
     assets.mkdir()
-    for name in ["index.html", "styles.css", "core.js", "app.js", "lessons.js", "research.js"]:
+    for name in [
+        "index.html",
+        "styles.css",
+        "core.js",
+        "app.js",
+        "lessons.js",
+        "research.js",
+        "implementation.js",
+    ]:
         (assets / name).write_text("fixture")
     reports = tmp_path / "output/pdf"
     reports.mkdir(parents=True)

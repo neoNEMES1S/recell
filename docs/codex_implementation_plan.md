@@ -1,8 +1,10 @@
 # Codex implementation plan: finish the missing proposal requirements
 
 Execution policy updated 5 November 2026: **finish as soon as dependencies permit;
-no calendar timeline or Gantt dates govern this work**. This is an implementation
-handoff, not a claim that the work below is executed. It expands the requirements
+no calendar timeline or Gantt dates govern this work**. Local execution began on
+5 November: the [results and remaining gates](implementation_results.md) record
+completed runs and software-only evidence. Verify those artifacts before repeating
+work. This handoff expands the requirements
 in [proposal alignment](proposal_alignment_plan.md), phases 21-28. The earlier
 evidence-dependent goal remains paused; writing this plan does not resume it.
 
@@ -324,8 +326,9 @@ after shared parser/trainer/provenance changes and at final integration. Do not
 rerun all completed scientific fits just to check a document or UI change. The
 existing 222-test result is historical; report the count actually obtained now.
 
-The following are **future CLI contracts**, not implemented commands today. Build
-only at their work package, with argparse and explicit fresh output directories:
+The following CLI contracts are now implemented. Completed destinations are
+immutable; use the [original run commands](implementation_results.md) to inspect
+their provenance and fresh versioned paths for any explicitly new experiment:
 
 | Package | CLI to implement | Minimum output |
 | --- | --- | --- |
@@ -345,8 +348,9 @@ dashboard packets; include only authorized derived evidence.
 ## Ready-to-use Codex execution instruction
 
 ```text
-Implement docs/codex_implementation_plan.md in dependency order, as fast as verified
-work allows. Begin with C00-C01 and the C02-C04 measured electrical-model slice.
+Continue docs/codex_implementation_plan.md in dependency order, as fast as verified
+work allows. First read docs/implementation_results.md and verify completed
+artifacts. Do not repeat the completed C00-C04 slice or CPU model-selection runs.
 Reuse existing parsers, folds, models, metrics and hash verification. Preserve
 unrelated user edits and every completed research output. No calendar deadlines.
 

@@ -2,9 +2,11 @@
 
 Planning baseline: 5 November 2026. This adds phases 21-28 to ReCell's roadmap;
 it does not rename or mark complete phases 1-20. The user requested planning and
-inclusion of the missing proposal requirements. New phases are **planned, not
-implemented**. The evidence-dependent phases 14-20 goal remains paused until the
-user resumes it. This document creates no active execution goal or new experiment.
+inclusion and then execution of the missing proposal requirements. Local packages
+are now implemented with scoped measured/software evidence; see
+[current results](implementation_results.md) and [phase status](phase_status.md).
+The full phases 21-28 requirements are not complete. The earlier evidence-dependent
+phases 14-20 goal remains paused until the user resumes it.
 
 Execution-policy update: the user has superseded the calendar timeline and wants
 completion as soon as dependencies permit. The [Codex implementation plan](codex_implementation_plan.md)
@@ -35,14 +37,14 @@ electrical/thermal state model. XGBoost remains a required strong SOH baseline.
 
 | Phase | Work and reviewable output | Dependencies | Completion gate / status today |
 | --- | --- | --- | --- |
-| 21 | Define proposal scope, SOH/SOL, data contract, baselines and numerical acceptance criteria; freeze new protocols | Full wording, intended application, data and access review | Definitions, physical-cell/site and parameter-identification splits, metrics and thresholds agreed before tuning. Draft plan only; definitions/access unconfirmed. |
-| 22 | Formulate and identify a dynamic equivalent-circuit cell model; parameter tables and baseline report | 21; eligible current/voltage/pulse/rest/OCV and capacity data | Identifiable finite parameters, sign/unit checks and held-out dynamic-voltage comparison. Not implemented. |
-| 23 | Implement/calibrate in Simscape; model project, parameters and repeatable validation harness | 22; confirmed MATLAB/Simulink/Simscape access and required products | Declared release runs, solver/conservation checks and held-out measured cases meet phase-21 criteria. Not implemented. |
-| 24 | Tune/select AI, connect health predictions to the dynamic model, and execute on DGX | 21; eligible health data for selection; 22-23 interfaces for coupling; actual DGX access for hardware execution | Full trial ledger, validation-only selection, frozen scoring, uncertainty and CPU/DGX resource comparison. Local AI work does not wait for Simscape; coupled validation uses the verified ECM. Not implemented. |
-| 25 | Integrate real BMS records; adapter, signal dictionary, shadow-inference replay and latency report | 21 schema and eligible frozen model; BMS exports/protocol, sensor map and reference tests | Reader/fault handling can develop before model integration or DGX. Real-data causal replay, parity and timing close the gate. No control actuation in this package. Not implemented. |
-| 26 | Implement the defined SOL target; if it means remaining life, add censoring-aware RUL forecasting | 21 definition; eligible health model; adequate longitudinal/end-of-life evidence | Life-data audit and model work do not require BMS completion unless the actual target requires it. Report target-specific errors, uncertainty and censoring. Not implemented; SOL unresolved. |
-| 27 | Independently validate the frozen combined model and robustness; separate simulation and measured-data reports | 23-26 candidates; unseen compatible cells/packs and qualified test conditions | Registered SOH/SOL/dynamic errors, sensor-fault/range tests and documented valid limits. Pack/thermal claims need their own measurements. No independent cohort confirmed. |
-| 28 | Complete objective-to-evidence review, reproducible handoff and dashboard/PDF updates | 27 and relevant gates; unmet requirements explicitly recorded | Checked equations, model/data versions, measured-versus-simulated labels and supported claims. Proposal attainment requires agreed criteria. Not implemented. |
+| 21 | Define proposal scope, SOH/SOL, data contract, baselines and numerical acceptance criteria; freeze new protocols | Full wording, intended application, data and access review | Technical study contracts/configs implemented; full SOL definition, scientific thresholds and access remain unconfirmed. |
+| 22 | Formulate and identify a dynamic equivalent-circuit cell model; parameter tables and baseline report | 21; eligible current/voltage/pulse/rest/OCV and capacity data | General engine and measured local pulse comparison complete; global equilibrium OCV/SOC and thermal validation remain open. |
+| 23 | Implement/calibrate in Simscape; model project, parameters and repeatable validation harness | 22; confirmed MATLAB/Simulink/Simscape access and required products | Numeric export verified and source handoff prepared; MATLAB/Simscape source is not compiled or executed. |
+| 24 | Tune/select AI, connect health predictions to the dynamic model, and execute on DGX | 21; eligible health data for selection; 22-23 interfaces for coupling; actual DGX access for hardware execution | 270 CPU validation trials and causal capacity bridge implemented; actual DGX and measured full-OCV coupling remain open. |
+| 25 | Integrate real BMS records; adapter, signal dictionary, shadow-inference replay and latency report | 21 schema and eligible frozen model; BMS exports/protocol, sensor map and reference tests | Mapped CSV/quality handling and synthetic electrical replay implemented; real BMS integration/health features/live timing remain open. |
+| 26 | Implement the defined SOL target; if it means remaining life, add censoring-aware RUL forecasting | 21 definition; eligible health model; adequate longitudinal/end-of-life evidence | Inventory, censoring and conditional-baseline primitives implemented; SOL/threshold/event cohort remain unconfirmed. |
+| 27 | Independently validate the frozen combined model and robustness; separate simulation and measured-data reports | 23-26 candidates; unseen compatible cells/packs and qualified test conditions | Independent calculation/model replay completed; independent physical cohort and full combined-model validation remain unavailable. |
+| 28 | Complete objective-to-evidence review, reproducible handoff and dashboard/PDF updates | 27 and relevant gates; unmet requirements explicitly recorded | Dashboard, 18 lessons and six-page mathematical review integrated; full proposal attainment and browser visual QA remain open. |
 
 Execute the [Codex dependency graph](codex_implementation_plan.md#shortest-path-and-dependency-graph),
 not a sequential wait through all eight phases. Electrical modelling, Simscape
@@ -172,7 +174,7 @@ Phase 28 adds dynamic voltage/SOC comparisons, DGX evidence, BMS quality/latency
 and defined SOL results to the dashboard as verified artifacts become available.
 Planned items must say planned; distinguish simulated, measured and independently
 validated results. Update mathematical PDFs to implemented equations, not merely
-this proposal. This planning update changes no frontend or hosted deployment.
+this proposal. The implementation now adds these scoped results and open gates to the dashboard; source and verified artifact integration are recorded in implementation_results.md.
 
 Immediate execution package when requested: complete the phase-21 definitions and
 acceptance worksheet; audit eligible waveforms and BMS/life-data availability;

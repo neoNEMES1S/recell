@@ -2,7 +2,7 @@
 
 A buildless browser dashboard over saved research results. The interface implements
 the approved Superdesign draft `fb78883f-9918-44f8-b1d1-e015dafbb8eb` with audited
-metrics, seven views and fourteen teaching lessons. No external frontend packages,
+metrics, eight views and eighteen teaching lessons. No external frontend packages,
 CDN scripts or runtime API calls are required.
 
 From the ReCell repository root:
@@ -14,7 +14,8 @@ open dashboard/dist/index.html
 
 Alternatively, serve `dashboard/dist` with Python's HTTP server. The exporter needs
 reference artifacts plus the completed transfer/calendar/Indian demand/PV/controller
-runs and their independent review manifests. It checks saved artifact hashes,
+runs, the local model-implementation studies and their independent review manifests.
+It checks saved artifact hashes,
 review/completion links and chart clocks. It never retrains or reoptimizes the
 extension studies. The browser selects saved results only.
 
@@ -28,7 +29,8 @@ preserved reference snapshot is present, reuse its exact values without optimiza
 
 That earlier dashboard was preserved before integration. Schema 2 `dist/data.js`
 contains separate reference/extension sections; `reference_generated_at` identifies
-the old reference. Four unchanged review PDFs are copied into `dist/reports/`.
+the old reference. Four unchanged review PDFs and the new six-page implementation
+review are copied into `dist/reports/`.
 
 The presentation targets Indian commercial and industrial behind-the-meter storage.
 All costs use INR and Indian digit grouping. Assumptions are ₹10/kWh flat grid energy,
@@ -62,13 +64,32 @@ pilot discussion include these extensions. The original forecasts/dispatch have
 reference labels. Research visibility does not promote a model for operation or
 establish a customer bill saving, measured wear reduction or investment case.
 
+## Model implementation
+
+- `#implementation/electrical`: Rint/1-RC measured local pulse comparison, cell/
+  diagnostic/pulse selectors, current/voltage plots, exact native samples and limits.
+- `#implementation/ai`: bounded CPU selection, horizon filter, per-fold decisions
+  and the adverse selected-versus-fixed-XGBoost result. No DGX run is claimed.
+- `#implementation/gates`: all twelve packages and proposal requirements, with
+  software checks distinct from measured studies and external evidence gates.
+- `#implementation/interfaces`: numeric Simscape handoff, explicitly synthetic
+  BMS replay, causal capacity bridge and life inventory with SOL unconfirmed.
+
+These studies have [separate protocols and reproducible commands](../docs/implementation_results.md).
+The exporter requires the matching checked completions under `outputs/ecm/`,
+`outputs/model_selection/`, `outputs/simscape/`, `outputs/bms/`, `outputs/life/`
+and `outputs/implementation/proposal_v1/review/`. Data are saved results, not live
+BMS readings. Browser visual QA was unavailable during this delivery; static
+rendering/event tests are not described as visual verification.
+
 Run calculation checks with `node dashboard/core.test.cjs`, research presentation
-checks with `node dashboard/research.test.cjs`, and exporter tests with
+checks with `node dashboard/research.test.cjs`, implementation checks with
+`node dashboard/implementation.test.cjs dashboard/dist/data.js`, and exporter tests with
 `.venv/bin/python -m pytest tests/test_dashboard.py tests/test_research_dashboard.py -q`
 from the repository root.
 
 Presentation order: Overview → Battery evidence → Reference forecasts/dispatch →
-Research extensions → Pilot review. Learn the method covers formulas and examples.
+Research extensions → Model implementation → Pilot review. Learn the method covers formulas and examples.
 Print brief includes reference and extension findings, independent of selected
 filters, with the current browser's discussion checklist and notes. Save it as PDF
 using the browser print dialog. These controls never record a formal approval.

@@ -17,6 +17,12 @@ calendar scheduling with earliest feasible execution. Independent code, audit an
 interface packages can finish while external gates wait; their software completion
 does not waive measured validation, actual Simscape/DGX or real BMS evidence.
 
+Execution update, 5-6 November: [local implementation results](implementation_results.md)
+now include a measured same-cell local pulse model, bounded CPU selection and
+tested capacity/BMS/life interfaces. The new dashboard and mathematical review
+display those scoped results. This does not supply the missing global OCV/SOC,
+temperature, independent cohort, SOL, actual BMS/Simscape/DGX or field evidence.
+
 ## Decision supported by current evidence
 
 Proceed to a bounded data-access and calibration pilot. Do not present this as

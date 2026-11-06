@@ -4,30 +4,42 @@ The documented 13-phase research prototype has been implemented and its referenc
 artifacts checked on 2026-10-15. This tracks software and experiment completion;
 scientific limitations remain explicit in [methods](methods.md) and [results](results.md).
 
-## Proposal alignment added on 5 November 2026
+## Proposal implementation: 5-6 November 2026
 
-The [missing-work plan](proposal_alignment_plan.md) adds eight **planned** phases
-without changing completed experiments or the status of phases 14-20. The latter
-evidence-dependent goal remains paused; planning does not resume it. Phase 21 has
-a draft plan, but its definitions, resources and acceptance criteria are not agreed.
+The user authorized execution of the [Codex handoff](codex_implementation_plan.md)
+and dashboard integration. Local software, measured pulse research and bounded CPU
+selection are implemented. The [results/commands](implementation_results.md) and
+[interface contract](battery_model_contract.md) are the current evidence record.
+The full proposal is not complete. The earlier evidence-dependent phases 14-20
+goal remains paused; its failed source and field gates are not relaxed.
 
-| New phase | Planned deliverable | Current status |
+| Package / phase | Implementation state | Evidence and remaining requirement |
 | --- | --- | --- |
-| 21 | Proposal scope, SOH/SOL definitions, data/access review and preregistered criteria | Planned; SOL and Simscape/DGX access unconfirmed |
-| 22 | Identified dynamic equivalent-circuit battery model and baseline comparison | Planned; dynamic-waveform/OCV audit needed |
-| 23 | Runnable calibrated Simscape model and measured held-out validation | Planned; software access and phase 22 needed |
-| 24 | AI tuning/selection, health-to-model coupling and actual DGX run evidence | Planned; no DGX experiments completed |
-| 25 | Real BMS mapping, causal shadow-inference replay and latency/quality report | Planned; BMS records/reference labels needed |
-| 26 | Defined SOL model; conditional RUL and censoring-aware evaluation | Planned; target and qualifying life evidence needed |
-| 27 | Independent combined-model and robustness validation | Planned; independent compatible cohort needed |
-| 28 | Proposal evidence review, reproducible handoff and verified dashboard/PDF additions | Planned; requires preceding evidence |
+| C00-C01 / 21 | `software_verified` | Baseline, units, roles and study configs; SOL and numerical scientific criteria remain unconfirmed |
+| C02 / 22 | `evidence_verified` | `outputs/ecm/local_pulse_ecm_v1/audit/`: 111 sessions, 333 local pulse windows |
+| C03 / 22 | `software_verified` | General Rint/1-RC and independent ODE/analytic tests; no measured global OCV/SOC map |
+| C04 / 22 | `evidence_verified` | Same-cell later-diagnostic test: 4.400 mV one-RC vs 8.182 mV Rint; not unseen-cell or full battery validation |
+| C05 / 23 | `waiting_external` | Numeric Simscape export checked; source prepared but not compiled/executed; actual MATLAB/products needed |
+| C06 / 24 | `software_verified` | 270 CPU validation trials, per-fold selection and 2,610 replayed forecasts; actual DGX evidence open |
+| C07 / 24 | `software_verified` | Capacity-reference/cutoff bridge tested; full measured coupling requires OCV/SOC evidence |
+| C08 / 25 | `software_verified` | BMS CSV/quality adapter and 60 synthetic electrical records; real BMS/health features/live timing open |
+| C09 / 26 | `waiting_external` | Six-cell inventory and tested censoring/baseline primitives; SOL/threshold/event cohort missing |
+| C10 / 27 | `software_verified` | All 175,824 pulse rows and saved health predictions/trials checked; no independent external cohort |
+| C11 / 28 | `software_verified` | Eight dashboard views, 18 lessons, six-page implementation PDF and source hashes; external gates remain visible |
 
-The user superseded the proposed calendar timeline with earliest feasible
-completion. The [Codex implementation plan](codex_implementation_plan.md) now governs
-execution order through C00-C11, concrete file changes, tests and evidence gates.
-Independent local work continues while Simscape/DGX/data requirements wait; dates
-do not govern progression. All packages remain planned. No Simscape/DGX/BMS/SOL
-result or thermal-runaway capability has been implemented by these planning updates.
+The selected AI models have higher average next-checkpoint error than fixed XGBoost:
+0.2465 versus 0.2187 SOH pp. The difference interval spans zero; no superiority is
+claimed. All recorded fitting is CPU. The dashboard has four implementation tabs
+for voltage/AI/proposal gates/interfaces. The BMS replay is explicitly synthetic.
+Numeric Simscape round-tripping is not MATLAB execution; no thermal-runaway,
+observed lifetime, hardware or field-validation claim follows.
+
+Calendar dates do not govern progression. Continue verified local work as
+dependencies permit. Current regression: **241 Python tests**, Ruff, and three
+JavaScript checks pass. An exported-snapshot test covers all 14 routes, sources,
+print and selector fallback; it is not visual browser QA. Browser automation
+failed before verification and became unavailable after the restart. All six PDF
+pages were rendered and visually checked.
 
 ## Existing research extension status
 
@@ -49,7 +61,7 @@ have been replaced by explicitly reviewed complete raw reconstructions; both als
 pass their diagnostic-date corridors. The complete audit accepts 52 cycling batches
 and rejects 13, including mixed V5 exports and time reversals/gaps. The failures
 prevent feature-dataset promotion and training. Acquisition is complete; the
-v2 scientific feature gate has failed. The full software suite passes 222 tests.
+v2 scientific feature gate has failed. The pre-implementation suite passed 222 tests.
 
 The extra-cell availability audit acquired 28/30 selected inputs and verified
 11 additional capacity diagnostics and four cycling batches; W4 cycling 2 failed
@@ -175,7 +187,7 @@ default v2 reporter still refuses the absent comparison. No model is promoted.
 
 ## Validation and provenance
 
-The original reference passed 41 tests. The extended suite now passes 222 tests;
+The original reference passed 41 tests. The extended suite now passes 241 tests;
 `ruff check src scripts tests` passes.
 Coverage includes archive integrity, conflicting identities, capacity integration,
 counter resets, causal SOH, training/test separation, future-feature exclusion, metrics,

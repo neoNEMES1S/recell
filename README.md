@@ -35,7 +35,10 @@ dynamic battery model, Simscape validation, DGX optimization, BMS integration an
 defined SOL/life validation as planned phases 21-28. The
 [Codex implementation handoff](docs/codex_implementation_plan.md) defines the fastest
 dependency-based execution order, source changes, tests and completion gates.
-These are future deliverables; the current research does not complete those requirements.
+Local implementation has now delivered a measured pulse-voltage comparison,
+bounded CPU selection and tested capacity/BMS/life interfaces. See the
+[implementation results](docs/implementation_results.md). Actual Simscape/DGX,
+real BMS, defined SOL and independent physical validation remain open.
 
 ## What works today
 
@@ -52,6 +55,9 @@ These are future deliverables; the current research does not complete those requ
 | Separate Indian public-building day-ahead demand benchmark | Registered validation/test comparison complete; [errors and limitations](docs/india_public_data_audit.md#registered-day-ahead-load-comparison); no billing validation |
 | First-life transfer-learning extension | Registered verified-prefix comparison complete; small GRU improvement, XGBoost lowest mean error; [review](docs/transfer_prefix_comparison.md) |
 | Indian public-data storage controller | Registered offline comparison complete; transfer has an unfavorable wear/inventory-adjusted score in this scenario; [review](docs/india_controller_review.md); field and release gates remain open |
+| Dynamic electrical model | Rint/1-RC implemented; same-cell chronological pulse RMSE 8.182 vs 4.400 mV; [contract and limits](docs/battery_model_contract.md) |
+| Bounded AI selection | 270 CPU trials; validation-selected models do not beat fixed XGBoost on average; [results](docs/implementation_results.md) |
+| Simscape/BMS/life interfaces | Numeric export checked, source handoff prepared, synthetic BMS replay and life inventory; external validation remains open |
 
 The current stage runs on CPU. See the [phase report](docs/phase_status.md) for
 completed work, validation, assumptions, and remaining scientific limitations.
@@ -114,8 +120,9 @@ open dashboard/dist/index.html
 serve it with `python -m http.server 8765 --bind 127.0.0.1 --directory dashboard/dist`
 and visit `http://127.0.0.1:8765`.
 
-The seven views cover battery evidence, reference forecasts/dispatch, four research
-extension tabs, fourteen teaching lessons and a validation-pilot discussion.
+The eight views cover battery evidence, reference forecasts/dispatch, four research
+extension tabs, model implementation with four evidence tabs, eighteen teaching
+lessons and a validation-pilot discussion.
 Start with **Guided walkthrough** to learn
 the calculations, or use **Print brief** for a client meeting. Notes and discussion
 checkboxes stay in the browser; they do not submit approval. The dashboard reads a
@@ -428,9 +435,11 @@ extends this roadmap with phases 21-28, objective-to-evidence mapping, data/acce
 dependencies, mathematical model scope and acceptance checks. The
 [Codex implementation plan](docs/codex_implementation_plan.md) supersedes the calendar
 schedule with packages C00-C11: finish eligible local branches while external
-requirements wait. All eight new phases are planned; the evidence-dependent
-phases 14-20 goal remains paused. SOL's definition and Simscape/DGX access are
-unconfirmed. No new model, runtime integration or hardware validation is claimed.
+requirements wait. Local packages are implemented with measured or software-only
+evidence as documented in the [results and handoff](docs/implementation_results.md).
+The earlier evidence-dependent phases 14-20 goal remains paused. SOL, real BMS,
+Simscape/DGX execution and independent physical validation remain unresolved;
+the full proposal is not declared complete.
 
 The next research extension is the
 [dataset integration and validation plan](docs/dataset_integration_plan.md):
